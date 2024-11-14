@@ -73,11 +73,11 @@ We use the dataset described before to run our judgements on code summarization.
 
 Our quantitative analysis can be found in the notebook ```notebooks/visualization_cs.ipynb```.
 
-## Data (```data/results```):
+## Data (```data/```):
 
-**1) ```cg_judgement_java_boolean_human.csv``` and ```cg_judgement_java_scale_human.csv```:**
+**1) ```results/cg_judgement_java_boolean_human.csv```:**
 
-These are the overall outputs of the code generation judgement task. They are spreadsheets containing the following fields:
+This is the overall output of the code generation judgement task. It is a spreadsheet containing the following fields:
 
 - ```target_id``` : alphanumeric string associated to each valid instance of CoderEval;
 - ```generated_by``` : the LLM which generated the candidate code (or ```human_written``` if the method was the target);
@@ -88,61 +88,37 @@ These are the overall outputs of the code generation judgement task. They are sp
 - ...
 
 The last two columns are repeated for each LLM as judge.
-Note that two version of this file are present: boolean and 5-level (scale) rating. These files are reported in the in the ```data/results``` folder.
 
-**2) ```cg_MA.csv```:**
+**2) ```code_generation_manual_analysis/cg_MA.csv```:**
 
 Results of the manual analysis for code generation judgement failures.
 
-**3) ```cg_MA_false_positives.csv``` and ```cg_MA_false_negatives.csv```:**
+**3) ```code_generation_manual_analysis/cg_MA_false_positives.csv``` and ```code_generation_manual_analysis/cg_MA_false_negatives.csv```:**
 
 The most frequent reasons (i.e., categories) why LLMs as judges fail at the code generation judgment task are reported in these files.
 
-**4) ```cs_{LLM_name}-raw-output.csv```:**
+**4) ```results/cs/{model_name}_CCF.csv```:**
 
-Contains the raw output of the models as judges (see point 2 of the Code Summarization pipeline for more information).
+These files contain the raw output of the models when prompted to do the code summarization judgment task (```model_output``` column) and also their judgments for the three quality aspects (```content adequacy```, ```conciseness``` and ```fluency & understandability```). 
 
-**5) ```cs_results-grouped.csv```:**
+## Complementary results (```complementary_results/```):
 
-This is the overall output of the code summarization judgement task. It is a spreadsheet containing the following fields:
+**1) ```cg_5level_prompt.pdf```:**
 
-- ```question_id``` : id associate to each unique code snippet;
-- ```mid``` : id associated to the technique which generated the summary of the code snippet (0 was assigned to human developers, other numbers to a given automatic code summarization techinique);
-- ```user_id``` : number of human evaluators who rated the three aspects of the comment: ```content adequacy```, ```conciseness```, ```fluency```;
-- ```Dev_CA``` : average content adequacy score assigned by the human evaluators to the summary;
-- ```Dev_Conciseness``` : same as above for conciseness;
-- ```Dev_Fluency``` : same as above for fluency;
-- ```codeFunction``` : code snippet;
-- ```codeComment``` : code summary;
-- ```CA_{LLM1}_rating``` : the rating given by the model as judge to the content adequacy of the summary;
-- ```CA_{LLM1}_rationale``` : the rationale given by the model as judge to the content adequacy of the summary;
-- ```Conciseness_{LLM1}_rating``` : same as above for conciseness;
-- ```Conciseness_{LLM1}_rationale``` : same as above for conciseness;
-- ```Fluency_{LLM1}_rating``` : same as above for fluency;
-- ```Fluency_{LLM1}_rationale``` : same as above for fluency;
-- ...
+Results for code generation when the model are asked to give a 5-level judgment, i.e., rate the quality of the solution on a scale from 1 to 5 (see ```prompts/prompt-judge-code-generation-5level.tex```).
 
-The last six columns are repeated for each LLM as judge.
+**2) ```cg_norationale_prompt.pdf```:**
 
-**6) ```cg_statistical_tests_bool.csv``` and ```cg_statistical_tests_scale.csv```:**
+Results for code generation when the model are asked to give a binary judgment, like the one reported in the paper, but they are not asked for a rationale.
 
-The results of the statistical tests run to obtain the right section of ```Table III``` in the paper, for both the boolean (actually reported in the paper) and the 5-level cases (omitted due to lack of space, but reported in ```imgs/RP.pdf```).
+**3) ```cg_selfcontained```:**
 
-## Images (```imgs/RP.pdf```):
+Results for code generation when considering only the CoderEval methods with no external dependencies.
 
-**1) ```Figure 1```:**
+**4) ```cs_instruction_prompt.pdf```:**
 
-Same boxplot as in ```Figure 1``` in the paper, but considering only methods with no external dependencies.
+Results for code summarization, but prompting to the LLMs-as-a-judge the exact same guidelines given to the human raters when evaluating the quality of the three aspects for each summary (see ```prompts/prompt-judge-code-summarization-instructions.tex```).
 
-**2) ```Figure 2```:**
+**5) ```cs_meanvsmedian.pdf```:**
 
-Same boxplot as in ```Figure 2``` in the paper, but considering only methods with no external dependencies.
-
-**3) ```Table I```:**
-
-Same table as ```Table II``` in the paper, but considering only methods with no external dependencies.
-
-**4) ```Table II```:**
-
-Same table as ```Table III``` in the paper, but considering the 5-level code generation judgement scenario.
-
+Results for code summarization, but using the mean of the human ratings as ground truth instead of the median.
