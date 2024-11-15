@@ -1,4 +1,4 @@
-# LLMs-as-a-judge-for-SE
+# LLM-as-a-judge-for-SE
 This repository is the replication package of the work **"On the Effectiveness of LLM-as-judge for Software-related Tasks"**. The purpose of this repository is to provide the data and discuss the pipeline that we used to run this study.
 
 ## LLM as a judge on Code Generation task
@@ -15,30 +15,30 @@ Clean the CoderEval dataset from instances with noisy or wrong test cases:
   
 Let ```N``` be the number of valid instances present in the CoderEval dataset.
 
-**2) Code generation (```code_generation.py```/```code_generation_ChatGPT.py```):**
+**2) Code generation (```code_generation.py``` and ```code_generation_ChatGPT.py```):**
 - for each of the ```N``` valid instances, we get the predictions from 8 LLMs (```deepseek-ai/deepseek-coder-1.3b-instruct```, ```deepseek-ai/deepseek-coder-6.7b-instruct```, ```deepseek-ai/deepseek-coder-33b-instruct```, ```codellama/CodeLlama-7b-Instruct-hf```, ```codellama/CodeLlama-13b-Instruct-hf```, ```codellama/CodeLlama-34b-Instruct-hf```, ```gpt-3.5-turbo```, ```gpt-4-turbo```);
-- the prompt for the code generation task (for all the LLMs not belonging to the ChatGPT family) is: ```{docstring}\n{signature}```;
-- the prompt for the GPT models is : ```Implement the following Java method.\nDescription: "{docstring}"\nSignature: "{signature}"\nOnly output the method implementation including the signature, and no other text.```;
+- the prompts for the code generation task are reported in ```prompts/prompt-code-generation.tex``` and ```prompts/prompt-code-generation_ChatGPT.tex``` (for the ChatGPT models only).
+- the extraction of the method from the raw output of the model is also performed in these scripts.
 
 Since some LLMs may fail at the code generation task (i.e., from their output no valid methods can be extracted), the total amount of candidates is at most ```N x number_LLMs```. Let ```M``` be the total number of valid candidates.
 
 **3) Outcome of CoderEval tests:**
 
-The candidates go through the CoderEval test cases and for each of them we associate a 1 if the candidate passes the tests and 0 otherwise. Information about the outcome of the CoderEval tests can be found in the ```cg_judgement_java_boolean_human.csv``` file.
+The candidates go through the CoderEval test cases and for each of them we associate a 1 if the candidate passes the tests and 0 otherwise. Information about the outcome of the CoderEval tests can be found in the ```cg_judgement_java_boolean_human.csv``` file. To run the tests we relied on the instructions present in the CoderEval repository.
   	
 **4) Each LLM acts as a judge on the code generation task (```judge_code_generation.py```):**
 
-A chosen model as judge is asked to assert the quality of a given candidate based on the description and the signature of a target method. The judge is asked to provide a binary answer (i.e., 1 if it thinks that the candidate is correct and 0 otherwise). The judge is asked both for a ```#Rating``` and a ```#Rationale``` (i.e., an explanation of the ```#Rating```). Each model as judge will evaluate ```M``` candidates. The optimized prompt that we fed to the LLMs as a judge is ```prompts/prompt-judge-code-generation-boolean.tex```.
+A chosen model as a judge is asked to assert the quality of a given candidate based on the description and the signature of a target method. The judge is asked to provide a binary answer (i.e., 1 if it thinks that the candidate is correct and 0 otherwise). The judge is asked both for a ```#Rating``` and a ```#Rationale``` (i.e., an explanation of the ```#Rating```). Each model as a judge will evaluate ```M``` candidates. The optimized prompt that we fed to the LLMs as a judge is ```prompts/prompt-judge-code-generation-boolean.tex```.
 
 **5) Extract the ```#Rating``` and the ```#Rationale``` for each judgement (```extract_rating_rationale_bool.py```):**
 
-This script is used to extract the ```#Rating``` and ```#Rationale``` information from the output of the models as judges. For each model some manually crafted heuristics are applied to the ```M``` model outputs.
+This script is used to extract the ```#Rating``` and ```#Rationale``` information from the raw output of the models as judges. For each model some manually crafted heuristics are applied to the ```M``` model outputs.
 
 **6) Rating and Rationale manual check:**
 
 All outputs from point ```5)``` are manually analyzed to extract information that were missed by the heuristics. Note that, in the cases in which the judge fails to provide a valid judgement (i.e., either the ```#Rating``` or the ```#Rationale``` are not present in the model output), both the ```#Rating``` and the ```#Rationale``` are set to "-".
 
-Results are in ```data/results/cg_judgement_java_boolean_human.csv```. Note that to the ```M``` judgements per LLM we added the judgements on the target methods (which pass the test of CoderEval by construction); Therefore, each LLM as judge was asked to judge ```M + N``` different candidates in total.
+Results are in ```data/results/cg_judgement_java_boolean_human.csv```. Note that to the ```M``` judgements per LLM we added the judgements on the ```N``` target methods (which pass the test of CoderEval by construction); Therefore, each LLM as judge was asked to judge ```M + N``` different candidates in total.
 
 **7) Quantitative analysis:**
 
@@ -46,18 +46,18 @@ Our quantitative analysis can be found in the notebook ```notebooks/visualizatio
 
 **8) Qualitative manual analysis of judgement failure cases:**
 
-The goal is to extract a sample of cases in which each LLM as judge fails at judging a candidate method. For each judge we sample 15 false positives (i.e., cases in which the candidate is evaluated positively by the judge, but does not pass the relative test of the CoderEval dataset) and false negatives (i.e., candidates that are evaluated negatively by the judge, but do pass the relative test of the CoderEval dataset). We sample 15 examples (when present) per judge and per category of failure (false positives/negatives). We define a set of categories for which the judge may fail at judging the candidate method and then we assign each case of failure to one or more of our categories. The output of our manual analysis is reported in ```cg_MA.csv```, whereas the number of occurrences of each category is reported in ```cg_MA_false_positives.csv``` and ```cg_MA_false_negatives.csv```. These files are in the ```data/results``` folder.
+The goal is to extract a sample of cases in which each LLM as judge fails at judging a candidate method. For each judge we sample 15 false positives (i.e., cases in which the candidate is evaluated positively by the judge, but does not pass the relative test of the CoderEval dataset) and false negatives (i.e., candidates that are evaluated negatively by the judge, but do pass the relative test of the CoderEval dataset). We sample 15 examples (when present) per judge and per category of failure (false positives/negatives). We define a set of categories for which the judge may fail at judging the candidate method and then we assign each case of failure to one or more of our categories. The output of our manual analysis is reported in ```cg_MA.csv```, whereas the number of occurrences of each category is reported in ```cg_MA_false_positives.csv``` and ```cg_MA_false_negatives.csv```. These files are in the ```data/code_generation_manual_analysis``` folder.
 
 ## Creation of the Code Summarization benchmark for Java
 
-For this part of our work we create a code summarization benchmark for Java starting from the CoderEval dataset discussed above. Our dataset features human judgements of 594 summaries. To build the dataset, we selected from the CoderEval benchmark the top-100 Java methods in terms of number of statements they feature. We decided to focus on the longest methods since those are the ones for which a good summary is likely to make a difference in terms of code comprehensibility and, thus, assessing the quality of summaries for these methods may make more sense. Among these 100 methods we found one that was a duplicate and was thus removed from the set, leaving us with 99 methods. For each of them, we have the associated code summary written by the original developer of the method. Also, we asked five LLMs (i.e., CodeLlama 7B, 13B, and 34B, GPT-3.5-turbo and GPT-4-turbo) to generate a summary for each of these 99 methods, leading to the total of 99 (manually written) + 99×5 automatically generated) = 594 summaries. The prompt used to generate code summaries with the LLMs is documented in ```prompts/prompt-summary-generation.tex```. The dataset is available at ```data/cs_benchmark/benchmark.csv```.
+For this part of our work we create a code summarization benchmark for Java starting from the CoderEval dataset discussed above. Our dataset features human judgements of 594 summaries. To build the dataset, we selected from the CoderEval benchmark the top-100 Java methods in terms of number of statements they feature. We decided to focus on the longest methods since those are the ones for which a good summary is likely to make a difference in terms of code comprehensibility and, thus, assessing the quality of summaries for these methods may make more sense. Among these 100 methods we found one that was a duplicate and was thus removed from the set, leaving us with 99 methods. For each of them, we have the associated code summary written by the original developer of the method. Also, we asked five LLMs (i.e., CodeLlama 7B, 13B, and 34B, GPT-3.5-turbo and GPT-4-turbo) to generate a summary for each of these 99 methods, leading to the total of 99 (manually written) + 99×5 automatically generated) = 594 summaries. The prompt used to generate code summaries with the LLMs is documented in ```prompts/prompt-summary-generation.tex```. We asked 3 different experienced Java developers to evaluate the quality of the summaries in terms of ```content adequacy``` (the extent to which the comment summarizes all information that can be inferred from the source code), ```conciseness``` (the extent to which the comment contains unnecessary information) and ```fluency & understandability``` (the extent to which the comment is easy to understand). This manual analysis leaves us with 3 scores (from 1 to 5) for ```content adequacy```, 3 for ```conciseness``` and 3 for ```fluency & understandability``` for every of the 594 summaries. We asked the human raters to evaluate each aspect independently from one another (i.e., a summary can be considered concise even if the information it contains is wrong). Our dataset is available at ```data/cs_benchmark/benchmark.csv```.
 
-## LLM as judge on Code Summarization task
+## LLM-as-a-judge on Code Summarization task
 ### Pipeline
 
 We use the dataset described before to run our judgements on code summarization.
 
-**1) LLMs as a judge for code summarization (```judge_code_summarization.py```):**
+**1) LLM-as-a-judge for code summarization (```judge_code_summarization.py```):**
 
 - for each snippet-summary pair, a chosen model as judge is asked to assert the quality of the summary with respect to the snippet. The judge is asked to give a ```#Rating``` and a ```#Rationale``` for 3 different aspects: ```content adequacy```, ```conciseness``` and ```fluency & understandability```. The optimized prompt that we fed to the LLMs as judge is reported in ```prompts/prompt-judge-code-summarization.tex```;
 - for this task we select only 5 LLMs which will play the role of the judge (namely ```codellama/CodeLlama-7b-Instruct-hf```, ```codellama/CodeLlama-13b-Instruct-hf```, ```codellama/CodeLlama-34b-Instruct-hf```, ```gpt-3.5-turbo```, ```gpt-4-turbo```) because unfortunately the LLMs belonging to the DeepSeek Coder family often give an invalid output.
@@ -65,7 +65,7 @@ We use the dataset described before to run our judgements on code summarization.
 
 **2) ```#Rating``` extraction for all quality aspects (```extract_rating_ccf.py```):**
 
-- a set of heuristics is used to extract the values for ```#Rating``` for all the quality aspects (```content adequacy```, ```conciseness``` and ```fluency & understandability```) from the output of the LLMs;
+- a set of heuristics is used to extract the values for ```#Rating``` for all the quality aspects (```content adequacy```, ```conciseness``` and ```fluency & understandability```) from the raw output of the LLMs;
 - the script used to do so is ```extract_rating_ccf.py```.
 - manual extraction is performed when the heuristics fail;
 
@@ -99,9 +99,9 @@ The most frequent reasons (i.e., categories) why LLMs as judges fail at the code
 
 **4) ```results/cs/{model_name}_CCF.csv```:**
 
-These files contain the raw output of the models when prompted to do the code summarization judgment task (```model_output``` column) and also their judgments for the three quality aspects (```content adequacy```, ```conciseness``` and ```fluency & understandability```). 
+These files contain the raw output of the models when prompted to do the code summarization judgment task (```model_output``` column) and also their judgments for the three quality aspects (```content adequacy```, ```conciseness``` and ```fluency & understandability```), extracted with the heuristics. 
 
-## Complementary results (```complementary_results/```):
+## Complementary results (```data/complementary_results/```):
 
 **1) ```cg_5level_prompt.pdf```:**
 
