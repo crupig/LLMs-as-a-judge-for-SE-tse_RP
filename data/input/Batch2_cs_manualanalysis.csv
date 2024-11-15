@@ -1,0 +1,3607 @@
+target_id,target,generated_by,summary,summary_postprocessed,CA_1,Conciseness_1,Fluency_1,CA_2,Conciseness_2,Fluency_2,CA_3,Conciseness_3,Fluency_3,,Extreme CA Difference,Extreme Conciseness Difference,Extreme Fluency Difference
+6367676a1a6d9265ec0181d4,"public static String[] addStringToArray(String[] array,String str){
+  if (Objects.isEmpty(array)) {
+    return new String[]{str};
+  }
+  String[] newArr=new String[array.length + 1];
+  System.arraycopy(array,0,newArr,0,array.length);
+  newArr[array.length]=str;
+  return newArr;
+}
+",CodeLlama-34b-Instruct-hf,"# Docstring
+
+/**
+ * Adds a string to the end of a string array.
+ *
+ * @param array the string array to add to
+ * @param str the string to add
+ * @return a new string array with the added string
+ * @throws NullPointerException if the input array is null
+ */
+public static String[] addStringToArray(String[] array, String str) {
+  // ...
+}","/**
+ * Adds a string to the end of a string array.
+ *
+ * @param array the string array to add to
+ * @param str the string to add
+ * @return a new string array with the added string
+ * @throws NullPointerException if the input array is null
+ */",3,4,4,4,5,5,3,5,5,,,,
+6367676a1a6d9265ec0181d4,"public static String[] addStringToArray(String[] array,String str){
+  if (Objects.isEmpty(array)) {
+    return new String[]{str};
+  }
+  String[] newArr=new String[array.length + 1];
+  System.arraycopy(array,0,newArr,0,array.length);
+  newArr[array.length]=str;
+  return newArr;
+}
+",gpt-3.5-turbo,"```java
+/**
+ * Adds a new string to the given array of strings.
+ * If the input array is empty or null, a new array containing only the new string is returned.
+ * Otherwise, a new array is created with the new string added at the end.
+ *
+ * @param array the array of strings to which the new string will be added
+ * @param str the string to be added to the array
+ * @return a new array containing the original strings and the new string added at the end
+ */
+```
+","/**
+ * Adds a new string to the given array of strings.
+ * If the input array is empty or null, a new array containing only the new string is returned.
+ * Otherwise, a new array is created with the new string added at the end.
+ *
+ * @param array the array of strings to which the new string will be added
+ * @param str the string to be added to the array
+ * @return a new array containing the original strings and the new string added at the end
+ */",4,5,5,5,5,5,5,5,5,,,,
+6367676a1a6d9265ec0181d4,"public static String[] addStringToArray(String[] array,String str){
+  if (Objects.isEmpty(array)) {
+    return new String[]{str};
+  }
+  String[] newArr=new String[array.length + 1];
+  System.arraycopy(array,0,newArr,0,array.length);
+  newArr[array.length]=str;
+  return newArr;
+}
+",human_written,"/** 
+ * Append the given String to the given String array, returning a new array consisting of the input array contents plus the given String.
+ * @param array the array to append to (can be <code>null</code>)
+ * @param str the String to append
+ * @return the new array (never <code>null</code>)
+ */
+","/** 
+ * Append the given String to the given String array, returning a new array consisting of the input array contents plus the given String.
+ * @param array the array to append to (can be <code>null</code>)
+ * @param str the String to append
+ * @return the new array (never <code>null</code>)
+ */",3,3,3,4,5,4,4,5,4,,,,
+6367676a1a6d9265ec0181d4,"public static String[] addStringToArray(String[] array,String str){
+  if (Objects.isEmpty(array)) {
+    return new String[]{str};
+  }
+  String[] newArr=new String[array.length + 1];
+  System.arraycopy(array,0,newArr,0,array.length);
+  newArr[array.length]=str;
+  return newArr;
+}
+",CodeLlama-7b-Instruct-hf,"```
+public static String[] addStringToArray(String[] array, String str)
+
+Adds a string to the end of an array of strings.
+
+Parameters:
+
+* array: The array of strings to add the string to.
+* str: The string to add to the array.
+
+Returns:
+
+* A new array of strings with the added string.
+
+Throws:
+
+* NullPointerException if the array is null.
+
+Example:
+
+String[] arr = {""hello"", ""world""};
+String[] newArr = addStringToArray(arr, ""foo"");
+// newArr is now [""hello"", ""world"", ""foo""]
+```","public static String[] addStringToArray(String[] array, String str)
+
+Adds a string to the end of an array of strings.
+
+Parameters:
+
+* array: The array of strings to add the string to.
+* str: The string to add to the array.
+
+Returns:
+
+* A new array of strings with the added string.
+
+Throws:
+
+* NullPointerException if the array is null.
+
+Example:
+
+String[] arr = {""hello"", ""world""};
+String[] newArr = addStringToArray(arr, ""foo"");
+// newArr is now [""hello"", ""world"", ""foo""]",3,2,3,4,4,5,5,4,4,,,,
+6367676a1a6d9265ec0181d4,"public static String[] addStringToArray(String[] array,String str){
+  if (Objects.isEmpty(array)) {
+    return new String[]{str};
+  }
+  String[] newArr=new String[array.length + 1];
+  System.arraycopy(array,0,newArr,0,array.length);
+  newArr[array.length]=str;
+  return newArr;
+}
+",CodeLlama-13b-Instruct-hf,"```
+/**
+ * Adds a string to the end of an array of strings.
+ *
+ * @param array the array of strings to add to
+ * @param str the string to add
+ * @return a new array of strings with the given string added to the end
+ */
+public static String[] addStringToArray(String[] array, String str) {
+    // ...
+}
+```","/**
+ * Adds a string to the end of an array of strings.
+ *
+ * @param array the array of strings to add to
+ * @param str the string to add
+ * @return a new array of strings with the given string added to the end
+ */",2,5,5,3,5,5,3,5,5,,,,
+6367676a1a6d9265ec0181d4,"public static String[] addStringToArray(String[] array,String str){
+  if (Objects.isEmpty(array)) {
+    return new String[]{str};
+  }
+  String[] newArr=new String[array.length + 1];
+  System.arraycopy(array,0,newArr,0,array.length);
+  newArr[array.length]=str;
+  return newArr;
+}
+",gpt-4-turbo,"```java
+/**
+ * Adds a new string to the end of an existing array of strings.
+ * If the input array is null or empty, it returns a new array containing only the specified string.
+ *
+ * @param array the array to which the string is to be added; can be null or empty
+ * @param str the string to add to the array
+ * @return a new array containing all elements of the original array followed by the added string
+ */
+```","/**
+ * Adds a new string to the end of an existing array of strings.
+ * If the input array is null or empty, it returns a new array containing only the specified string.
+ *
+ * @param array the array to which the string is to be added; can be null or empty
+ * @param str the string to add to the array
+ * @return a new array containing all elements of the original array followed by the added string
+ */",5,3,4,5,5,5,5,4,5,,,,
+6367677e1a6d9265ec01830f,"public String format(LoggingEvent event){
+  if (sbuf.capacity() > MAX_CAPACITY) {
+    sbuf=new StringBuffer(BUF_SIZE);
+  }
+ else {
+    sbuf.setLength(0);
+  }
+  PatternConverter c=head;
+  while (c != null) {
+    c.format(sbuf,event);
+    c=c.next;
+  }
+  return sbuf.toString();
+}
+",human_written,"/** 
+ * Produces a formatted string as specified by the conversion pattern.
+ */
+","/** 
+ * Produces a formatted string as specified by the conversion pattern.
+ */",2,5,5,2,5,5,2,5,3,,,,
+6367677e1a6d9265ec01830f,"public String format(LoggingEvent event){
+  if (sbuf.capacity() > MAX_CAPACITY) {
+    sbuf=new StringBuffer(BUF_SIZE);
+  }
+ else {
+    sbuf.setLength(0);
+  }
+  PatternConverter c=head;
+  while (c != null) {
+    c.format(sbuf,event);
+    c=c.next;
+  }
+  return sbuf.toString();
+}
+",CodeLlama-7b-Instruct-hf,"```
+public String format(LoggingEvent event)
+
+Formats the given LoggingEvent using the pattern converter chain.
+
+Parameters:
+event - the LoggingEvent to format
+
+Returns:
+the formatted LoggingEvent as a String
+
+Throws:
+IllegalStateException - if the pattern converter chain is not properly configured
+```","public String format(LoggingEvent event)
+
+Formats the given LoggingEvent using the pattern converter chain.
+
+Parameters:
+event - the LoggingEvent to format
+
+Returns:
+the formatted LoggingEvent as a String
+
+Throws:
+IllegalStateException - if the pattern converter chain is not properly configured",3,3,3,3,5,5,3,5,3,,,,
+6367677e1a6d9265ec01830f,"public String format(LoggingEvent event){
+  if (sbuf.capacity() > MAX_CAPACITY) {
+    sbuf=new StringBuffer(BUF_SIZE);
+  }
+ else {
+    sbuf.setLength(0);
+  }
+  PatternConverter c=head;
+  while (c != null) {
+    c.format(sbuf,event);
+    c=c.next;
+  }
+  return sbuf.toString();
+}
+",gpt-4-turbo,"```java
+/**
+ * Formats a logging event into a string based on a predefined pattern.
+ * This method resets the StringBuffer if its capacity exceeds the maximum allowed capacity,
+ * otherwise it simply clears the buffer for new data. It iterates through a chain of PatternConverters
+ * to format the event data into the StringBuffer and then converts the buffer's content into a string.
+ *
+ * @param event The LoggingEvent to be formatted.
+ * @return A formatted string representing the logging event.
+ */
+```","/**
+ * Formats a logging event into a string based on a predefined pattern.
+ * This method resets the StringBuffer if its capacity exceeds the maximum allowed capacity,
+ * otherwise it simply clears the buffer for new data. It iterates through a chain of PatternConverters
+ * to format the event data into the StringBuffer and then converts the buffer's content into a string.
+ *
+ * @param event The LoggingEvent to be formatted.
+ * @return A formatted string representing the logging event.
+ */",4,4,5,5,5,5,5,5,5,,,,
+6367677e1a6d9265ec01830f,"public String format(LoggingEvent event){
+  if (sbuf.capacity() > MAX_CAPACITY) {
+    sbuf=new StringBuffer(BUF_SIZE);
+  }
+ else {
+    sbuf.setLength(0);
+  }
+  PatternConverter c=head;
+  while (c != null) {
+    c.format(sbuf,event);
+    c=c.next;
+  }
+  return sbuf.toString();
+}
+",gpt-3.5-turbo,"```java
+/**
+ * Formats the logging event using the specified pattern converters and returns the formatted string.
+ * If the capacity of the string buffer exceeds the maximum capacity, it resets the buffer size.
+ * 
+ * @param event the logging event to be formatted
+ * @return the formatted string representing the logging event
+ */
+```
+","/**
+ * Formats the logging event using the specified pattern converters and returns the formatted string.
+ * If the capacity of the string buffer exceeds the maximum capacity, it resets the buffer size.
+ * 
+ * @param event the logging event to be formatted
+ * @return the formatted string representing the logging event
+ */",4,5,5,4,5,5,4,5,5,,,,
+6367677e1a6d9265ec01830f,"public String format(LoggingEvent event){
+  if (sbuf.capacity() > MAX_CAPACITY) {
+    sbuf=new StringBuffer(BUF_SIZE);
+  }
+ else {
+    sbuf.setLength(0);
+  }
+  PatternConverter c=head;
+  while (c != null) {
+    c.format(sbuf,event);
+    c=c.next;
+  }
+  return sbuf.toString();
+}
+",CodeLlama-34b-Instruct-hf,"```
+# Docstring for format(LoggingEvent event) method
+
+This method formats a LoggingEvent object into a String using a StringBuffer. It first checks if the StringBuffer has a capacity greater than MAX_CAPACITY, and if so, it creates a new StringBuffer with a capacity of BUF_SIZE. Otherwise, it sets the length of the existing StringBuffer to 0.
+
+The method then iterates over a list of PatternConverter objects, calling the format() method on each one to append the formatted event to the StringBuffer. Finally, it returns the String representation of the StringBuffer.
+
+The format() method is used to format log messages in a consistent and efficient manner, and it is typically called by the logging framework when a log event occurs.
+```","This method formats a LoggingEvent object into a String using a StringBuffer. It first checks if the StringBuffer has a capacity greater than MAX_CAPACITY, and if so, it creates a new StringBuffer with a capacity of BUF_SIZE. Otherwise, it sets the length of the existing StringBuffer to 0.
+
+The method then iterates over a list of PatternConverter objects, calling the format() method on each one to append the formatted event to the StringBuffer. Finally, it returns the String representation of the StringBuffer.
+
+The format() method is used to format log messages in a consistent and efficient manner, and it is typically called by the logging framework when a log event occurs.",5,3,3,5,4,5,5,5,5,,,,
+6367677e1a6d9265ec01830f,"public String format(LoggingEvent event){
+  if (sbuf.capacity() > MAX_CAPACITY) {
+    sbuf=new StringBuffer(BUF_SIZE);
+  }
+ else {
+    sbuf.setLength(0);
+  }
+  PatternConverter c=head;
+  while (c != null) {
+    c.format(sbuf,event);
+    c=c.next;
+  }
+  return sbuf.toString();
+}
+",CodeLlama-13b-Instruct-hf,"```
+/**
+ * Formats a logging event according to the specified pattern.
+ *
+ * @param event the logging event to format
+ * @return the formatted string
+ */
+public String format(LoggingEvent event) {
+    // ...
+}
+```
+This docstring provides a brief description of the method, including its purpose and the parameters it takes. It also includes a return value, which is the formatted string. The docstring is written in the JavaDoc format, which is a standard for documenting Java code.","/**
+ * Formats a logging event according to the specified pattern.
+ *
+ * @param event the logging event to format
+ * @return the formatted string
+ */",3,5,5,3,5,5,3,5,3,,,,
+636767df1a6d9265ec018744,"protected List<TimeRange> buildTimeRanges(long start,long end){
+  if (start >= end) {
+    return null;
+  }
+  end+=1;
+  final List<TimeRange> timeRanges=new ArrayList<>();
+  do {
+    long batchEnd=Math.min(start + FETCH_DATA_DURATION,end);
+    timeRanges.add(new TimeRange(start,batchEnd));
+    start=batchEnd;
+  }
+ while (start < end);
+  return timeRanges;
+}
+",CodeLlama-34b-Instruct-hf,"```
+# Docstring for buildTimeRanges method
+
+This method builds a list of TimeRange objects based on the given start and end timestamps.
+
+Parameters:
+
+* start: The start timestamp of the time range.
+* end: The end timestamp of the time range.
+
+Returns:
+
+* A list of TimeRange objects, each representing a time range within the given start and end timestamps.
+
+The method first checks if the start timestamp is greater than or equal to the end timestamp. If so, it returns null.
+
+Otherwise, it increments the end timestamp by 1 and creates a new ArrayList to store the TimeRange objects.
+
+It then enters a loop where it creates a new TimeRange object for each batch of data, where the batch size is determined by the FETCH_DATA_DURATION constant. The start timestamp of each batch is set to the start timestamp of the previous batch, and the end timestamp is set to the minimum of the start timestamp plus the FETCH_DATA_DURATION and the end timestamp.
+
+The method returns the list of TimeRange objects when the start timestamp is greater than or equal to the end timestamp.
+```","This method builds a list of TimeRange objects based on the given start and end timestamps.
+
+Parameters:
+
+* start: The start timestamp of the time range.
+* end: The end timestamp of the time range.
+
+Returns:
+
+* A list of TimeRange objects, each representing a time range within the given start and end timestamps.
+
+The method first checks if the start timestamp is greater than or equal to the end timestamp. If so, it returns null.
+
+Otherwise, it increments the end timestamp by 1 and creates a new ArrayList to store the TimeRange objects.
+
+It then enters a loop where it creates a new TimeRange object for each batch of data, where the batch size is determined by the FETCH_DATA_DURATION constant. The start timestamp of each batch is set to the start timestamp of the previous batch, and the end timestamp is set to the minimum of the start timestamp plus the FETCH_DATA_DURATION and the end timestamp.
+
+The method returns the list of TimeRange objects when the start timestamp is greater than or equal to the end timestamp.",4,3,3,5,5,5,5,4,5,,,,
+636767df1a6d9265ec018744,"protected List<TimeRange> buildTimeRanges(long start,long end){
+  if (start >= end) {
+    return null;
+  }
+  end+=1;
+  final List<TimeRange> timeRanges=new ArrayList<>();
+  do {
+    long batchEnd=Math.min(start + FETCH_DATA_DURATION,end);
+    timeRanges.add(new TimeRange(start,batchEnd));
+    start=batchEnd;
+  }
+ while (start < end);
+  return timeRanges;
+}
+",CodeLlama-7b-Instruct-hf,"```
+/**
+ * Builds a list of time ranges from the given start and end timestamps.
+ *
+ * @param start the start timestamp
+ * @param end the end timestamp
+ * @return a list of time ranges, or null if the start timestamp is greater than or equal to the end timestamp
+ */
+protected List<TimeRange> buildTimeRanges(long start, long end) {
+  // ...
+}
+```
+This docstring provides a brief description of the method's purpose and its parameters. It also includes a brief explanation of what the method does, and what it returns.
+
+The `@param` tags are used to describe the parameters of the method, and the `@return` tag is used to describe what the method returns.
+
+The docstring also includes a brief explanation of the method's logic, which is important for understanding how the method works and how it can be used.","/**
+ * Builds a list of time ranges from the given start and end timestamps.
+ *
+ * @param start the start timestamp
+ * @param end the end timestamp
+ * @return a list of time ranges, or null if the start timestamp is greater than or equal to the end timestamp
+ */",3,5,5,3,5,5,3,5,5,,,,
+636767df1a6d9265ec018744,"protected List<TimeRange> buildTimeRanges(long start,long end){
+  if (start >= end) {
+    return null;
+  }
+  end+=1;
+  final List<TimeRange> timeRanges=new ArrayList<>();
+  do {
+    long batchEnd=Math.min(start + FETCH_DATA_DURATION,end);
+    timeRanges.add(new TimeRange(start,batchEnd));
+    start=batchEnd;
+  }
+ while (start < end);
+  return timeRanges;
+}
+",gpt-4-turbo,"```java
+/**
+ * Constructs a list of TimeRange objects representing intervals between a start and end time.
+ * Each interval has a duration defined by FETCH_DATA_DURATION unless the remaining time is less.
+ *
+ * @param start The starting timestamp (inclusive).
+ * @param end The ending timestamp (exclusive).
+ * @return A List of TimeRange objects representing the time intervals. Returns null if start is not less than end.
+ */
+```","/**
+ * Constructs a list of TimeRange objects representing intervals between a start and end time.
+ * Each interval has a duration defined by FETCH_DATA_DURATION unless the remaining time is less.
+ *
+ * @param start The starting timestamp (inclusive).
+ * @param end The ending timestamp (exclusive).
+ * @return A List of TimeRange objects representing the time intervals. Returns null if start is not less than end.
+ */",4,4,4,4,5,5,4,5,5,,,,
+636767df1a6d9265ec018744,"protected List<TimeRange> buildTimeRanges(long start,long end){
+  if (start >= end) {
+    return null;
+  }
+  end+=1;
+  final List<TimeRange> timeRanges=new ArrayList<>();
+  do {
+    long batchEnd=Math.min(start + FETCH_DATA_DURATION,end);
+    timeRanges.add(new TimeRange(start,batchEnd));
+    start=batchEnd;
+  }
+ while (start < end);
+  return timeRanges;
+}
+",gpt-3.5-turbo,"```java
+/**
+ * Builds a list of TimeRange objects based on the specified start and end timestamps.
+ * The time ranges are created by dividing the time interval between start and end into
+ * smaller intervals of FETCH_DATA_DURATION length.
+ *
+ * @param start the starting timestamp of the time interval
+ * @param end the ending timestamp of the time interval
+ * @return a list of TimeRange objects representing the divided time intervals
+ */
+```
+","/**
+ * Builds a list of TimeRange objects based on the specified start and end timestamps.
+ * The time ranges are created by dividing the time interval between start and end into
+ * smaller intervals of FETCH_DATA_DURATION length.
+ *
+ * @param start the starting timestamp of the time interval
+ * @param end the ending timestamp of the time interval
+ * @return a list of TimeRange objects representing the divided time intervals
+ */",4,5,5,4,5,5,4,5,5,,,,
+636767df1a6d9265ec018744,"protected List<TimeRange> buildTimeRanges(long start,long end){
+  if (start >= end) {
+    return null;
+  }
+  end+=1;
+  final List<TimeRange> timeRanges=new ArrayList<>();
+  do {
+    long batchEnd=Math.min(start + FETCH_DATA_DURATION,end);
+    timeRanges.add(new TimeRange(start,batchEnd));
+    start=batchEnd;
+  }
+ while (start < end);
+  return timeRanges;
+}
+",human_written,"/** 
+ * Split time ranges to insure the start time and end time is small then  {@link #FETCH_DATA_DURATION}
+ */
+","/** 
+ * Split time ranges to insure the start time and end time is small then  {@link #FETCH_DATA_DURATION}
+ */",1,5,2,1,5,1,2,5,1,,,,
+636767df1a6d9265ec018744,"protected List<TimeRange> buildTimeRanges(long start,long end){
+  if (start >= end) {
+    return null;
+  }
+  end+=1;
+  final List<TimeRange> timeRanges=new ArrayList<>();
+  do {
+    long batchEnd=Math.min(start + FETCH_DATA_DURATION,end);
+    timeRanges.add(new TimeRange(start,batchEnd));
+    start=batchEnd;
+  }
+ while (start < end);
+  return timeRanges;
+}
+",CodeLlama-13b-Instruct-hf,"This method builds a list of time ranges based on the given start and end timestamps. The time ranges are created by dividing the total duration between the start and end timestamps into batches of a fixed duration (FETCH_DATA_DURATION). The method returns null if the start timestamp is greater than or equal to the end timestamp.
+
+The method first checks if the start timestamp is greater than or equal to the end timestamp, and if so, returns null. Otherwise, it creates a new ArrayList to store the time ranges.
+
+The method then uses a do-while loop to iterate over the total duration between the start and end timestamps, and for each iteration, it calculates the end timestamp of the current batch by taking the minimum of the start timestamp plus the fixed duration and the end timestamp. It then adds a new TimeRange object to the ArrayList with the start and end timestamps of the current batch.
+
+Finally, the method returns the ArrayList of TimeRange objects.","This method builds a list of time ranges based on the given start and end timestamps. The time ranges are created by dividing the total duration between the start and end timestamps into batches of a fixed duration (FETCH_DATA_DURATION). The method returns null if the start timestamp is greater than or equal to the end timestamp.
+
+The method first checks if the start timestamp is greater than or equal to the end timestamp, and if so, returns null. Otherwise, it creates a new ArrayList to store the time ranges.
+
+The method then uses a do-while loop to iterate over the total duration between the start and end timestamps, and for each iteration, it calculates the end timestamp of the current batch by taking the minimum of the start timestamp plus the fixed duration and the end timestamp. It then adds a new TimeRange object to the ArrayList with the start and end timestamps of the current batch.
+
+Finally, the method returns the ArrayList of TimeRange objects.",5,3,4,5,4,5,5,4,5,,,,
+636767a31a6d9265ec018552,"@Override public String readString() throws IOException {
+  final int size=readRawVarint32();
+  if (size <= (bufferSize - bufferPos) && size > 0) {
+    final String result=STRING.deser(buffer,bufferPos,size);
+    bufferPos+=size;
+    return result;
+  }
+ else {
+    return STRING.deser(readRawBytes(size));
+  }
+}
+",CodeLlama-7b-Instruct-hf,"```
+@Override
+public String readString() throws IOException {
+    /**
+     * Reads a string from the input stream.
+     *
+     * @return the string read from the input stream
+     * @throws IOException if an I/O error occurs
+     */
+    final int size = readRawVarint32();
+    if (size <= (bufferSize - bufferPos) && size > 0) {
+        final String result = STRING.deser(buffer, bufferPos, size);
+        bufferPos += size;
+        return result;
+    } else {
+        return STRING.deser(readRawBytes(size));
+    }
+}
+```","/**
+     * Reads a string from the input stream.
+     *
+     * @return the string read from the input stream
+     * @throws IOException if an I/O error occurs
+     */",2,3,4,2,5,3,2,4,3,,,,
+636767a31a6d9265ec018552,"@Override public String readString() throws IOException {
+  final int size=readRawVarint32();
+  if (size <= (bufferSize - bufferPos) && size > 0) {
+    final String result=STRING.deser(buffer,bufferPos,size);
+    bufferPos+=size;
+    return result;
+  }
+ else {
+    return STRING.deser(readRawBytes(size));
+  }
+}
+",gpt-4-turbo,"```java
+/**
+ * Reads a string from the buffer using variable-length encoding.
+ * 
+ * This method first reads the size of the string using `readRawVarint32()`. It then checks if the entire string
+ * can be read from the current position in the buffer without needing additional reads. If it can, it deserializes
+ * the string directly from the buffer. Otherwise, it reads the required number of bytes first, then deserializes the string.
+ *
+ * @return The deserialized string.
+ * @throws IOException If an I/O error occurs while reading the size or the bytes of the string.
+ */
+```","/**
+ * Reads a string from the buffer using variable-length encoding.
+ * 
+ * This method first reads the size of the string using `readRawVarint32()`. It then checks if the entire string
+ * can be read from the current position in the buffer without needing additional reads. If it can, it deserializes
+ * the string directly from the buffer. Otherwise, it reads the required number of bytes first, then deserializes the string.
+ *
+ * @return The deserialized string.
+ * @throws IOException If an I/O error occurs while reading the size or the bytes of the string.
+ */",4,4,4,5,5,5,5,5,5,,,,
+636767a31a6d9265ec018552,"@Override public String readString() throws IOException {
+  final int size=readRawVarint32();
+  if (size <= (bufferSize - bufferPos) && size > 0) {
+    final String result=STRING.deser(buffer,bufferPos,size);
+    bufferPos+=size;
+    return result;
+  }
+ else {
+    return STRING.deser(readRawBytes(size));
+  }
+}
+",human_written,"/** 
+ * Read a  {@code string} field value from the stream.
+ */
+","/** 
+ * Read a  {@code string} field value from the stream.
+ */",1,3,1,2,5,3,2,5,2,,,,
+636767a31a6d9265ec018552,"@Override public String readString() throws IOException {
+  final int size=readRawVarint32();
+  if (size <= (bufferSize - bufferPos) && size > 0) {
+    final String result=STRING.deser(buffer,bufferPos,size);
+    bufferPos+=size;
+    return result;
+  }
+ else {
+    return STRING.deser(readRawBytes(size));
+  }
+}
+",gpt-3.5-turbo,"# Docstring
+This method reads a string from the input stream by first determining the size of the string using readRawVarint32(). It then checks if the size is within the remaining buffer space and greater than 0. If so, it deserializes the string from the buffer and updates the buffer position accordingly. Otherwise, it reads the raw bytes of the specified size and deserializes the string from those bytes. This method throws an IOException if there are any issues during the reading process.","This method reads a string from the input stream by first determining the size of the string using readRawVarint32(). It then checks if the size is within the remaining buffer space and greater than 0. If so, it deserializes the string from the buffer and updates the buffer position accordingly. Otherwise, it reads the raw bytes of the specified size and deserializes the string from those bytes. This method throws an IOException if there are any issues during the reading process.",4,4,4,5,5,5,5,5,4,,,,
+636767a31a6d9265ec018552,"@Override public String readString() throws IOException {
+  final int size=readRawVarint32();
+  if (size <= (bufferSize - bufferPos) && size > 0) {
+    final String result=STRING.deser(buffer,bufferPos,size);
+    bufferPos+=size;
+    return result;
+  }
+ else {
+    return STRING.deser(readRawBytes(size));
+  }
+}
+",CodeLlama-13b-Instruct-hf,"This method reads a string from the input stream. It first reads the size of the string using the `readRawVarint32()` method, which returns the size of the string in bytes. The method then checks if the size of the string is within the bounds of the buffer and if the size is greater than 0. If it is, it reads the string from the buffer using the `STRING.deser()` method, which deserializes the string from the buffer. The method then updates the buffer position and returns the string. If the size of the string is not within the bounds of the buffer or if the size is 0, the method reads the string from the input stream using the `readRawBytes()` method. The method then deserializes the string from the input stream and returns it.","This method reads a string from the input stream. It first reads the size of the string using the `readRawVarint32()` method, which returns the size of the string in bytes. The method then checks if the size of the string is within the bounds of the buffer and if the size is greater than 0. If it is, it reads the string from the buffer using the `STRING.deser()` method, which deserializes the string from the buffer. The method then updates the buffer position and returns the string. If the size of the string is not within the bounds of the buffer or if the size is 0, the method reads the string from the input stream using the `readRawBytes()` method. The method then deserializes the string from the input stream and returns it.",4,4,4,5,5,5,5,5,4,,,,
+636767a31a6d9265ec018552,"@Override public String readString() throws IOException {
+  final int size=readRawVarint32();
+  if (size <= (bufferSize - bufferPos) && size > 0) {
+    final String result=STRING.deser(buffer,bufferPos,size);
+    bufferPos+=size;
+    return result;
+  }
+ else {
+    return STRING.deser(readRawBytes(size));
+  }
+}
+",CodeLlama-34b-Instruct-hf,"```
+# Docstring for readString() method
+
+This method reads a string from the input stream. It first reads the size of the string as a raw varint32, and then reads the string bytes from the input stream. If the size of the string is less than or equal to the buffer size minus the buffer position, and the size is greater than 0, it deserializes the string using the STRING.deser() method and returns the result. Otherwise, it reads the raw bytes of the string using the readRawBytes() method and deserializes them using the STRING.deser() method.
+
+@param size The size of the string to read.
+@return The deserialized string.
+@throws IOException If an I/O error occurs.
+```","This method reads a string from the input stream. It first reads the size of the string as a raw varint32, and then reads the string bytes from the input stream. If the size of the string is less than or equal to the buffer size minus the buffer position, and the size is greater than 0, it deserializes the string using the STRING.deser() method and returns the result. Otherwise, it reads the raw bytes of the string using the readRawBytes() method and deserializes them using the STRING.deser() method.
+
+@param size The size of the string to read.
+@return The deserialized string.
+@throws IOException If an I/O error occurs.",4,5,5,5,5,5,5,5,4,,,,
+636766ae1a6d9265ec0175d8,"private String buildContentRange(){
+  Integer limit=drc.getLimit() == null ? getDefaultNumberPagination() - 1 : drc.getLimit();
+  Integer offset=drc.getOffset() == null ? 0 : drc.getOffset();
+  Long count=drc.getCount() == null ? 0 : drc.getCount();
+  return offset + ""-"" + (limit.equals(0) ? count - 1 : limit)+ ""/""+ count;
+}
+",gpt-4-turbo,"```java
+/**
+ * Constructs a content range string for HTTP headers based on pagination parameters.
+ * This method calculates the content range by determining the start and end points
+ * based on the offset and limit values retrieved from a data request context (drc).
+ * If the limit is not specified, it defaults to the maximum number of items per page minus one.
+ * If the offset is not specified, it defaults to 0. If the total count of items is not known,
+ * it defaults to 0. The content range format returned is ""start-end/total"", where ""start""
+ * is the offset, ""end"" is the calculated end index, and ""total"" is the total number of items.
+ *
+ * @return A string representing the content range in the format ""start-end/total"".
+ */
+```","/**
+ * Constructs a content range string for HTTP headers based on pagination parameters.
+ * This method calculates the content range by determining the start and end points
+ * based on the offset and limit values retrieved from a data request context (drc).
+ * If the limit is not specified, it defaults to the maximum number of items per page minus one.
+ * If the offset is not specified, it defaults to 0. If the total count of items is not known,
+ * it defaults to 0. The content range format returned is ""start-end/total"", where ""start""
+ * is the offset, ""end"" is the calculated end index, and ""total"" is the total number of items.
+ *
+ * @return A string representing the content range in the format ""start-end/total"".
+ */",5,4,4,5,5,4,5,5,4,,,,
+636766ae1a6d9265ec0175d8,"private String buildContentRange(){
+  Integer limit=drc.getLimit() == null ? getDefaultNumberPagination() - 1 : drc.getLimit();
+  Integer offset=drc.getOffset() == null ? 0 : drc.getOffset();
+  Long count=drc.getCount() == null ? 0 : drc.getCount();
+  return offset + ""-"" + (limit.equals(0) ? count - 1 : limit)+ ""/""+ count;
+}
+",CodeLlama-7b-Instruct-hf,"```
+/**
+ * Builds the content range string for the given data request context.
+ *
+ * @param drc the data request context
+ * @return the content range string
+ */
+private String buildContentRange(DataRequestContext drc) {
+  // Calculate the limit and offset values
+  Integer limit = drc.getLimit() == null ? getDefaultNumberPagination() - 1 : drc.getLimit();
+  Integer offset = drc.getOffset() == null ? 0 : drc.getOffset();
+
+  // Calculate the count value
+  Long count = drc.getCount() == null ? 0 : drc.getCount();
+
+  // Build the content range string
+  return offset + ""-"" + (limit.equals(0) ? count - 1 : limit) + ""/"" + count;
+}
+```
+This docstring provides a brief description of the method's purpose and its parameters. It also includes a brief explanation of the method's implementation, including the calculation of the limit and offset values and the count value. Finally, it provides an example of how to use the method.","/**
+ * Builds the content range string for the given data request context.
+ *
+ * @param drc the data request context
+ * @return the content range string
+ */",1,3,3,2,5,3,1,5,3,,,,
+636766ae1a6d9265ec0175d8,"private String buildContentRange(){
+  Integer limit=drc.getLimit() == null ? getDefaultNumberPagination() - 1 : drc.getLimit();
+  Integer offset=drc.getOffset() == null ? 0 : drc.getOffset();
+  Long count=drc.getCount() == null ? 0 : drc.getCount();
+  return offset + ""-"" + (limit.equals(0) ? count - 1 : limit)+ ""/""+ count;
+}
+",human_written,"/** 
+ * Build the 'Content-Range' HTTP Header value.
+ * @return 'Content-Range' value
+ */
+","/** 
+ * Build the 'Content-Range' HTTP Header value.
+ * @return 'Content-Range' value
+ */",1,3,3,2,5,3,2,2,2,,,TRUE,
+636766ae1a6d9265ec0175d8,"private String buildContentRange(){
+  Integer limit=drc.getLimit() == null ? getDefaultNumberPagination() - 1 : drc.getLimit();
+  Integer offset=drc.getOffset() == null ? 0 : drc.getOffset();
+  Long count=drc.getCount() == null ? 0 : drc.getCount();
+  return offset + ""-"" + (limit.equals(0) ? count - 1 : limit)+ ""/""+ count;
+}
+",gpt-3.5-turbo,"```java
+/**
+ * Builds the content range string based on the limit, offset, and count values from the DataRequestContext.
+ * If limit, offset, or count is null, default values are used.
+ * The content range format is ""offset-limit/count"".
+ * 
+ * @return the content range string
+ */
+```
+","/**
+ * Builds the content range string based on the limit, offset, and count values from the DataRequestContext.
+ * If limit, offset, or count is null, default values are used.
+ * The content range format is ""offset-limit/count"".
+ * 
+ * @return the content range string
+ */",2,5,3,4,5,4,4,5,3,,,,
+636766ae1a6d9265ec0175d8,"private String buildContentRange(){
+  Integer limit=drc.getLimit() == null ? getDefaultNumberPagination() - 1 : drc.getLimit();
+  Integer offset=drc.getOffset() == null ? 0 : drc.getOffset();
+  Long count=drc.getCount() == null ? 0 : drc.getCount();
+  return offset + ""-"" + (limit.equals(0) ? count - 1 : limit)+ ""/""+ count;
+}
+",CodeLlama-13b-Instruct-hf,"```
+/**
+ * Builds a Content-Range header value based on the given parameters.
+ *
+ * @param drc the DataResponseContext object containing the pagination parameters
+ * @return a String representing the Content-Range header value
+ */
+private String buildContentRange(DataResponseContext drc) {
+    // ...
+}
+```
+This docstring provides a brief description of the method, including its purpose and the parameters it takes. It also includes a brief description of the return value, which is a String representing the Content-Range header value.","/**
+ * Builds a Content-Range header value based on the given parameters.
+ *
+ * @param drc the DataResponseContext object containing the pagination parameters
+ * @return a String representing the Content-Range header value
+ */",2,3,3,3,5,4,1,5,3,,,,
+636766ae1a6d9265ec0175d8,"private String buildContentRange(){
+  Integer limit=drc.getLimit() == null ? getDefaultNumberPagination() - 1 : drc.getLimit();
+  Integer offset=drc.getOffset() == null ? 0 : drc.getOffset();
+  Long count=drc.getCount() == null ? 0 : drc.getCount();
+  return offset + ""-"" + (limit.equals(0) ? count - 1 : limit)+ ""/""+ count;
+}
+",CodeLlama-34b-Instruct-hf,"# Docstring
+
+This method builds a content range string based on the given limit, offset, and count. The string is in the format of ""offset-limit/count"". If the limit is 0, the method uses the count minus 1 as the limit. If the offset is null, it is set to 0. If the count is null, it is set to 0.
+
+The method returns a string representing the content range.
+
+# Parameters
+
+* `drc`: The `DataRange` object containing the limit, offset, and count.
+
+# Returns
+
+* A string representing the content range in the format of ""offset-limit/count"".
+
+# Throws
+
+* `NullPointerException`: If the `drc` parameter is null.
+* `IllegalArgumentException`: If the `limit` parameter is negative or the `offset` parameter is negative.
+
+# Examples
+
+* `buildContentRange(new DataRange(10, 5, 100));` returns `""5-14/100""`
+* `buildContentRange(new DataRange(0, 5, 100));` returns `""5-99/100""`
+* `buildContentRange(new DataRange(10, null, 100));` returns `""0-9/100""`
+* `buildContentRange(new DataRange(null, 5, 100));` returns `""5-99/100""`
+* `buildContentRange(new DataRange(null, null, 100));` returns `""0-99/100""`","This method builds a content range string based on the given limit, offset, and count. The string is in the format of ""offset-limit/count"". If the limit is 0, the method uses the count minus 1 as the limit. If the offset is null, it is set to 0. If the count is null, it is set to 0.
+
+The method returns a string representing the content range.
+
+# Parameters
+
+* `drc`: The `DataRange` object containing the limit, offset, and count.
+
+# Returns
+
+* A string representing the content range in the format of ""offset-limit/count"".
+
+# Throws
+
+* `NullPointerException`: If the `drc` parameter is null.
+* `IllegalArgumentException`: If the `limit` parameter is negative or the `offset` parameter is negative.
+
+# Examples
+
+* `buildContentRange(new DataRange(10, 5, 100));` returns `""5-14/100""`
+* `buildContentRange(new DataRange(0, 5, 100));` returns `""5-99/100""`
+* `buildContentRange(new DataRange(10, null, 100));` returns `""0-9/100""`
+* `buildContentRange(new DataRange(null, 5, 100));` returns `""5-99/100""`
+* `buildContentRange(new DataRange(null, null, 100));` returns `""0-99/100""",2,3,3,2,3,5,2,2,3,,,,
+636766fa1a6d9265ec0177a9,"private void addInitializedType(final int abstractType){
+  if (initializations == null) {
+    initializations=new int[2];
+  }
+  int initializationsLength=initializations.length;
+  if (initializationCount >= initializationsLength) {
+    int[] newInitializations=new int[Math.max(initializationCount + 1,2 * initializationsLength)];
+    System.arraycopy(initializations,0,newInitializations,0,initializationsLength);
+    initializations=newInitializations;
+  }
+  initializations[initializationCount++]=abstractType;
+}
+",CodeLlama-13b-Instruct-hf,"This method is used to add an initialized type to an array of initialized types. It takes an integer parameter `abstractType` representing the type to be added.
+
+The method first checks if the `initializations` array is null, and if it is, it creates a new array with a length of 2.
+
+Next, it checks the length of the `initializations` array and compares it to the `initializationCount` variable. If the `initializationCount` is greater than or equal to the length of the `initializations` array, it creates a new array with a length equal to the maximum of `initializationCount + 1` and `2 * initializationsLength`.
+
+The method then copies the contents of the `initializations` array to the new array, and sets the `initializations` variable to the new array.
+
+Finally, the method adds the `abstractType` parameter to the `initializations` array at the index equal to the `initializationCount` variable.
+
+This method is used to keep track of the initialized types in a program, and to ensure that the `initializations` array is always large enough to hold all the initialized types.","This method is used to add an initialized type to an array of initialized types. It takes an integer parameter `abstractType` representing the type to be added.
+
+The method first checks if the `initializations` array is null, and if it is, it creates a new array with a length of 2.
+
+Next, it checks the length of the `initializations` array and compares it to the `initializationCount` variable. If the `initializationCount` is greater than or equal to the length of the `initializations` array, it creates a new array with a length equal to the maximum of `initializationCount + 1` and `2 * initializationsLength`.
+
+The method then copies the contents of the `initializations` array to the new array, and sets the `initializations` variable to the new array.
+
+Finally, the method adds the `abstractType` parameter to the `initializations` array at the index equal to the `initializationCount` variable.
+
+This method is used to keep track of the initialized types in a program, and to ensure that the `initializations` array is always large enough to hold all the initialized types.",4,3,4,5,4,5,4,4,5,,,,
+636766fa1a6d9265ec0177a9,"private void addInitializedType(final int abstractType){
+  if (initializations == null) {
+    initializations=new int[2];
+  }
+  int initializationsLength=initializations.length;
+  if (initializationCount >= initializationsLength) {
+    int[] newInitializations=new int[Math.max(initializationCount + 1,2 * initializationsLength)];
+    System.arraycopy(initializations,0,newInitializations,0,initializationsLength);
+    initializations=newInitializations;
+  }
+  initializations[initializationCount++]=abstractType;
+}
+",gpt-4-turbo,"```java
+/**
+ * Adds an abstract type to the 'initializations' array, expanding the array if necessary.
+ * This method initializes the 'initializations' array if it is null, and ensures there is enough space
+ * to add new elements by doubling its size when needed. The method safely adds the abstract type
+ * into the array and increments the count of initializations.
+ *
+ * @param abstractType The abstract type to be added to the initializations array.
+ */
+```","/**
+ * Adds an abstract type to the 'initializations' array, expanding the array if necessary.
+ * This method initializes the 'initializations' array if it is null, and ensures there is enough space
+ * to add new elements by doubling its size when needed. The method safely adds the abstract type
+ * into the array and increments the count of initializations.
+ *
+ * @param abstractType The abstract type to be added to the initializations array.
+ */",3,4,4,4,5,5,5,5,5,,,,
+636766fa1a6d9265ec0177a9,"private void addInitializedType(final int abstractType){
+  if (initializations == null) {
+    initializations=new int[2];
+  }
+  int initializationsLength=initializations.length;
+  if (initializationCount >= initializationsLength) {
+    int[] newInitializations=new int[Math.max(initializationCount + 1,2 * initializationsLength)];
+    System.arraycopy(initializations,0,newInitializations,0,initializationsLength);
+    initializations=newInitializations;
+  }
+  initializations[initializationCount++]=abstractType;
+}
+",gpt-3.5-turbo,"```java
+/**
+ * Adds an initialized type to the array of initializations.
+ * If the initializations array is null, it initializes it with a length of 2.
+ * If the number of initializations exceeds the length of the array, it resizes the array.
+ * 
+ * @param abstractType the initialized type to add
+ */
+```
+","/**
+ * Adds an initialized type to the array of initializations.
+ * If the initializations array is null, it initializes it with a length of 2.
+ * If the number of initializations exceeds the length of the array, it resizes the array.
+ * 
+ * @param abstractType the initialized type to add
+ */",4,4,4,4,5,5,4,5,5,,,,
+636766fa1a6d9265ec0177a9,"private void addInitializedType(final int abstractType){
+  if (initializations == null) {
+    initializations=new int[2];
+  }
+  int initializationsLength=initializations.length;
+  if (initializationCount >= initializationsLength) {
+    int[] newInitializations=new int[Math.max(initializationCount + 1,2 * initializationsLength)];
+    System.arraycopy(initializations,0,newInitializations,0,initializationsLength);
+    initializations=newInitializations;
+  }
+  initializations[initializationCount++]=abstractType;
+}
+",CodeLlama-34b-Instruct-hf,"# Docstring
+
+Adds an initialized type to the internal array of initialized types.
+
+The method takes a single parameter, `abstractType`, which is the type to be added to the array. If the array is null, it is initialized with a size of 2. If the array is not null, the method checks if the `initializationCount` is greater than or equal to the length of the array. If it is, a new array is created with a size of `Math.max(initializationCount + 1, 2 * initializationsLength)`. The contents of the old array are copied to the new array, and the new array is assigned to the `initializations` variable. Finally, the `abstractType` is added to the end of the array and the `initializationCount` is incremented.
+
+The method is private, meaning it can only be accessed within the same class. It is not intended to be used as a public API.","Adds an initialized type to the internal array of initialized types.
+
+The method takes a single parameter, `abstractType`, which is the type to be added to the array. If the array is null, it is initialized with a size of 2. If the array is not null, the method checks if the `initializationCount` is greater than or equal to the length of the array. If it is, a new array is created with a size of `Math.max(initializationCount + 1, 2 * initializationsLength)`. The contents of the old array are copied to the new array, and the new array is assigned to the `initializations` variable. Finally, the `abstractType` is added to the end of the array and the `initializationCount` is incremented.
+
+The method is private, meaning it can only be accessed within the same class. It is not intended to be used as a public API.",3,2,4,5,4,5,4,4,5,,,,
+636766fa1a6d9265ec0177a9,"private void addInitializedType(final int abstractType){
+  if (initializations == null) {
+    initializations=new int[2];
+  }
+  int initializationsLength=initializations.length;
+  if (initializationCount >= initializationsLength) {
+    int[] newInitializations=new int[Math.max(initializationCount + 1,2 * initializationsLength)];
+    System.arraycopy(initializations,0,newInitializations,0,initializationsLength);
+    initializations=newInitializations;
+  }
+  initializations[initializationCount++]=abstractType;
+}
+",human_written,"/** 
+ * Adds an abstract type to the list of types on which a constructor is invoked in the basic block.
+ * @param abstractType an abstract type on a which a constructor is invoked.
+ */
+","/** 
+ * Adds an abstract type to the list of types on which a constructor is invoked in the basic block.
+ * @param abstractType an abstract type on a which a constructor is invoked.
+ */",2,3,2,2,4,2,3,5,2,,,,
+636766fa1a6d9265ec0177a9,"private void addInitializedType(final int abstractType){
+  if (initializations == null) {
+    initializations=new int[2];
+  }
+  int initializationsLength=initializations.length;
+  if (initializationCount >= initializationsLength) {
+    int[] newInitializations=new int[Math.max(initializationCount + 1,2 * initializationsLength)];
+    System.arraycopy(initializations,0,newInitializations,0,initializationsLength);
+    initializations=newInitializations;
+  }
+  initializations[initializationCount++]=abstractType;
+}
+",CodeLlama-7b-Instruct-hf,"```
+private void addInitializedType(final int abstractType)
+
+Adds the given abstract type to the list of initialized types.
+
+Parameters:
+abstractType (int): The abstract type to add.
+
+Returns:
+void
+
+Throws:
+NullPointerException if the initializations array is null.
+
+Note: This method is used to keep track of the types that have been initialized in the current scope.
+```","private void addInitializedType(final int abstractType)
+
+Adds the given abstract type to the list of initialized types.
+
+Parameters:
+abstractType (int): The abstract type to add.
+
+Returns:
+void
+
+Throws:
+NullPointerException if the initializations array is null.
+
+Note: This method is used to keep track of the types that have been initialized in the current scope.",2,3,3,3,4,5,2,4,4,,,,
+6367676a1a6d9265ec0181cd,"public static String trimLeadingWhitespace(String str){
+  if (!hasLength(str)) {
+    return str;
+  }
+  StringBuilder sb=new StringBuilder(str);
+  while (sb.length() > 0 && Character.isWhitespace(sb.charAt(0))) {
+    sb.deleteCharAt(0);
+  }
+  return sb.toString();
+}
+",gpt-4-turbo,"```java
+/**
+ * Removes leading whitespace characters from the specified string.
+ *
+ * This method checks if the input string has any length and if not, it directly returns the original string.
+ * It then iterates over the string from the beginning, removing any leading whitespace characters
+ * until a non-whitespace character is encountered.
+ *
+ * @param str the string from which leading whitespace characters are to be removed.
+ * @return a new string with leading whitespace removed, or the original string if it is empty or contains no leading whitespace.
+ */
+```","/**
+ * Removes leading whitespace characters from the specified string.
+ *
+ * This method checks if the input string has any length and if not, it directly returns the original string.
+ * It then iterates over the string from the beginning, removing any leading whitespace characters
+ * until a non-whitespace character is encountered.
+ *
+ * @param str the string from which leading whitespace characters are to be removed.
+ * @return a new string with leading whitespace removed, or the original string if it is empty or contains no leading whitespace.
+ */",5,5,5,5,5,5,5,4,5,,,,
+6367676a1a6d9265ec0181cd,"public static String trimLeadingWhitespace(String str){
+  if (!hasLength(str)) {
+    return str;
+  }
+  StringBuilder sb=new StringBuilder(str);
+  while (sb.length() > 0 && Character.isWhitespace(sb.charAt(0))) {
+    sb.deleteCharAt(0);
+  }
+  return sb.toString();
+}
+",gpt-3.5-turbo,"```java
+/**
+ * Removes leading whitespace characters from the given string.
+ * If the input string is null or empty, it returns the input string as is.
+ * 
+ * @param str the input string to trim leading whitespace from
+ * @return the input string with leading whitespace removed
+ */
+```
+","/**
+ * Removes leading whitespace characters from the given string.
+ * If the input string is null or empty, it returns the input string as is.
+ * 
+ * @param str the input string to trim leading whitespace from
+ * @return the input string with leading whitespace removed
+ */",4,4,5,4,5,5,5,5,5,,,,
+6367676a1a6d9265ec0181cd,"public static String trimLeadingWhitespace(String str){
+  if (!hasLength(str)) {
+    return str;
+  }
+  StringBuilder sb=new StringBuilder(str);
+  while (sb.length() > 0 && Character.isWhitespace(sb.charAt(0))) {
+    sb.deleteCharAt(0);
+  }
+  return sb.toString();
+}
+",CodeLlama-34b-Instruct-hf,"# Docstring
+
+/**
+ * Trims leading whitespace from a string.
+ *
+ * @param str the input string
+ * @return the trimmed string
+ */
+public static String trimLeadingWhitespace(String str) {
+  // ...
+}
+
+# Explanation:
+
+This docstring provides a brief description of the method's purpose and parameters. It also includes a return type and a brief description of the return value. The `@param` tag is used to describe the input parameter, and the `@return` tag is used to describe the return value. This docstring is concise and provides the necessary information for a developer to understand how to use the method.","/**
+ * Trims leading whitespace from a string.
+ *
+ * @param str the input string
+ * @return the trimmed string
+ */",3,4,4,3,5,5,3,5,5,,,,
+6367676a1a6d9265ec0181cd,"public static String trimLeadingWhitespace(String str){
+  if (!hasLength(str)) {
+    return str;
+  }
+  StringBuilder sb=new StringBuilder(str);
+  while (sb.length() > 0 && Character.isWhitespace(sb.charAt(0))) {
+    sb.deleteCharAt(0);
+  }
+  return sb.toString();
+}
+",CodeLlama-13b-Instruct-hf,"```
+/**
+ * Trims leading whitespace from a string.
+ *
+ * @param str the string to trim
+ * @return the trimmed string
+ */
+public static String trimLeadingWhitespace(String str) {
+    if (!hasLength(str)) {
+        return str;
+    }
+    StringBuilder sb = new StringBuilder(str);
+    while (sb.length() > 0 && Character.isWhitespace(sb.charAt(0))) {
+        sb.deleteCharAt(0);
+    }
+    return sb.toString();
+}
+```
+This docstring provides a brief description of the method, including its purpose and the parameters it takes. It also includes a brief explanation of the method's behavior, including the fact that it trims leading whitespace from a string.","/**
+ * Trims leading whitespace from a string.
+ *
+ * @param str the string to trim
+ * @return the trimmed string
+ */",3,4,4,3,5,5,3,5,5,,,,
+6367676a1a6d9265ec0181cd,"public static String trimLeadingWhitespace(String str){
+  if (!hasLength(str)) {
+    return str;
+  }
+  StringBuilder sb=new StringBuilder(str);
+  while (sb.length() > 0 && Character.isWhitespace(sb.charAt(0))) {
+    sb.deleteCharAt(0);
+  }
+  return sb.toString();
+}
+",human_written,"/** 
+ * Trim leading whitespace from the given String.
+ * @param str the String to check
+ * @return the trimmed String
+ * @see java.lang.Character#isWhitespace
+ */
+","/** 
+ * Trim leading whitespace from the given String.
+ * @param str the String to check
+ * @return the trimmed String
+ * @see java.lang.Character#isWhitespace
+ */",2,4,3,3,4,5,3,5,5,,,,
+6367676a1a6d9265ec0181cd,"public static String trimLeadingWhitespace(String str){
+  if (!hasLength(str)) {
+    return str;
+  }
+  StringBuilder sb=new StringBuilder(str);
+  while (sb.length() > 0 && Character.isWhitespace(sb.charAt(0))) {
+    sb.deleteCharAt(0);
+  }
+  return sb.toString();
+}
+",CodeLlama-7b-Instruct-hf,"```
+Trims leading whitespace from a string.
+
+@param str the string to trim
+@return the trimmed string
+```","Trims leading whitespace from a string.
+
+@param str the string to trim
+@return the trimmed string",3,4,4,3,5,5,3,5,5,,,,
+636767121a6d9265ec017b0a,"private int parseEndOfLine(String headerPart,int end){
+  int index=end;
+  for (; ; ) {
+    int offset=headerPart.indexOf('\r',index);
+    if (offset == -1 || offset + 1 >= headerPart.length()) {
+      throw new IllegalStateException(""Expected headers to be terminated by an empty line."");
+    }
+    if (headerPart.charAt(offset + 1) == '\n') {
+      return offset;
+    }
+    index=offset + 1;
+  }
+}
+",gpt-3.5-turbo,"```java
+/**
+ * Parses the end of a line in the given header part starting from the specified index.
+ * 
+ * @param headerPart the header part to parse
+ * @param end the starting index to begin parsing from
+ * @return the index of the end of the line
+ * @throws IllegalStateException if the headers are not terminated by an empty line
+ */
+```
+","/**
+ * Parses the end of a line in the given header part starting from the specified index.
+ * 
+ * @param headerPart the header part to parse
+ * @param end the starting index to begin parsing from
+ * @return the index of the end of the line
+ * @throws IllegalStateException if the headers are not terminated by an empty line
+ */",3,4,4,3,5,5,4,5,5,,,,
+636767121a6d9265ec017b0a,"private int parseEndOfLine(String headerPart,int end){
+  int index=end;
+  for (; ; ) {
+    int offset=headerPart.indexOf('\r',index);
+    if (offset == -1 || offset + 1 >= headerPart.length()) {
+      throw new IllegalStateException(""Expected headers to be terminated by an empty line."");
+    }
+    if (headerPart.charAt(offset + 1) == '\n') {
+      return offset;
+    }
+    index=offset + 1;
+  }
+}
+",human_written,"/** 
+ * Skips bytes until the end of the current line.
+ * @param headerPart The headers, which are being parsed.
+ * @param end Index of the last byte, which has yet been processed.
+ * @return Index of the \r\n sequence, which indicates end of line.
+ */
+","/** 
+ * Skips bytes until the end of the current line.
+ * @param headerPart The headers, which are being parsed.
+ * @param end Index of the last byte, which has yet been processed.
+ * @return Index of the \r\n sequence, which indicates end of line.
+ */",3,4,4,2,5,3,2,5,4,,,,
+636767121a6d9265ec017b0a,"private int parseEndOfLine(String headerPart,int end){
+  int index=end;
+  for (; ; ) {
+    int offset=headerPart.indexOf('\r',index);
+    if (offset == -1 || offset + 1 >= headerPart.length()) {
+      throw new IllegalStateException(""Expected headers to be terminated by an empty line."");
+    }
+    if (headerPart.charAt(offset + 1) == '\n') {
+      return offset;
+    }
+    index=offset + 1;
+  }
+}
+",CodeLlama-34b-Instruct-hf,"```
+# Docstring for parseEndOfLine method
+
+This method parses the end of a line in a header part of a HTTP message. It takes two parameters:
+
+* `headerPart`: The header part of the HTTP message as a string.
+* `end`: The index of the last character in the header part.
+
+The method returns the index of the end of the line, which is the index of the last character in the line, or -1 if the line is not terminated by a CRLF sequence.
+
+The method first checks if the line is terminated by a CRLF sequence by searching for the index of the first occurrence of the character '\r' in the header part, starting from the index of the last character in the header part. If the index is -1 or if the index is greater than or equal to the length of the header part, an IllegalStateException is thrown.
+
+If the line is not terminated by a CRLF sequence, the method searches for the index of the first occurrence of the character '\n' in the header part, starting from the index of the last character in the header part. If the index is -1 or if the index is greater than or equal to the length of the header part, an IllegalStateException is thrown.
+
+If the line is terminated by a CRLF sequence, the method returns the index of the last character in the line.
+
+# Example usage:
+
+Suppose we have a HTTP message with the following header part:
+
+""GET / HTTP/1.1\r\nHost: example.com\r\n\r\n""
+
+If we call the parseEndOfLine method with the header part and the index of the last character in the header part (which is 27 in this case), the method will return the index of the last character in the line, which is 25.
+```","This method parses the end of a line in a header part of a HTTP message. It takes two parameters:
+
+* `headerPart`: The header part of the HTTP message as a string.
+* `end`: The index of the last character in the header part.
+
+The method returns the index of the end of the line, which is the index of the last character in the line, or -1 if the line is not terminated by a CRLF sequence.
+
+The method first checks if the line is terminated by a CRLF sequence by searching for the index of the first occurrence of the character '\r' in the header part, starting from the index of the last character in the header part. If the index is -1 or if the index is greater than or equal to the length of the header part, an IllegalStateException is thrown.
+
+If the line is not terminated by a CRLF sequence, the method searches for the index of the first occurrence of the character '\n' in the header part, starting from the index of the last character in the header part. If the index is -1 or if the index is greater than or equal to the length of the header part, an IllegalStateException is thrown.
+
+If the line is terminated by a CRLF sequence, the method returns the index of the last character in the line.
+
+# Example usage:
+
+Suppose we have a HTTP message with the following header part:
+
+""GET / HTTP/1.1\r\nHost: example.com\r\n\r\n""
+
+If we call the parseEndOfLine method with the header part and the index of the last character in the header part (which is 27 in this case), the method will return the index of the last character in the line, which is 25.",4,3,3,5,3,5,5,4,4,,,,
+636767121a6d9265ec017b0a,"private int parseEndOfLine(String headerPart,int end){
+  int index=end;
+  for (; ; ) {
+    int offset=headerPart.indexOf('\r',index);
+    if (offset == -1 || offset + 1 >= headerPart.length()) {
+      throw new IllegalStateException(""Expected headers to be terminated by an empty line."");
+    }
+    if (headerPart.charAt(offset + 1) == '\n') {
+      return offset;
+    }
+    index=offset + 1;
+  }
+}
+",gpt-4-turbo,"```java
+/**
+ * Parses the end of a line in a header string, expecting a CRLF (""\r\n"") as the line terminator.
+ *
+ * @param headerPart The string containing the header part to be parsed.
+ * @param end The starting index from which to search for the line terminator.
+ * @return The index of the carriage return character ('\r') where the CRLF sequence starts.
+ * @throws IllegalStateException if the header does not end with a CRLF sequence or if the sequence is incomplete.
+ */
+```","/**
+ * Parses the end of a line in a header string, expecting a CRLF (""\r\n"") as the line terminator.
+ *
+ * @param headerPart The string containing the header part to be parsed.
+ * @param end The starting index from which to search for the line terminator.
+ * @return The index of the carriage return character ('\r') where the CRLF sequence starts.
+ * @throws IllegalStateException if the header does not end with a CRLF sequence or if the sequence is incomplete.
+ */",5,5,4,4,5,5,5,5,4,,,,
+636767121a6d9265ec017b0a,"private int parseEndOfLine(String headerPart,int end){
+  int index=end;
+  for (; ; ) {
+    int offset=headerPart.indexOf('\r',index);
+    if (offset == -1 || offset + 1 >= headerPart.length()) {
+      throw new IllegalStateException(""Expected headers to be terminated by an empty line."");
+    }
+    if (headerPart.charAt(offset + 1) == '\n') {
+      return offset;
+    }
+    index=offset + 1;
+  }
+}
+",CodeLlama-7b-Instruct-hf,"```
+# Docstring for parseEndOfLine(String headerPart, int end)
+
+Parses the end of the header part of an HTTP request.
+
+Parameters:
+
+* headerPart (String): The header part of the HTTP request.
+* end (int): The index of the last character of the header part.
+
+Returns:
+
+* int: The index of the end of the header part, or -1 if the end of the header part was not found.
+
+Throws:
+
+* IllegalStateException: If the headers were not terminated by an empty line.
+
+This method parses the end of the header part of an HTTP request, which is defined as the end of the header part or the end of the line following the end of the header part. The method returns the index of the end of the header part, or -1 if the end of the header part was not found. If the headers were not terminated by an empty line, an IllegalStateException is thrown.
+
+The method uses a loop to search for the end of the header part, starting at the specified index. It searches for the first occurrence of the carriage return character ('\r') and then checks the following character to see if it is a newline character ('\n'). If the end of the header part is found, the method returns the index of the end of the header part. If the end of the header part is not found, the method continues to search for the end of the header part until it is found or until the end of the header part is reached. If the end of the header part is not found, an IllegalStateException is thrown.
+
+This method is used by the HttpRequest class to parse the end of the header part of an HTTP request.
+```","Parses the end of the header part of an HTTP request.
+
+Parameters:
+
+* headerPart (String): The header part of the HTTP request.
+* end (int): The index of the last character of the header part.
+
+Returns:
+
+* int: The index of the end of the header part, or -1 if the end of the header part was not found.
+
+Throws:
+
+* IllegalStateException: If the headers were not terminated by an empty line.
+
+This method parses the end of the header part of an HTTP request, which is defined as the end of the header part or the end of the line following the end of the header part. The method returns the index of the end of the header part, or -1 if the end of the header part was not found. If the headers were not terminated by an empty line, an IllegalStateException is thrown.
+
+The method uses a loop to search for the end of the header part, starting at the specified index. It searches for the first occurrence of the carriage return character ('\r') and then checks the following character to see if it is a newline character ('\n'). If the end of the header part is found, the method returns the index of the end of the header part. If the end of the header part is not found, the method continues to search for the end of the header part until it is found or until the end of the header part is reached. If the end of the header part is not found, an IllegalStateException is thrown.
+
+This method is used by the HttpRequest class to parse the end of the header part of an HTTP request.",2,3,3,2,3,4,2,3,4,,,,
+636767121a6d9265ec017b0a,"private int parseEndOfLine(String headerPart,int end){
+  int index=end;
+  for (; ; ) {
+    int offset=headerPart.indexOf('\r',index);
+    if (offset == -1 || offset + 1 >= headerPart.length()) {
+      throw new IllegalStateException(""Expected headers to be terminated by an empty line."");
+    }
+    if (headerPart.charAt(offset + 1) == '\n') {
+      return offset;
+    }
+    index=offset + 1;
+  }
+}
+",CodeLlama-13b-Instruct-hf,"This method is used to parse the end of a line in a header part of a HTTP request. It takes two arguments:
+
+* `headerPart`: a `String` representing the header part of the HTTP request.
+* `end`: an `int` representing the index of the end of the line to be parsed.
+
+The method returns an `int` representing the index of the end of the line, or -1 if the line is not terminated by an empty line.
+
+The method uses a loop to iterate over the characters in the `headerPart` string, starting from the `end` index. It uses the `indexOf()` method to find the index of the first occurrence of the `\r` character, and then checks if the next character is `\n`. If it is, the method returns the index of the `\r` character. If not, it continues the loop and searches for the next occurrence of `\r` and checks if the next character is `\n`.
+
+If the method reaches the end of the `headerPart` string without finding an empty line, it throws an `IllegalStateException` with the message ""Expected headers to be terminated by an empty line."".
+
+This method is used to parse the headers of a HTTP request, and it is an important part of the HTTP protocol.","This method is used to parse the end of a line in a header part of a HTTP request. It takes two arguments:
+
+* `headerPart`: a `String` representing the header part of the HTTP request.
+* `end`: an `int` representing the index of the end of the line to be parsed.
+
+The method returns an `int` representing the index of the end of the line, or -1 if the line is not terminated by an empty line.
+
+The method uses a loop to iterate over the characters in the `headerPart` string, starting from the `end` index. It uses the `indexOf()` method to find the index of the first occurrence of the `\r` character, and then checks if the next character is `\n`. If it is, the method returns the index of the `\r` character. If not, it continues the loop and searches for the next occurrence of `\r` and checks if the next character is `\n`.
+
+If the method reaches the end of the `headerPart` string without finding an empty line, it throws an `IllegalStateException` with the message ""Expected headers to be terminated by an empty line."".
+
+This method is used to parse the headers of a HTTP request, and it is an important part of the HTTP protocol.",3,3,3,2,3,4,2,3,4,,,,
+636766821a6d9265ec0174bf,"public static String capitalize(String name){
+  if (name == null || name.length() == 0) {
+    return name;
+  }
+  char chars[]=name.toCharArray();
+  chars[0]=Character.toUpperCase(chars[0]);
+  return new String(chars);
+}
+",CodeLlama-7b-Instruct-hf,"```
+/**
+ * Capitalizes the first letter of a given string.
+ *
+ * @param name the string to capitalize
+ * @return the capitalized string
+ * @throws NullPointerException if the given string is null
+ * @throws IllegalArgumentException if the given string is empty
+ */
+public static String capitalize(String name) {
+  // ...
+}
+```
+This docstring provides a brief description of the method's purpose, as well as the parameters and return types. It also includes a few examples of how the method can be used, and a brief explanation of any exceptions that may be thrown.
+
+The `@param` tag is used to describe the parameters of the method, and the `@return` tag is used to describe the return type. The `@throws` tag is used to describe any exceptions that may be thrown by the method.
+
+Overall, this docstring provides a clear and concise description of the method's purpose and usage, which can help other developers understand how to use the method correctly.","/**
+ * Capitalizes the first letter of a given string.
+ *
+ * @param name the string to capitalize
+ * @return the capitalized string
+ * @throws NullPointerException if the given string is null
+ * @throws IllegalArgumentException if the given string is empty
+ */",2,5,5,2,5,5,2,5,5,,,,
+636766821a6d9265ec0174bf,"public static String capitalize(String name){
+  if (name == null || name.length() == 0) {
+    return name;
+  }
+  char chars[]=name.toCharArray();
+  chars[0]=Character.toUpperCase(chars[0]);
+  return new String(chars);
+}
+",CodeLlama-13b-Instruct-hf,"```
+/**
+ * Capitalizes the first letter of a string.
+ *
+ * @param name the string to capitalize
+ * @return the capitalized string
+ */
+public static String capitalize(String name) {
+    if (name == null || name.length() == 0) {
+        return name;
+    }
+    char[] chars = name.toCharArray();
+    chars[0] = Character.toUpperCase(chars[0]);
+    return new String(chars);
+}
+```
+This docstring provides a brief description of the method, including its purpose and any parameters it takes. It also includes a brief explanation of the method's return value.","/**
+ * Capitalizes the first letter of a string.
+ *
+ * @param name the string to capitalize
+ * @return the capitalized string
+ */",4,5,5,4,5,5,3,5,5,,,,
+636766821a6d9265ec0174bf,"public static String capitalize(String name){
+  if (name == null || name.length() == 0) {
+    return name;
+  }
+  char chars[]=name.toCharArray();
+  chars[0]=Character.toUpperCase(chars[0]);
+  return new String(chars);
+}
+",CodeLlama-34b-Instruct-hf,"# Docstring
+
+Capitalizes the first letter of a given string.
+
+* @param name The string to capitalize.
+* @return The capitalized string. If the input string is null or empty, the method returns the original string.","Capitalizes the first letter of a given string.
+
+* @param name The string to capitalize.
+* @return The capitalized string. If the input string is null or empty, the method returns the original string.",5,5,5,5,5,5,5,5,5,,,,
+636766821a6d9265ec0174bf,"public static String capitalize(String name){
+  if (name == null || name.length() == 0) {
+    return name;
+  }
+  char chars[]=name.toCharArray();
+  chars[0]=Character.toUpperCase(chars[0]);
+  return new String(chars);
+}
+",gpt-4-turbo,"```java
+/**
+ * Capitalizes the first character of the given string.
+ * 
+ * This method converts the first character of the input string to uppercase while leaving the rest of the characters unchanged.
+ * If the input string is null or empty, it returns the original string.
+ *
+ * @param name The string to be capitalized.
+ * @return A string with the first character capitalized, or the original string if it is null or empty.
+ */
+```","/**
+ * Capitalizes the first character of the given string.
+ * 
+ * This method converts the first character of the input string to uppercase while leaving the rest of the characters unchanged.
+ * If the input string is null or empty, it returns the original string.
+ *
+ * @param name The string to be capitalized.
+ * @return A string with the first character capitalized, or the original string if it is null or empty.
+ */",4,5,5,5,5,5,5,4,5,,,,
+636766821a6d9265ec0174bf,"public static String capitalize(String name){
+  if (name == null || name.length() == 0) {
+    return name;
+  }
+  char chars[]=name.toCharArray();
+  chars[0]=Character.toUpperCase(chars[0]);
+  return new String(chars);
+}
+",gpt-3.5-turbo,"```java
+/**
+ * Capitalizes the first letter of the input string.
+ * If the input string is null or empty, returns the input string as is.
+ * 
+ * @param name the input string to capitalize
+ * @return the input string with the first letter capitalized
+ */
+```
+","/**
+ * Capitalizes the first letter of the input string.
+ * If the input string is null or empty, returns the input string as is.
+ * 
+ * @param name the input string to capitalize
+ * @return the input string with the first letter capitalized
+ */",4,5,4,5,5,5,5,5,5,,,,
+636766821a6d9265ec0174bf,"public static String capitalize(String name){
+  if (name == null || name.length() == 0) {
+    return name;
+  }
+  char chars[]=name.toCharArray();
+  chars[0]=Character.toUpperCase(chars[0]);
+  return new String(chars);
+}
+",human_written,"/** 
+ * Reverse of Introspector.decapitalize
+ */
+","/** 
+ * Reverse of Introspector.decapitalize
+ */",1,5,2,2,5,3,2,5,2,,,,
+636767021a6d9265ec0178b2,"private void pop(final String descriptor){
+  char firstDescriptorChar=descriptor.charAt(0);
+  if (firstDescriptorChar == '(') {
+    pop((Type.getArgumentsAndReturnSizes(descriptor) >> 2) - 1);
+  }
+ else   if (firstDescriptorChar == 'J' || firstDescriptorChar == 'D') {
+    pop(2);
+  }
+ else {
+    pop(1);
+  }
+}
+",gpt-4-turbo,"```java
+/**
+ * Pops elements from the stack based on the descriptor's first character.
+ * This method is designed to handle different types of data as indicated by the descriptor.
+ * - If the descriptor starts with '(', it calculates the number of arguments in the method descriptor,
+ *   shifts right by 2 bits, subtracts 1, and recursively pops that many elements from the stack.
+ * - If the descriptor starts with 'J' (long) or 'D' (double), it pops two elements from the stack,
+ *   considering the double size of these types.
+ * - For all other types, it pops one element from the stack.
+ *
+ * @param descriptor the string descriptor that indicates the type or method signature to be considered
+ *                   for popping elements from the stack.
+ */
+```","/**
+ * Pops elements from the stack based on the descriptor's first character.
+ * This method is designed to handle different types of data as indicated by the descriptor.
+ * - If the descriptor starts with '(', it calculates the number of arguments in the method descriptor,
+ *   shifts right by 2 bits, subtracts 1, and recursively pops that many elements from the stack.
+ * - If the descriptor starts with 'J' (long) or 'D' (double), it pops two elements from the stack,
+ *   considering the double size of these types.
+ * - For all other types, it pops one element from the stack.
+ *
+ * @param descriptor the string descriptor that indicates the type or method signature to be considered
+ *                   for popping elements from the stack.
+ */",4,4,4,5,5,5,5,5,5,,,,
+636767021a6d9265ec0178b2,"private void pop(final String descriptor){
+  char firstDescriptorChar=descriptor.charAt(0);
+  if (firstDescriptorChar == '(') {
+    pop((Type.getArgumentsAndReturnSizes(descriptor) >> 2) - 1);
+  }
+ else   if (firstDescriptorChar == 'J' || firstDescriptorChar == 'D') {
+    pop(2);
+  }
+ else {
+    pop(1);
+  }
+}
+",human_written,"/** 
+ * Pops as many abstract types from the output frame stack as described by the given descriptor.
+ * @param descriptor a type or method descriptor (in which case its argument types are popped).
+ */
+","/** 
+ * Pops as many abstract types from the output frame stack as described by the given descriptor.
+ * @param descriptor a type or method descriptor (in which case its argument types are popped).
+ */",2,4,3,3,5,4,2,5,3,,,,
+636767021a6d9265ec0178b2,"private void pop(final String descriptor){
+  char firstDescriptorChar=descriptor.charAt(0);
+  if (firstDescriptorChar == '(') {
+    pop((Type.getArgumentsAndReturnSizes(descriptor) >> 2) - 1);
+  }
+ else   if (firstDescriptorChar == 'J' || firstDescriptorChar == 'D') {
+    pop(2);
+  }
+ else {
+    pop(1);
+  }
+}
+",CodeLlama-7b-Instruct-hf,"```
+/**
+ * Pops the top operand or pair of operands from the stack, based on the descriptor.
+ *
+ * @param descriptor the method descriptor
+ */
+private void pop(final String descriptor) {
+  char firstDescriptorChar = descriptor.charAt(0);
+  if (firstDescriptorChar == '(') {
+    pop((Type.getArgumentsAndReturnSizes(descriptor) >> 2) - 1);
+  } else if (firstDescriptorChar == 'J' || firstDescriptorChar == 'D') {
+    pop(2);
+  } else {
+    pop(1);
+  }
+}
+```
+This docstring provides a brief description of the method's purpose and its parameters. It also includes a brief explanation of the method's implementation, which is important for understanding how the method works.
+
+The docstring includes the method's name, `pop`, and its parameter, `descriptor`, which is a `String` that represents the method descriptor. The docstring also includes a brief description of the method's purpose, which is to ""pop the top operand or pair of operands from the stack, based on the descriptor.""
+
+The docstring also includes a brief explanation of the method's implementation, which is important for understanding how the method works. The explanation states that the method first checks the first character of the `descriptor` string, and based on that character, it pops the appropriate number of operands from the stack. If the first character is an opening parenthesis, it pops the number of operands specified in the descriptor, minus one. If the first character is a double or long, it pops two operands. Otherwise, it pops one operand.
+
+Overall, this docstring provides a clear and concise explanation of the method's purpose and its implementation, which is important for understanding how the method works and for using the method effectively.","/**
+ * Pops the top operand or pair of operands from the stack, based on the descriptor.
+ *
+ * @param descriptor the method descriptor
+ */",2,4,4,2,5,3,2,5,4,,,,
+636767021a6d9265ec0178b2,"private void pop(final String descriptor){
+  char firstDescriptorChar=descriptor.charAt(0);
+  if (firstDescriptorChar == '(') {
+    pop((Type.getArgumentsAndReturnSizes(descriptor) >> 2) - 1);
+  }
+ else   if (firstDescriptorChar == 'J' || firstDescriptorChar == 'D') {
+    pop(2);
+  }
+ else {
+    pop(1);
+  }
+}
+",gpt-3.5-turbo,"```java
+/**
+ * Pops the top value(s) from the operand stack based on the given descriptor.
+ * If the descriptor starts with '(', pops the number of arguments and return sizes minus 1.
+ * If the descriptor starts with 'J' or 'D', pops 2 values.
+ * Otherwise, pops 1 value.
+ *
+ * @param descriptor the descriptor indicating the type of values to pop
+ */
+```
+","/**
+ * Pops the top value(s) from the operand stack based on the given descriptor.
+ * If the descriptor starts with '(', pops the number of arguments and return sizes minus 1.
+ * If the descriptor starts with 'J' or 'D', pops 2 values.
+ * Otherwise, pops 1 value.
+ *
+ * @param descriptor the descriptor indicating the type of values to pop
+ */",2,3,2,2,5,4,2,5,3,,,,
+636767021a6d9265ec0178b2,"private void pop(final String descriptor){
+  char firstDescriptorChar=descriptor.charAt(0);
+  if (firstDescriptorChar == '(') {
+    pop((Type.getArgumentsAndReturnSizes(descriptor) >> 2) - 1);
+  }
+ else   if (firstDescriptorChar == 'J' || firstDescriptorChar == 'D') {
+    pop(2);
+  }
+ else {
+    pop(1);
+  }
+}
+",CodeLlama-34b-Instruct-hf,"```
+# Docstring for pop() method
+
+This method is used to pop the top operand stack value.
+
+Parameters:
+
+* descriptor (String): The descriptor of the operand stack value to be popped.
+
+Returns:
+
+* void
+
+Description:
+
+This method checks the first character of the descriptor string to determine the size of the operand stack value to be popped. If the first character is '(', it calls the pop() method recursively with the number of arguments and return values as the argument. If the first character is 'J' or 'D', it pops two values from the operand stack. Otherwise, it pops one value from the operand stack.
+
+This method is used to implement the pop instruction in the Java Virtual Machine (JVM). It is called by the JVM when it encounters a pop instruction in the bytecode.
+```","This method is used to pop the top operand stack value.
+
+Parameters:
+
+* descriptor (String): The descriptor of the operand stack value to be popped.
+
+Returns:
+
+* void
+
+Description:
+
+This method checks the first character of the descriptor string to determine the size of the operand stack value to be popped. If the first character is '(', it calls the pop() method recursively with the number of arguments and return values as the argument. If the first character is 'J' or 'D', it pops two values from the operand stack. Otherwise, it pops one value from the operand stack.
+
+This method is used to implement the pop instruction in the Java Virtual Machine (JVM). It is called by the JVM when it encounters a pop instruction in the bytecode.",2,2,4,2,4,5,2,4,4,,,,
+636767021a6d9265ec0178b2,"private void pop(final String descriptor){
+  char firstDescriptorChar=descriptor.charAt(0);
+  if (firstDescriptorChar == '(') {
+    pop((Type.getArgumentsAndReturnSizes(descriptor) >> 2) - 1);
+  }
+ else   if (firstDescriptorChar == 'J' || firstDescriptorChar == 'D') {
+    pop(2);
+  }
+ else {
+    pop(1);
+  }
+}
+",CodeLlama-13b-Instruct-hf,"This method is used to pop values from the stack based on their descriptor. The descriptor is a string that represents the type of the value, and the method uses this information to determine how many values to pop from the stack.
+
+The method first retrieves the first character of the descriptor string using the `charAt` method. If the first character is an open parenthesis, it means that the value is a method and the method should pop the number of arguments and return values specified in the descriptor. If the first character is a 'J' or a 'D', it means that the value is a long or double, and the method should pop two values from the stack. Otherwise, the method should pop one value from the stack.
+
+This method is used in the `Type.getArgumentsAndReturnSizes` method to determine the number of values to pop from the stack based on the descriptor.","This method is used to pop values from the stack based on their descriptor. The descriptor is a string that represents the type of the value, and the method uses this information to determine how many values to pop from the stack.
+
+The method first retrieves the first character of the descriptor string using the `charAt` method. If the first character is an open parenthesis, it means that the value is a method and the method should pop the number of arguments and return values specified in the descriptor. If the first character is a 'J' or a 'D', it means that the value is a long or double, and the method should pop two values from the stack. Otherwise, the method should pop one value from the stack.
+
+This method is used in the `Type.getArgumentsAndReturnSizes` method to determine the number of values to pop from the stack based on the descriptor.",4,3,4,5,4,5,5,4,4,,,,
+6367677d1a6d9265ec0182fd,"public static boolean toBoolean(String value,boolean dEfault){
+  if (value == null)   return dEfault;
+  String trimmedVal=value.trim();
+  if (""true"".equalsIgnoreCase(trimmedVal))   return true;
+  if (""false"".equalsIgnoreCase(trimmedVal))   return false;
+  return dEfault;
+}
+",CodeLlama-34b-Instruct-hf,"```
+# Docstring:
+
+# Summary:
+This method converts a string value to a boolean value.
+
+# Parameters:
+value: The string value to be converted.
+dEfault: The default value to return if the string value cannot be converted.
+
+# Returns:
+A boolean value representing the converted string value.
+
+# Throws:
+None
+
+# Notes:
+This method trims the input string and compares it to ""true"" and ""false"" (ignoring case) to determine the converted value. If the input string is null or cannot be converted, the default value is returned.
+```","# Summary:
+This method converts a string value to a boolean value.
+
+# Parameters:
+value: The string value to be converted.
+dEfault: The default value to return if the string value cannot be converted.
+
+# Returns:
+A boolean value representing the converted string value.
+
+# Throws:
+None
+
+# Notes:
+This method trims the input string and compares it to ""true"" and ""false"" (ignoring case) to determine the converted value. If the input string is null or cannot be converted, the default value is returned.",5,4,5,5,5,5,5,4,5,,,,
+6367677d1a6d9265ec0182fd,"public static boolean toBoolean(String value,boolean dEfault){
+  if (value == null)   return dEfault;
+  String trimmedVal=value.trim();
+  if (""true"".equalsIgnoreCase(trimmedVal))   return true;
+  if (""false"".equalsIgnoreCase(trimmedVal))   return false;
+  return dEfault;
+}
+",CodeLlama-7b-Instruct-hf,"```
+# Docstring for toBoolean(String value, boolean dEfault)
+
+Converts a string to a boolean value.
+
+Parameters:
+
+* value: The string to be converted.
+* dEfault: The default value to return if the string cannot be converted to a boolean.
+
+Returns:
+
+* The boolean value represented by the string, or the default value if the string is null or cannot be converted to a boolean.
+
+Throws:
+
+* NullPointerException if the value parameter is null.
+
+Examples:
+
+* toBoolean(""true"", false) returns true
+* toBoolean(""false"", true) returns false
+* toBoolean("""", true) returns true
+* toBoolean("""", false) returns false
+* toBoolean(null, true) throws NullPointerException
+```","Converts a string to a boolean value.
+
+Parameters:
+
+* value: The string to be converted.
+* dEfault: The default value to return if the string cannot be converted to a boolean.
+
+Returns:
+
+* The boolean value represented by the string, or the default value if the string is null or cannot be converted to a boolean.
+
+Throws:
+
+* NullPointerException if the value parameter is null.
+
+Examples:
+
+* toBoolean(""true"", false) returns true
+* toBoolean(""false"", true) returns false
+* toBoolean("""", true) returns true
+* toBoolean("""", false) returns false
+* toBoolean(null, true) throws NullPointerException",2,3,3,2,4,5,2,4,5,,,,
+6367677d1a6d9265ec0182fd,"public static boolean toBoolean(String value,boolean dEfault){
+  if (value == null)   return dEfault;
+  String trimmedVal=value.trim();
+  if (""true"".equalsIgnoreCase(trimmedVal))   return true;
+  if (""false"".equalsIgnoreCase(trimmedVal))   return false;
+  return dEfault;
+}
+",gpt-4-turbo,"```java
+/**
+ * Converts a string to a boolean value, with a default fallback.
+ *
+ * This method attempts to convert a provided string into a boolean. It first checks if the string is null,
+ * in which case it returns the default value specified. If not null, the string is trimmed of leading and
+ * trailing whitespace. The method then checks if the trimmed string is ""true"" or ""false"" (case insensitive),
+ * returning true or false respectively. If the string does not match either ""true"" or ""false"", the default
+ * value is returned.
+ *
+ * @param value The string to convert to a boolean.
+ * @param dEfault The default boolean value to return if the string cannot be converted.
+ * @return The boolean value of the string, or the default value if the string cannot be converted.
+ */
+```","/**
+ * Converts a string to a boolean value, with a default fallback.
+ *
+ * This method attempts to convert a provided string into a boolean. It first checks if the string is null,
+ * in which case it returns the default value specified. If not null, the string is trimmed of leading and
+ * trailing whitespace. The method then checks if the trimmed string is ""true"" or ""false"" (case insensitive),
+ * returning true or false respectively. If the string does not match either ""true"" or ""false"", the default
+ * value is returned.
+ *
+ * @param value The string to convert to a boolean.
+ * @param dEfault The default boolean value to return if the string cannot be converted.
+ * @return The boolean value of the string, or the default value if the string cannot be converted.
+ */",4,3,4,5,5,5,5,4,5,,,,
+6367677d1a6d9265ec0182fd,"public static boolean toBoolean(String value,boolean dEfault){
+  if (value == null)   return dEfault;
+  String trimmedVal=value.trim();
+  if (""true"".equalsIgnoreCase(trimmedVal))   return true;
+  if (""false"".equalsIgnoreCase(trimmedVal))   return false;
+  return dEfault;
+}
+",human_written,"/** 
+ * If <code>value</code> is ""true"", then <code>true</code> is returned. If <code>value</code> is ""false"", then <code>true</code> is returned. Otherwise, <code>default</code> is returned. <p>Case of value is unimportant.  
+ */
+","/** 
+ * If <code>value</code> is ""true"", then <code>true</code> is returned. If <code>value</code> is ""false"", then <code>true</code> is returned. Otherwise, <code>default</code> is returned. <p>Case of value is unimportant.  
+ */",2,3,2,2,3,2,2,3,2,,,,
+6367677d1a6d9265ec0182fd,"public static boolean toBoolean(String value,boolean dEfault){
+  if (value == null)   return dEfault;
+  String trimmedVal=value.trim();
+  if (""true"".equalsIgnoreCase(trimmedVal))   return true;
+  if (""false"".equalsIgnoreCase(trimmedVal))   return false;
+  return dEfault;
+}
+",gpt-3.5-turbo,"```java
+/**
+ * Converts the given string value to a boolean. If the value is null, returns the default boolean value provided.
+ * The comparison is case-insensitive for the strings ""true"" and ""false"".
+ *
+ * @param value the string value to convert to boolean
+ * @param dEfault the default boolean value to return if the input value is null
+ * @return the boolean value corresponding to the input string, or the default value if the input is null or not ""true"" or ""false""
+ */
+```
+","/**
+ * Converts the given string value to a boolean. If the value is null, returns the default boolean value provided.
+ * The comparison is case-insensitive for the strings ""true"" and ""false"".
+ *
+ * @param value the string value to convert to boolean
+ * @param dEfault the default boolean value to return if the input value is null
+ * @return the boolean value corresponding to the input string, or the default value if the input is null or not ""true"" or ""false""
+ */",4,4,5,5,5,5,5,5,5,,,,
+6367677d1a6d9265ec0182fd,"public static boolean toBoolean(String value,boolean dEfault){
+  if (value == null)   return dEfault;
+  String trimmedVal=value.trim();
+  if (""true"".equalsIgnoreCase(trimmedVal))   return true;
+  if (""false"".equalsIgnoreCase(trimmedVal))   return false;
+  return dEfault;
+}
+",CodeLlama-13b-Instruct-hf,"```
+/**
+ * Converts a string to a boolean value.
+ *
+ * @param value the string to convert
+ * @param dEfault the default value to return if the string cannot be converted
+ * @return the boolean value of the string, or the default value if the string is null or cannot be converted
+ */
+```","/**
+ * Converts a string to a boolean value.
+ *
+ * @param value the string to convert
+ * @param dEfault the default value to return if the string cannot be converted
+ * @return the boolean value of the string, or the default value if the string is null or cannot be converted
+ */",3,4,5,3,5,5,4,5,5,,,,
+636767861a6d9265ec018440,"public void abbreviate(final int nameStart,final StringBuffer buf){
+  int i=count;
+  for (int pos=buf.indexOf(""."",nameStart); pos != -1; pos=buf.indexOf(""."",pos + 1)) {
+    if (--i == 0) {
+      buf.delete(nameStart,pos + 1);
+      break;
+    }
+  }
+}
+",gpt-3.5-turbo,"```java
+/**
+ * Abbreviates the given StringBuffer by deleting characters starting from the specified index until the count is reached.
+ *
+ * @param nameStart the starting index from which characters should be deleted
+ * @param buf the StringBuffer to be abbreviated
+ */
+```
+","/**
+ * Abbreviates the given StringBuffer by deleting characters starting from the specified index until the count is reached.
+ *
+ * @param nameStart the starting index from which characters should be deleted
+ * @param buf the StringBuffer to be abbreviated
+ */",4,3,4,3,5,3,4,5,5,,,,
+636767861a6d9265ec018440,"public void abbreviate(final int nameStart,final StringBuffer buf){
+  int i=count;
+  for (int pos=buf.indexOf(""."",nameStart); pos != -1; pos=buf.indexOf(""."",pos + 1)) {
+    if (--i == 0) {
+      buf.delete(nameStart,pos + 1);
+      break;
+    }
+  }
+}
+",human_written,"/** 
+ * Abbreviate name.
+ * @param buf buffer to append abbreviation.
+ * @param nameStart start of name to abbreviate.
+ */
+","/** 
+ * Abbreviate name.
+ * @param buf buffer to append abbreviation.
+ * @param nameStart start of name to abbreviate.
+ */",2,4,4,2,5,2,2,5,2,,,,
+636767861a6d9265ec018440,"public void abbreviate(final int nameStart,final StringBuffer buf){
+  int i=count;
+  for (int pos=buf.indexOf(""."",nameStart); pos != -1; pos=buf.indexOf(""."",pos + 1)) {
+    if (--i == 0) {
+      buf.delete(nameStart,pos + 1);
+      break;
+    }
+  }
+}
+",CodeLlama-7b-Instruct-hf,"```
+/**
+ * Abbreviates the name of a person or organization.
+ *
+ * @param nameStart The index of the first character of the name.
+ * @param buf The string buffer containing the name.
+ */
+public void abbreviate(final int nameStart, final StringBuffer buf) {
+  // ...
+}
+```
+This docstring provides a brief description of the method's purpose, which is to abbreviate the name of a person or organization. It also includes the method's parameters, which are the index of the first character of the name and the string buffer containing the name.
+
+The docstring also includes a brief explanation of the method's implementation, which is that it iterates through the string buffer and deletes the first occurrence of a period (""."") after the specified index. The method also has a break statement to stop iterating once the first occurrence of a period is found.
+
+Overall, this docstring provides a clear and concise description of the method's purpose and its parameters, making it easier for other developers to understand the method's behavior and use it effectively.","/**
+ * Abbreviates the name of a person or organization.
+ *
+ * @param nameStart The index of the first character of the name.
+ * @param buf The string buffer containing the name.
+ */",2,3,3,2,5,2,2,5,2,,,,
+636767861a6d9265ec018440,"public void abbreviate(final int nameStart,final StringBuffer buf){
+  int i=count;
+  for (int pos=buf.indexOf(""."",nameStart); pos != -1; pos=buf.indexOf(""."",pos + 1)) {
+    if (--i == 0) {
+      buf.delete(nameStart,pos + 1);
+      break;
+    }
+  }
+}
+",CodeLlama-13b-Instruct-hf,"This method is used to abbreviate a string by removing all characters after the first occurrence of a period (.) character. The method takes two parameters: `nameStart` is the starting index of the string to be abbreviated, and `buf` is the `StringBuffer` object that contains the string to be abbreviated.
+
+The method first initializes a counter variable `i` to the number of characters in the string, and then iterates over the string using the `indexOf()` method to find the first occurrence of a period character. If a period character is found, the method deletes all characters after the period character and breaks out of the loop. If no period character is found, the method does nothing.
+
+This method is useful for abbreviating strings that contain multiple periods, such as file paths or URLs. It can be used to remove unnecessary information from the string and make it more concise.","This method is used to abbreviate a string by removing all characters after the first occurrence of a period (.) character. The method takes two parameters: `nameStart` is the starting index of the string to be abbreviated, and `buf` is the `StringBuffer` object that contains the string to be abbreviated.
+
+The method first initializes a counter variable `i` to the number of characters in the string, and then iterates over the string using the `indexOf()` method to find the first occurrence of a period character. If a period character is found, the method deletes all characters after the period character and breaks out of the loop. If no period character is found, the method does nothing.
+
+This method is useful for abbreviating strings that contain multiple periods, such as file paths or URLs. It can be used to remove unnecessary information from the string and make it more concise.",4,4,4,5,4,5,5,4,5,,,,
+636767861a6d9265ec018440,"public void abbreviate(final int nameStart,final StringBuffer buf){
+  int i=count;
+  for (int pos=buf.indexOf(""."",nameStart); pos != -1; pos=buf.indexOf(""."",pos + 1)) {
+    if (--i == 0) {
+      buf.delete(nameStart,pos + 1);
+      break;
+    }
+  }
+}
+",gpt-4-turbo,"```java
+/**
+ * Abbreviates a fully qualified name in the StringBuffer by removing elements to leave only the specified number of trailing name components.
+ * 
+ * @param nameStart The starting index in the StringBuffer from where the abbreviation should begin.
+ * @param buf The StringBuffer containing the name to be abbreviated.
+ * 
+ * This method modifies the StringBuffer by finding periods (.) starting from the specified index, and removes all characters up to the last 'count' segments of the name.
+ * For example, if the buffer contains ""com.example.project.ClassName"" and nameStart is 0 with count set to 2, the buffer would be modified to ""project.ClassName"".
+ */
+```","/**
+ * Abbreviates a fully qualified name in the StringBuffer by removing elements to leave only the specified number of trailing name components.
+ * 
+ * @param nameStart The starting index in the StringBuffer from where the abbreviation should begin.
+ * @param buf The StringBuffer containing the name to be abbreviated.
+ * 
+ * This method modifies the StringBuffer by finding periods (.) starting from the specified index, and removes all characters up to the last 'count' segments of the name.
+ * For example, if the buffer contains ""com.example.project.ClassName"" and nameStart is 0 with count set to 2, the buffer would be modified to ""project.ClassName"".
+ */",5,4,4,4,4,5,5,4,5,,,,
+636767861a6d9265ec018440,"public void abbreviate(final int nameStart,final StringBuffer buf){
+  int i=count;
+  for (int pos=buf.indexOf(""."",nameStart); pos != -1; pos=buf.indexOf(""."",pos + 1)) {
+    if (--i == 0) {
+      buf.delete(nameStart,pos + 1);
+      break;
+    }
+  }
+}
+",CodeLlama-34b-Instruct-hf,"```
+# Docstring
+
+This method abbreviates a string by removing all but the first letter of each word, separated by a dot.
+
+Parameters:
+
+* `nameStart`: The starting position of the string to be abbreviated.
+* `buf`: The string buffer containing the string to be abbreviated.
+
+Returns:
+
+* `void`: This method does not return any value.
+
+Throws:
+
+* `NullPointerException`: If the `buf` parameter is null.
+* `IndexOutOfBoundsException`: If the `nameStart` parameter is negative or greater than the length of the string in the `buf` parameter.
+```","This method abbreviates a string by removing all but the first letter of each word, separated by a dot.
+
+Parameters:
+
+* `nameStart`: The starting position of the string to be abbreviated.
+* `buf`: The string buffer containing the string to be abbreviated.
+
+Returns:
+
+* `void`: This method does not return any value.
+
+Throws:
+
+* `NullPointerException`: If the `buf` parameter is null.
+* `IndexOutOfBoundsException`: If the `nameStart` parameter is negative or greater than the length of the string in the `buf` parameter.",2,3,3,2,5,5,2,4,5,,,,
+636766a81a6d9265ec017595,"final ByteVector put11(final int byteValue1,final int byteValue2){
+  int currentLength=length;
+  if (currentLength + 2 > data.length) {
+    enlarge(2);
+  }
+  byte[] currentData=data;
+  currentData[currentLength++]=(byte)byteValue1;
+  currentData[currentLength++]=(byte)byteValue2;
+  length=currentLength;
+  return this;
+}
+",gpt-4-turbo,"```java
+/**
+ * Appends two bytes to the ByteVector.
+ * This method takes two integer values, casts them to bytes, and appends them to the ByteVector.
+ * If the ByteVector does not have enough capacity, it is enlarged by 2 bytes.
+ *
+ * @param byteValue1 The first integer value to be converted to byte and added to the ByteVector.
+ * @param byteValue2 The second integer value to be converted to byte and added to the ByteVector.
+ * @return The ByteVector instance with the new bytes added.
+ */
+```","/**
+ * Appends two bytes to the ByteVector.
+ * This method takes two integer values, casts them to bytes, and appends them to the ByteVector.
+ * If the ByteVector does not have enough capacity, it is enlarged by 2 bytes.
+ *
+ * @param byteValue1 The first integer value to be converted to byte and added to the ByteVector.
+ * @param byteValue2 The second integer value to be converted to byte and added to the ByteVector.
+ * @return The ByteVector instance with the new bytes added.
+ */",4,4,4,5,5,5,5,4,5,,,,
+636766a81a6d9265ec017595,"final ByteVector put11(final int byteValue1,final int byteValue2){
+  int currentLength=length;
+  if (currentLength + 2 > data.length) {
+    enlarge(2);
+  }
+  byte[] currentData=data;
+  currentData[currentLength++]=(byte)byteValue1;
+  currentData[currentLength++]=(byte)byteValue2;
+  length=currentLength;
+  return this;
+}
+",gpt-3.5-turbo,"```java
+/**
+ * Appends two byte values to the ByteVector, enlarging the underlying data array if necessary.
+ * 
+ * @param byteValue1 the first byte value to append
+ * @param byteValue2 the second byte value to append
+ * @return the updated ByteVector instance
+ */
+```
+","/**
+ * Appends two byte values to the ByteVector, enlarging the underlying data array if necessary.
+ * 
+ * @param byteValue1 the first byte value to append
+ * @param byteValue2 the second byte value to append
+ * @return the updated ByteVector instance
+ */",3,4,4,5,5,5,4,5,5,,,,
+636766a81a6d9265ec017595,"final ByteVector put11(final int byteValue1,final int byteValue2){
+  int currentLength=length;
+  if (currentLength + 2 > data.length) {
+    enlarge(2);
+  }
+  byte[] currentData=data;
+  currentData[currentLength++]=(byte)byteValue1;
+  currentData[currentLength++]=(byte)byteValue2;
+  length=currentLength;
+  return this;
+}
+",human_written,"/** 
+ * Puts two bytes into this byte vector. The byte vector is automatically enlarged if necessary.
+ * @param byteValue1 a byte.
+ * @param byteValue2 another byte.
+ * @return this byte vector.
+ */
+","/** 
+ * Puts two bytes into this byte vector. The byte vector is automatically enlarged if necessary.
+ * @param byteValue1 a byte.
+ * @param byteValue2 another byte.
+ * @return this byte vector.
+ */",3,3,4,5,5,5,4,5,5,,,,
+636766a81a6d9265ec017595,"final ByteVector put11(final int byteValue1,final int byteValue2){
+  int currentLength=length;
+  if (currentLength + 2 > data.length) {
+    enlarge(2);
+  }
+  byte[] currentData=data;
+  currentData[currentLength++]=(byte)byteValue1;
+  currentData[currentLength++]=(byte)byteValue2;
+  length=currentLength;
+  return this;
+}
+",CodeLlama-7b-Instruct-hf,"```
+/**
+ * Appends two bytes to the end of the ByteVector.
+ *
+ * @param byteValue1 the first byte to append
+ * @param byteValue2 the second byte to append
+ * @return this ByteVector, for chaining
+ * @throws IndexOutOfBoundsException if the ByteVector is full
+ */
+final ByteVector put11(final int byteValue1, final int byteValue2) {
+  // ...
+}
+```
+This docstring provides a brief description of the method's purpose and its parameters. It also includes a brief description of the method's return value and any exceptions that may be thrown.
+
+The `@param` tags are used to describe the parameters of the method, and the `@return` tag is used to describe the return value. The `@throws` tag is used to describe any exceptions that may be thrown by the method.
+
+The docstring also includes a brief description of the method's purpose, which is to append two bytes to the end of the ByteVector. This description is written in a way that is easy to understand for developers who may not be familiar with the method.","/**
+ * Appends two bytes to the end of the ByteVector.
+ *
+ * @param byteValue1 the first byte to append
+ * @param byteValue2 the second byte to append
+ * @return this ByteVector, for chaining
+ * @throws IndexOutOfBoundsException if the ByteVector is full
+ */",2,3,4,2,5,5,2,5,5,,,,
+636766a81a6d9265ec017595,"final ByteVector put11(final int byteValue1,final int byteValue2){
+  int currentLength=length;
+  if (currentLength + 2 > data.length) {
+    enlarge(2);
+  }
+  byte[] currentData=data;
+  currentData[currentLength++]=(byte)byteValue1;
+  currentData[currentLength++]=(byte)byteValue2;
+  length=currentLength;
+  return this;
+}
+",CodeLlama-13b-Instruct-hf,"```
+/**
+ * Appends two bytes to the end of the byte vector.
+ *
+ * @param byteValue1 the first byte to append
+ * @param byteValue2 the second byte to append
+ * @return this byte vector
+ * @throws ArrayIndexOutOfBoundsException if the byte vector is too small to hold the two bytes
+ */
+final ByteVector put11(final int byteValue1, final int byteValue2) {
+  ...
+}
+```
+This docstring provides a brief description of the method, including its purpose and the parameters it takes. It also mentions the return type and any potential exceptions that may be thrown.","/**
+ * Appends two bytes to the end of the byte vector.
+ *
+ * @param byteValue1 the first byte to append
+ * @param byteValue2 the second byte to append
+ * @return this byte vector
+ * @throws ArrayIndexOutOfBoundsException if the byte vector is too small to hold the two bytes
+ */",2,4,4,2,5,5,2,5,5,,,,
+636766a81a6d9265ec017595,"final ByteVector put11(final int byteValue1,final int byteValue2){
+  int currentLength=length;
+  if (currentLength + 2 > data.length) {
+    enlarge(2);
+  }
+  byte[] currentData=data;
+  currentData[currentLength++]=(byte)byteValue1;
+  currentData[currentLength++]=(byte)byteValue2;
+  length=currentLength;
+  return this;
+}
+",CodeLlama-34b-Instruct-hf,"# Docstring
+
+/**
+ * Appends two bytes to the end of the ByteVector.
+ *
+ * @param byteValue1 the first byte to append
+ * @param byteValue2 the second byte to append
+ * @return the updated ByteVector
+ */
+final ByteVector put11(final int byteValue1, final int byteValue2) {
+  // ...
+}","/**
+ * Appends two bytes to the end of the ByteVector.
+ *
+ * @param byteValue1 the first byte to append
+ * @param byteValue2 the second byte to append
+ * @return the updated ByteVector
+ */",3,4,4,3,5,5,3,5,5,,,,
+636766fa1a6d9265ec0177a4,"public static Double[] toObject(final double[] array){
+  if (array == null) {
+    return null;
+  }
+ else   if (array.length == 0) {
+    return ArrayUtils.EMPTY_DOUBLE_OBJECT_ARRAY;
+  }
+  final Double[] result=new Double[array.length];
+  for (int i=0; i < array.length; i++) {
+    result[i]=new Double(array[i]);
+  }
+  return result;
+}
+",gpt-3.5-turbo,"```java
+/**
+ * Converts a primitive double array to an array of Double objects.
+ * If the input array is null, returns null.
+ * If the input array is empty, returns an empty Double array.
+ * 
+ * @param array the primitive double array to convert
+ * @return an array of Double objects corresponding to the input array
+ */
+```
+","/**
+ * Converts a primitive double array to an array of Double objects.
+ * If the input array is null, returns null.
+ * If the input array is empty, returns an empty Double array.
+ * 
+ * @param array the primitive double array to convert
+ * @return an array of Double objects corresponding to the input array
+ */",5,5,5,5,5,5,5,5,5,,,,
+636766fa1a6d9265ec0177a4,"public static Double[] toObject(final double[] array){
+  if (array == null) {
+    return null;
+  }
+ else   if (array.length == 0) {
+    return ArrayUtils.EMPTY_DOUBLE_OBJECT_ARRAY;
+  }
+  final Double[] result=new Double[array.length];
+  for (int i=0; i < array.length; i++) {
+    result[i]=new Double(array[i]);
+  }
+  return result;
+}
+",CodeLlama-13b-Instruct-hf,"```
+/**
+ * Converts a double array to a Double array.
+ *
+ * @param array the double array to convert
+ * @return a Double array containing the same values as the input array, or null if the input array is null
+ */
+public static Double[] toObject(final double[] array) {
+    // ...
+}
+```
+This docstring provides a brief description of the method, including its purpose and the parameters it takes. It also includes a return value, which is a Double array containing the same values as the input array. The docstring is written in a format that is compatible with JavaDoc, which is a tool used to generate documentation for Java code.","/**
+ * Converts a double array to a Double array.
+ *
+ * @param array the double array to convert
+ * @return a Double array containing the same values as the input array, or null if the input array is null
+ */",4,5,5,4,5,5,4,5,5,,,,
+636766fa1a6d9265ec0177a4,"public static Double[] toObject(final double[] array){
+  if (array == null) {
+    return null;
+  }
+ else   if (array.length == 0) {
+    return ArrayUtils.EMPTY_DOUBLE_OBJECT_ARRAY;
+  }
+  final Double[] result=new Double[array.length];
+  for (int i=0; i < array.length; i++) {
+    result[i]=new Double(array[i]);
+  }
+  return result;
+}
+",CodeLlama-7b-Instruct-hf,"```
+# Docstring for toObject(double[])
+
+Converts a double array to an array of Double objects.
+
+Parameters:
+
+* array: the double array to convert
+
+Returns:
+
+* an array of Double objects, or null if the input array is null
+
+Throws:
+
+* NullPointerException if the input array is null
+
+Example:
+
+```
+double[] doubleArray = {1.0, 2.0, 3.0};
+Double[] doubleObjectArray = ArrayUtils.toObject(doubleArray);
+```
+```
+
+This docstring provides a brief description of the method's purpose, its parameters, and its return value. It also includes a brief example of how to use the method.","Converts a double array to an array of Double objects.
+
+Parameters:
+
+* array: the double array to convert
+
+Returns:
+
+* an array of Double objects, or null if the input array is null
+
+Throws:
+
+* NullPointerException if the input array is null
+
+Example:
+
+```
+double[] doubleArray = {1.0, 2.0, 3.0};
+Double[] doubleObjectArray = ArrayUtils.toObject(doubleArray);
+```
+```
+
+This docstring provides a brief description of the method's purpose, its parameters, and its return value. It also includes a brief example of how to use the method.",2,3,4,2,4,5,2,3,5,,,,
+636766fa1a6d9265ec0177a4,"public static Double[] toObject(final double[] array){
+  if (array == null) {
+    return null;
+  }
+ else   if (array.length == 0) {
+    return ArrayUtils.EMPTY_DOUBLE_OBJECT_ARRAY;
+  }
+  final Double[] result=new Double[array.length];
+  for (int i=0; i < array.length; i++) {
+    result[i]=new Double(array[i]);
+  }
+  return result;
+}
+",CodeLlama-34b-Instruct-hf,"# Docstring
+
+/**
+ * Converts a primitive double array to an object Double array.
+ *
+ * @param array the primitive double array to convert
+ * @return the converted object Double array, or null if the input array is null
+ * @throws NullPointerException if the input array is null
+ */
+public static Double[] toObject(final double[] array) {
+  // ...
+}","/**
+ * Converts a primitive double array to an object Double array.
+ *
+ * @param array the primitive double array to convert
+ * @return the converted object Double array, or null if the input array is null
+ * @throws NullPointerException if the input array is null
+ */",2,4,4,2,5,5,2,5,5,,,,
+636766fa1a6d9265ec0177a4,"public static Double[] toObject(final double[] array){
+  if (array == null) {
+    return null;
+  }
+ else   if (array.length == 0) {
+    return ArrayUtils.EMPTY_DOUBLE_OBJECT_ARRAY;
+  }
+  final Double[] result=new Double[array.length];
+  for (int i=0; i < array.length; i++) {
+    result[i]=new Double(array[i]);
+  }
+  return result;
+}
+",gpt-4-turbo,"```java
+/**
+ * Converts a primitive double array to an array of Double objects.
+ *
+ * This method takes a primitive double array as input and converts it into an array of Double objects.
+ * If the input array is null, the method returns null. If the input array is empty, it returns an empty
+ * Double array. Otherwise, it creates a new Double array of the same length as the input array, copies
+ * each double value into a corresponding Double object, and returns the new array.
+ *
+ * @param array the array of primitive double types to be converted.
+ * @return an array of Double objects corresponding to the input array; or null if the input array is null.
+ */
+```","/**
+ * Converts a primitive double array to an array of Double objects.
+ *
+ * This method takes a primitive double array as input and converts it into an array of Double objects.
+ * If the input array is null, the method returns null. If the input array is empty, it returns an empty
+ * Double array. Otherwise, it creates a new Double array of the same length as the input array, copies
+ * each double value into a corresponding Double object, and returns the new array.
+ *
+ * @param array the array of primitive double types to be converted.
+ * @return an array of Double objects corresponding to the input array; or null if the input array is null.
+ */",5,5,4,5,4,5,5,3,5,,,,
+636766fa1a6d9265ec0177a4,"public static Double[] toObject(final double[] array){
+  if (array == null) {
+    return null;
+  }
+ else   if (array.length == 0) {
+    return ArrayUtils.EMPTY_DOUBLE_OBJECT_ARRAY;
+  }
+  final Double[] result=new Double[array.length];
+  for (int i=0; i < array.length; i++) {
+    result[i]=new Double(array[i]);
+  }
+  return result;
+}
+",human_written,"/** 
+ * <p>Converts an array of primitive doubles to objects.</p> <p>This method returns <code>null</code> for a <code>null</code> input array.</p>
+ * @param array  a <code>double</code> array
+ * @return a <code>Double</code> array, <code>null</code> if null array input
+ */
+","/** 
+ * <p>Converts an array of primitive doubles to objects.</p> <p>This method returns <code>null</code> for a <code>null</code> input array.</p>
+ * @param array  a <code>double</code> array
+ * @return a <code>Double</code> array, <code>null</code> if null array input
+ */",3,4,3,4,5,5,3,4,3,,,,
+636766fa1a6d9265ec01779c,"private String parseToken(final char[] terminators){
+  char ch;
+  i1=pos;
+  i2=pos;
+  while (hasChar()) {
+    ch=chars[pos];
+    if (isOneOf(ch,terminators)) {
+      break;
+    }
+    i2++;
+    pos++;
+  }
+  return getToken(false);
+}
+",human_written,"/** 
+ * Parses out a token until any of the given terminators is encountered.
+ * @param terminators the array of terminating characters. Any of these characters when encountered signify the end of the token
+ * @return the token
+ */
+","/** 
+ * Parses out a token until any of the given terminators is encountered.
+ * @param terminators the array of terminating characters. Any of these characters when encountered signify the end of the token
+ * @return the token
+ */",3,4,4,4,5,5,3,4,4,,,,
+636766fa1a6d9265ec01779c,"private String parseToken(final char[] terminators){
+  char ch;
+  i1=pos;
+  i2=pos;
+  while (hasChar()) {
+    ch=chars[pos];
+    if (isOneOf(ch,terminators)) {
+      break;
+    }
+    i2++;
+    pos++;
+  }
+  return getToken(false);
+}
+",CodeLlama-34b-Instruct-hf,"# Docstring
+
+Parses a token from the current position in the input string, using the given terminators.
+
+The method starts by initializing two variables, `i1` and `i2`, to the current position in the input string. It then enters a loop that continues until a terminator character is found or the end of the input string is reached.
+
+Inside the loop, the method checks if the current character is one of the terminators. If it is, the loop is exited and the method returns the token that was parsed.
+
+If the current character is not a terminator, the method increments the position in the input string and continues the loop.
+
+Once the loop is exited, the method returns the token that was parsed.
+
+Parameters:
+
+* `terminators`: An array of characters that serve as terminators for the token.
+
+Returns:
+
+* A string representing the token that was parsed.","Parses a token from the current position in the input string, using the given terminators.
+
+The method starts by initializing two variables, `i1` and `i2`, to the current position in the input string. It then enters a loop that continues until a terminator character is found or the end of the input string is reached.
+
+Inside the loop, the method checks if the current character is one of the terminators. If it is, the loop is exited and the method returns the token that was parsed.
+
+If the current character is not a terminator, the method increments the position in the input string and continues the loop.
+
+Once the loop is exited, the method returns the token that was parsed.
+
+Parameters:
+
+* `terminators`: An array of characters that serve as terminators for the token.
+
+Returns:
+
+* A string representing the token that was parsed.",5,4,4,5,5,4,5,4,4,,,,
+636766fa1a6d9265ec01779c,"private String parseToken(final char[] terminators){
+  char ch;
+  i1=pos;
+  i2=pos;
+  while (hasChar()) {
+    ch=chars[pos];
+    if (isOneOf(ch,terminators)) {
+      break;
+    }
+    i2++;
+    pos++;
+  }
+  return getToken(false);
+}
+",gpt-3.5-turbo,"```java
+/**
+ * Parses a token from the input character array until one of the specified terminators is encountered.
+ * 
+ * @param terminators an array of characters that indicate the end of the token
+ * @return the parsed token as a String
+ */
+```
+","/**
+ * Parses a token from the input character array until one of the specified terminators is encountered.
+ * 
+ * @param terminators an array of characters that indicate the end of the token
+ * @return the parsed token as a String
+ */",2,5,5,2,5,4,3,5,5,,,,
+636766fa1a6d9265ec01779c,"private String parseToken(final char[] terminators){
+  char ch;
+  i1=pos;
+  i2=pos;
+  while (hasChar()) {
+    ch=chars[pos];
+    if (isOneOf(ch,terminators)) {
+      break;
+    }
+    i2++;
+    pos++;
+  }
+  return getToken(false);
+}
+",CodeLlama-7b-Instruct-hf,"```
+/**
+ * Parses a token from the input string, stopping at the first occurrence of any of the specified terminators.
+ *
+ * @param terminators The set of characters that terminate the token.
+ * @return The parsed token, or null if no token could be found.
+ */
+private String parseToken(final char[] terminators) {
+  // ...
+}
+```
+This docstring provides a brief description of the method's purpose and its parameters. It also includes a brief explanation of what the method does, and what it returns.
+
+The `@param` tag is used to document the `terminators` parameter, which is a set of characters that terminate the token.
+
+The `@return` tag is used to document the method's return value, which is the parsed token, or null if no token could be found.
+
+Overall, this docstring provides a clear and concise description of the method's purpose and its behavior, which can help other developers understand how the method works and how to use it correctly.","/**
+ * Parses a token from the input string, stopping at the first occurrence of any of the specified terminators.
+ *
+ * @param terminators The set of characters that terminate the token.
+ * @return The parsed token, or null if no token could be found.
+ */",2,5,5,2,5,4,3,5,5,,,,
+636766fa1a6d9265ec01779c,"private String parseToken(final char[] terminators){
+  char ch;
+  i1=pos;
+  i2=pos;
+  while (hasChar()) {
+    ch=chars[pos];
+    if (isOneOf(ch,terminators)) {
+      break;
+    }
+    i2++;
+    pos++;
+  }
+  return getToken(false);
+}
+",CodeLlama-13b-Instruct-hf,"This method is used to parse a token from a character array. It takes a character array as input and returns a string representing the parsed token.
+
+The method uses a while loop to iterate over the characters in the input array, starting from the current position (pos). It checks each character to see if it is one of the terminators passed in as a parameter. If it is, the method breaks out of the loop and returns the token.
+
+The method also keeps track of the starting and ending positions of the token in the input array, using the variables i1 and i2. These positions are used to extract the token from the input array and return it as a string.
+
+Overall, this method is used to parse a token from a character array, taking into account the terminators passed in as a parameter. It is a private method, so it is not intended to be called directly by other classes.","This method is used to parse a token from a character array. It takes a character array as input and returns a string representing the parsed token.
+
+The method uses a while loop to iterate over the characters in the input array, starting from the current position (pos). It checks each character to see if it is one of the terminators passed in as a parameter. If it is, the method breaks out of the loop and returns the token.
+
+The method also keeps track of the starting and ending positions of the token in the input array, using the variables i1 and i2. These positions are used to extract the token from the input array and return it as a string.
+
+Overall, this method is used to parse a token from a character array, taking into account the terminators passed in as a parameter. It is a private method, so it is not intended to be called directly by other classes.",5,3,4,5,4,5,5,4,5,,,,
+636766fa1a6d9265ec01779c,"private String parseToken(final char[] terminators){
+  char ch;
+  i1=pos;
+  i2=pos;
+  while (hasChar()) {
+    ch=chars[pos];
+    if (isOneOf(ch,terminators)) {
+      break;
+    }
+    i2++;
+    pos++;
+  }
+  return getToken(false);
+}
+",gpt-4-turbo,"```java
+/**
+ * Extracts a token from the input character array up to any of the specified terminators.
+ * This method parses characters starting from the current position (`pos`) in the global `chars` array,
+ * and continues until it encounters any character that is part of the `terminators` array.
+ * The method updates the position (`pos`) to point to the character after the last parsed character.
+ *
+ * @param terminators An array of characters that signify the end of the token.
+ * @return A string representing the token parsed from the character array, excluding the terminator.
+ *         The token extraction is handled by the `getToken(boolean)` method.
+ */
+```","/**
+ * Extracts a token from the input character array up to any of the specified terminators.
+ * This method parses characters starting from the current position (`pos`) in the global `chars` array,
+ * and continues until it encounters any character that is part of the `terminators` array.
+ * The method updates the position (`pos`) to point to the character after the last parsed character.
+ *
+ * @param terminators An array of characters that signify the end of the token.
+ * @return A string representing the token parsed from the character array, excluding the terminator.
+ *         The token extraction is handled by the `getToken(boolean)` method.
+ */",3,4,4,4,5,3,5,5,5,,,,
+636767e01a6d9265ec018755,"private Map<String,Object> buildContent(JsonObject jsonObject){
+  Map<String,Object> content=new HashMap<>();
+  content.put(""msg_type"",jsonObject.get(""msg_type"").getAsString());
+  if (jsonObject.get(""ats"") != null) {
+    String ats=jsonObject.get(""ats"").getAsString();
+    String text=jsonObject.get(""content"").getAsJsonObject().get(""text"").getAsString();
+    List<String> collect=Arrays.stream(ats.split("","")).map(String::trim).collect(Collectors.toList());
+    for (    String userId : collect) {
+      text+=""<at user_id=\"""" + userId + ""\""></at>"";
+    }
+    jsonObject.get(""content"").getAsJsonObject().addProperty(""text"",text);
+  }
+  content.put(""content"",jsonObject.get(""content"").getAsJsonObject());
+  return content;
+}
+",gpt-4-turbo,"```java
+/**
+ * Constructs a content map from a given JSON object.
+ * 
+ * This method extracts the message type and content from the provided JSON object.
+ * If the JSON object contains ""ats"" (mentions), it processes them by appending
+ * special tags to the text content for each mentioned user. The method assumes
+ * that the ""ats"" field contains user IDs separated by commas. Each user ID is
+ * wrapped in an ""<at>"" tag and appended to the original text content.
+ * 
+ * @param jsonObject The JSON object containing the necessary data to build the content map.
+ * @return A map with keys ""msg_type"" and ""content"", where ""msg_type"" is a string
+ *         and ""content"" is a JSON object potentially modified with user mentions.
+ * @throws NullPointerException if jsonObject is null or essential fields are missing in the JSON object.
+ */
+```","/**
+ * Constructs a content map from a given JSON object.
+ * 
+ * This method extracts the message type and content from the provided JSON object.
+ * If the JSON object contains ""ats"" (mentions), it processes them by appending
+ * special tags to the text content for each mentioned user. The method assumes
+ * that the ""ats"" field contains user IDs separated by commas. Each user ID is
+ * wrapped in an ""<at>"" tag and appended to the original text content.
+ * 
+ * @param jsonObject The JSON object containing the necessary data to build the content map.
+ * @return A map with keys ""msg_type"" and ""content"", where ""msg_type"" is a string
+ *         and ""content"" is a JSON object potentially modified with user mentions.
+ * @throws NullPointerException if jsonObject is null or essential fields are missing in the JSON object.
+ */",4,3,4,5,5,5,5,4,4,,,,
+636767e01a6d9265ec018755,"private Map<String,Object> buildContent(JsonObject jsonObject){
+  Map<String,Object> content=new HashMap<>();
+  content.put(""msg_type"",jsonObject.get(""msg_type"").getAsString());
+  if (jsonObject.get(""ats"") != null) {
+    String ats=jsonObject.get(""ats"").getAsString();
+    String text=jsonObject.get(""content"").getAsJsonObject().get(""text"").getAsString();
+    List<String> collect=Arrays.stream(ats.split("","")).map(String::trim).collect(Collectors.toList());
+    for (    String userId : collect) {
+      text+=""<at user_id=\"""" + userId + ""\""></at>"";
+    }
+    jsonObject.get(""content"").getAsJsonObject().addProperty(""text"",text);
+  }
+  content.put(""content"",jsonObject.get(""content"").getAsJsonObject());
+  return content;
+}
+",gpt-3.5-turbo,"```java
+/**
+ * Builds and returns a Map containing processed content based on the provided JsonObject.
+ * 
+ * @param jsonObject the input JsonObject containing message type, mentions, and content
+ * @return a Map<String, Object> with processed content including message type and updated content
+ */
+```
+","/**
+ * Builds and returns a Map containing processed content based on the provided JsonObject.
+ * 
+ * @param jsonObject the input JsonObject containing message type, mentions, and content
+ * @return a Map<String, Object> with processed content including message type and updated content
+ */",3,5,5,3,5,5,3,5,5,,,,
+636767e01a6d9265ec018755,"private Map<String,Object> buildContent(JsonObject jsonObject){
+  Map<String,Object> content=new HashMap<>();
+  content.put(""msg_type"",jsonObject.get(""msg_type"").getAsString());
+  if (jsonObject.get(""ats"") != null) {
+    String ats=jsonObject.get(""ats"").getAsString();
+    String text=jsonObject.get(""content"").getAsJsonObject().get(""text"").getAsString();
+    List<String> collect=Arrays.stream(ats.split("","")).map(String::trim).collect(Collectors.toList());
+    for (    String userId : collect) {
+      text+=""<at user_id=\"""" + userId + ""\""></at>"";
+    }
+    jsonObject.get(""content"").getAsJsonObject().addProperty(""text"",text);
+  }
+  content.put(""content"",jsonObject.get(""content"").getAsJsonObject());
+  return content;
+}
+",CodeLlama-34b-Instruct-hf,"This method takes a `JsonObject` as input and returns a `Map<String,Object>` containing the parsed content of the JSON object. The method first extracts the `msg_type` field from the JSON object and adds it to the map. If the JSON object contains an `ats` field, the method parses the `ats` field and adds the parsed content to the map. The method then returns the map.
+
+The method uses the `getAsString()` method to extract the `msg_type` field from the JSON object, and the `getAsJsonObject()` method to extract the `content` field. The `getAsJsonObject()` method is used to extract the `text` field from the `content` field, and the `getAsString()` method is used to extract the `ats` field from the `content` field.
+
+The method also uses the `Arrays.stream()` method to create a stream of the `ats` field, and the `map()` method to create a new stream of the `ats` field with the `String::trim` method applied to each element. The `collect()` method is used to collect the elements of the stream into a `List<String>`.
+
+The method then uses a `for` loop to iterate over the `collect` list and add the parsed content to the map. The `text` field is updated with the parsed content, and the `content` field is updated with the new `text` field.
+
+The method returns the map containing the parsed content of the JSON object.","This method takes a `JsonObject` as input and returns a `Map<String,Object>` containing the parsed content of the JSON object. The method first extracts the `msg_type` field from the JSON object and adds it to the map. If the JSON object contains an `ats` field, the method parses the `ats` field and adds the parsed content to the map. The method then returns the map.
+
+The method uses the `getAsString()` method to extract the `msg_type` field from the JSON object, and the `getAsJsonObject()` method to extract the `content` field. The `getAsJsonObject()` method is used to extract the `text` field from the `content` field, and the `getAsString()` method is used to extract the `ats` field from the `content` field.
+
+The method also uses the `Arrays.stream()` method to create a stream of the `ats` field, and the `map()` method to create a new stream of the `ats` field with the `String::trim` method applied to each element. The `collect()` method is used to collect the elements of the stream into a `List<String>`.
+
+The method then uses a `for` loop to iterate over the `collect` list and add the parsed content to the map. The `text` field is updated with the parsed content, and the `content` field is updated with the new `text` field.
+
+The method returns the map containing the parsed content of the JSON object.",5,5,4,5,4,5,5,4,5,,,,
+636767e01a6d9265ec018755,"private Map<String,Object> buildContent(JsonObject jsonObject){
+  Map<String,Object> content=new HashMap<>();
+  content.put(""msg_type"",jsonObject.get(""msg_type"").getAsString());
+  if (jsonObject.get(""ats"") != null) {
+    String ats=jsonObject.get(""ats"").getAsString();
+    String text=jsonObject.get(""content"").getAsJsonObject().get(""text"").getAsString();
+    List<String> collect=Arrays.stream(ats.split("","")).map(String::trim).collect(Collectors.toList());
+    for (    String userId : collect) {
+      text+=""<at user_id=\"""" + userId + ""\""></at>"";
+    }
+    jsonObject.get(""content"").getAsJsonObject().addProperty(""text"",text);
+  }
+  content.put(""content"",jsonObject.get(""content"").getAsJsonObject());
+  return content;
+}
+",human_written,"/** 
+ * build content,if it has ats someone set the ats
+ */
+","/** 
+ * build content,if it has ats someone set the ats
+ */",1,5,1,2,5,2,1,5,1,,,,
+636767e01a6d9265ec018755,"private Map<String,Object> buildContent(JsonObject jsonObject){
+  Map<String,Object> content=new HashMap<>();
+  content.put(""msg_type"",jsonObject.get(""msg_type"").getAsString());
+  if (jsonObject.get(""ats"") != null) {
+    String ats=jsonObject.get(""ats"").getAsString();
+    String text=jsonObject.get(""content"").getAsJsonObject().get(""text"").getAsString();
+    List<String> collect=Arrays.stream(ats.split("","")).map(String::trim).collect(Collectors.toList());
+    for (    String userId : collect) {
+      text+=""<at user_id=\"""" + userId + ""\""></at>"";
+    }
+    jsonObject.get(""content"").getAsJsonObject().addProperty(""text"",text);
+  }
+  content.put(""content"",jsonObject.get(""content"").getAsJsonObject());
+  return content;
+}
+",CodeLlama-7b-Instruct-hf,"```
+# Docstring for buildContent method
+
+This method takes a JsonObject as input and returns a Map<String, Object> containing the following keys:
+
+* ""msg_type"": the message type (e.g. ""text"", ""image"", etc.)
+* ""content"": a JsonObject containing the message content
+
+The method first extracts the message type from the input JsonObject and adds it to the output Map. It then checks if the ""ats"" field is present in the input JsonObject. If it is, the method extracts the list of user IDs from the ""ats"" field and adds them to the output Map. Finally, the method adds the ""content"" field from the input JsonObject to the output Map.
+
+The method returns the resulting Map, which can be used to send a message to a user or a group of users.
+```","This method takes a JsonObject as input and returns a Map<String, Object> containing the following keys:
+
+* ""msg_type"": the message type (e.g. ""text"", ""image"", etc.)
+* ""content"": a JsonObject containing the message content
+
+The method first extracts the message type from the input JsonObject and adds it to the output Map. It then checks if the ""ats"" field is present in the input JsonObject. If it is, the method extracts the list of user IDs from the ""ats"" field and adds them to the output Map. Finally, the method adds the ""content"" field from the input JsonObject to the output Map.
+
+The method returns the resulting Map, which can be used to send a message to a user or a group of users.",4,3,3,5,5,5,4,5,5,,,,
+636767e01a6d9265ec018755,"private Map<String,Object> buildContent(JsonObject jsonObject){
+  Map<String,Object> content=new HashMap<>();
+  content.put(""msg_type"",jsonObject.get(""msg_type"").getAsString());
+  if (jsonObject.get(""ats"") != null) {
+    String ats=jsonObject.get(""ats"").getAsString();
+    String text=jsonObject.get(""content"").getAsJsonObject().get(""text"").getAsString();
+    List<String> collect=Arrays.stream(ats.split("","")).map(String::trim).collect(Collectors.toList());
+    for (    String userId : collect) {
+      text+=""<at user_id=\"""" + userId + ""\""></at>"";
+    }
+    jsonObject.get(""content"").getAsJsonObject().addProperty(""text"",text);
+  }
+  content.put(""content"",jsonObject.get(""content"").getAsJsonObject());
+  return content;
+}
+",CodeLlama-13b-Instruct-hf,"```
+/**
+ * Builds a content map from a JSON object.
+ *
+ * @param jsonObject the JSON object to build the content map from
+ * @return a map containing the content and other relevant information
+ */
+private Map<String, Object> buildContent(JsonObject jsonObject) {
+    Map<String, Object> content = new HashMap<>();
+    content.put(""msg_type"", jsonObject.get(""msg_type"").getAsString());
+    if (jsonObject.get(""ats"") != null) {
+        String ats = jsonObject.get(""ats"").getAsString();
+        String text = jsonObject.get(""content"").getAsJsonObject().get(""text"").getAsString();
+        List<String> collect = Arrays.stream(ats.split("","")).map(String::trim).collect(Collectors.toList());
+        for (String userId : collect) {
+            text += ""<at user_id=\"""" + userId + ""\""></at>"";
+        }
+        jsonObject.get(""content"").getAsJsonObject().addProperty(""text"", text);
+    }
+    content.put(""content"", jsonObject.get(""content"").getAsJsonObject());
+    return content;
+}
+```
+This docstring provides a brief description of the method, including its purpose and the parameters it takes. It also includes a brief description of the return value, which is a map containing the content and other relevant information.","/**
+ * Builds a content map from a JSON object.
+ *
+ * @param jsonObject the JSON object to build the content map from
+ * @return a map containing the content and other relevant information
+ */",3,4,4,3,5,4,2,5,4,,,,
+636766f91a6d9265ec01776e,"@Override public void write(final byte b[],final int off,final int len) throws IOException {
+  if (off < 0 || off > b.length || len < 0 || off + len > b.length || off + len < 0) {
+    throw new IndexOutOfBoundsException();
+  }
+ else   if (len == 0) {
+    return;
+  }
+  if (this.count + len > this.buf.length) {
+    this.encodePendingBytes(false);
+  }
+  System.arraycopy(b,off,this.buf,this.count,len);
+  this.count+=len;
+}
+",CodeLlama-7b-Instruct-hf,"```
+@Override
+public void write(final byte[] b, final int off, final int len) throws IOException {
+    /**
+     * Writes a sequence of bytes to the underlying buffer.
+     *
+     * @param b the data to be written
+     * @param off the start offset in the data
+     * @param len the number of bytes that are written
+     * @throws IOException if an I/O error occurs
+     * @throws IndexOutOfBoundsException if the off or len parameter is negative, or if off+len is greater than the length of the array b.
+     */
+}
+```
+This docstring provides a brief description of the method's purpose and its parameters. It also includes a brief explanation of the method's behavior, including any exceptions that may be thrown. The docstring is written in a way that is easy to read and understand, and it includes the necessary information to help developers use the method correctly.","/**
+     * Writes a sequence of bytes to the underlying buffer.
+     *
+     * @param b the data to be written
+     * @param off the start offset in the data
+     * @param len the number of bytes that are written
+     * @throws IOException if an I/O error occurs
+     * @throws IndexOutOfBoundsException if the off or len parameter is negative, or if off+len is greater than the length of the array b.
+     */",4,5,5,3,5,4,3,5,5,,,,
+636766f91a6d9265ec01776e,"@Override public void write(final byte b[],final int off,final int len) throws IOException {
+  if (off < 0 || off > b.length || len < 0 || off + len > b.length || off + len < 0) {
+    throw new IndexOutOfBoundsException();
+  }
+ else   if (len == 0) {
+    return;
+  }
+  if (this.count + len > this.buf.length) {
+    this.encodePendingBytes(false);
+  }
+  System.arraycopy(b,off,this.buf,this.count,len);
+  this.count+=len;
+}
+",CodeLlama-13b-Instruct-hf,"This is a method for writing bytes to a buffer. It takes three parameters:
+
+* `b`: an array of bytes to write
+* `off`: the offset in the array to start writing from
+* `len`: the number of bytes to write
+
+The method checks that the `off` and `len` parameters are valid, and throws an `IndexOutOfBoundsException` if they are not. If `len` is 0, the method returns without doing anything.
+
+If the buffer is full, the method calls `encodePendingBytes(false)` to encode any pending bytes before writing the new bytes to the buffer.
+
+Finally, the method uses `System.arraycopy()` to copy the bytes from the input array to the buffer, and updates the `count` variable to reflect the number of bytes written.","This is a method for writing bytes to a buffer. It takes three parameters:
+
+* `b`: an array of bytes to write
+* `off`: the offset in the array to start writing from
+* `len`: the number of bytes to write
+
+The method checks that the `off` and `len` parameters are valid, and throws an `IndexOutOfBoundsException` if they are not. If `len` is 0, the method returns without doing anything.
+
+If the buffer is full, the method calls `encodePendingBytes(false)` to encode any pending bytes before writing the new bytes to the buffer.
+
+Finally, the method uses `System.arraycopy()` to copy the bytes from the input array to the buffer, and updates the `count` variable to reflect the number of bytes written.",5,5,4,5,5,5,4,5,5,,,,
+636766f91a6d9265ec01776e,"@Override public void write(final byte b[],final int off,final int len) throws IOException {
+  if (off < 0 || off > b.length || len < 0 || off + len > b.length || off + len < 0) {
+    throw new IndexOutOfBoundsException();
+  }
+ else   if (len == 0) {
+    return;
+  }
+  if (this.count + len > this.buf.length) {
+    this.encodePendingBytes(false);
+  }
+  System.arraycopy(b,off,this.buf,this.count,len);
+  this.count+=len;
+}
+",gpt-4-turbo,"```java
+/**
+ * Writes a portion of an array of bytes to the buffer.
+ *
+ * This method overrides the default write method to include additional checks and functionality.
+ * It first checks if the specified subarray is within the bounds of the source array. If the parameters
+ * are invalid, it throws an IndexOutOfBoundsException. If the length of the data to be written is zero,
+ * the method returns immediately without writing any bytes.
+ *
+ * If the internal buffer does not have enough space to accommodate the new data, it encodes any pending
+ * bytes before proceeding. The bytes are then copied from the specified source array to the internal buffer,
+ * and the internal count of bytes is updated accordingly.
+ *
+ * @param b the byte array from which to write bytes.
+ * @param off the start offset in the array from which to start writing bytes.
+ * @param len the number of bytes to write.
+ * @throws IOException if an I/O error occurs.
+ * @throws IndexOutOfBoundsException if the offset and length parameters do not specify a valid chunk of the array.
+ */
+```","/**
+ * Writes a portion of an array of bytes to the buffer.
+ *
+ * This method overrides the default write method to include additional checks and functionality.
+ * It first checks if the specified subarray is within the bounds of the source array. If the parameters
+ * are invalid, it throws an IndexOutOfBoundsException. If the length of the data to be written is zero,
+ * the method returns immediately without writing any bytes.
+ *
+ * If the internal buffer does not have enough space to accommodate the new data, it encodes any pending
+ * bytes before proceeding. The bytes are then copied from the specified source array to the internal buffer,
+ * and the internal count of bytes is updated accordingly.
+ *
+ * @param b the byte array from which to write bytes.
+ * @param off the start offset in the array from which to start writing bytes.
+ * @param len the number of bytes to write.
+ * @throws IOException if an I/O error occurs.
+ * @throws IndexOutOfBoundsException if the offset and length parameters do not specify a valid chunk of the array.
+ */",5,4,3,5,4,5,5,4,5,,,,
+636766f91a6d9265ec01776e,"@Override public void write(final byte b[],final int off,final int len) throws IOException {
+  if (off < 0 || off > b.length || len < 0 || off + len > b.length || off + len < 0) {
+    throw new IndexOutOfBoundsException();
+  }
+ else   if (len == 0) {
+    return;
+  }
+  if (this.count + len > this.buf.length) {
+    this.encodePendingBytes(false);
+  }
+  System.arraycopy(b,off,this.buf,this.count,len);
+  this.count+=len;
+}
+",gpt-3.5-turbo,"```java
+/**
+ * Writes a specified number of bytes from the given byte array to the output stream.
+ * 
+ * @param b the byte array containing the data to be written
+ * @param off the starting offset in the byte array
+ * @param len the number of bytes to write
+ * @throws IOException if an I/O error occurs while writing to the stream
+ */
+```
+","/**
+ * Writes a specified number of bytes from the given byte array to the output stream.
+ * 
+ * @param b the byte array containing the data to be written
+ * @param off the starting offset in the byte array
+ * @param len the number of bytes to write
+ * @throws IOException if an I/O error occurs while writing to the stream
+ */",4,5,5,3,5,5,3,5,5,,,,
+636766f91a6d9265ec01776e,"@Override public void write(final byte b[],final int off,final int len) throws IOException {
+  if (off < 0 || off > b.length || len < 0 || off + len > b.length || off + len < 0) {
+    throw new IndexOutOfBoundsException();
+  }
+ else   if (len == 0) {
+    return;
+  }
+  if (this.count + len > this.buf.length) {
+    this.encodePendingBytes(false);
+  }
+  System.arraycopy(b,off,this.buf,this.count,len);
+  this.count+=len;
+}
+",human_written,"/** 
+ * Writes <code>len</code> bytes from the specified byte array starting at offset <code>off</code> to this byte array output stream.
+ * @param b   the data.
+ * @param off the start offset in the data.
+ * @param len the number of bytes to write.
+ */
+","/** 
+ * Writes <code>len</code> bytes from the specified byte array starting at offset <code>off</code> to this byte array output stream.
+ * @param b   the data.
+ * @param off the start offset in the data.
+ * @param len the number of bytes to write.
+ */",3,4,3,3,5,4,3,5,4,,,,
+636766f91a6d9265ec01776e,"@Override public void write(final byte b[],final int off,final int len) throws IOException {
+  if (off < 0 || off > b.length || len < 0 || off + len > b.length || off + len < 0) {
+    throw new IndexOutOfBoundsException();
+  }
+ else   if (len == 0) {
+    return;
+  }
+  if (this.count + len > this.buf.length) {
+    this.encodePendingBytes(false);
+  }
+  System.arraycopy(b,off,this.buf,this.count,len);
+  this.count+=len;
+}
+",CodeLlama-34b-Instruct-hf,"```
+# Docstring:
+
+This method writes a byte array to the output stream.
+
+Parameters:
+
+* b: The byte array to write.
+* off: The offset within the byte array to start writing from.
+* len: The number of bytes to write.
+
+Throws:
+
+* IndexOutOfBoundsException: If the offset or length is out of bounds for the byte array.
+* IOException: If an I/O error occurs while writing to the output stream.
+
+Returns:
+
+* void
+```","This method writes a byte array to the output stream.
+
+Parameters:
+
+* b: The byte array to write.
+* off: The offset within the byte array to start writing from.
+* len: The number of bytes to write.
+
+Throws:
+
+* IndexOutOfBoundsException: If the offset or length is out of bounds for the byte array.
+* IOException: If an I/O error occurs while writing to the output stream.
+
+Returns:
+
+* void",3,4,4,4,5,4,4,4,5,,,,
+636767461a6d9265ec017d0e,"private Pair<List<Integer>,Long> computeSuffixSum(List<Integer> bounds){
+  List<Integer> suffixSum=new ArrayList<>(Collections.nCopies(bounds.size(),0));
+  long sum=0;
+  for (int i=bounds.size() - 1; i >= 0; i--) {
+    suffixSum.set(i,(int)Math.min(Integer.MAX_VALUE,sum));
+    sum+=bounds.get(i);
+  }
+  return Pair.of(suffixSum,sum);
+}
+",gpt-4-turbo,"```java
+/**
+ * Computes the suffix sum of a list of integers and returns a pair containing the list of suffix sums and the total sum.
+ * The suffix sum at each position i in the list is the sum of all elements from position i to the end of the list.
+ * This method ensures that each individual suffix sum does not exceed the maximum value for an integer.
+ *
+ * @param bounds The input list of integers for which suffix sums are to be computed.
+ * @return A Pair object where the first element is a list of suffix sums and the second element is the total sum of all elements in the input list.
+ */
+```","/**
+ * Computes the suffix sum of a list of integers and returns a pair containing the list of suffix sums and the total sum.
+ * The suffix sum at each position i in the list is the sum of all elements from position i to the end of the list.
+ * This method ensures that each individual suffix sum does not exceed the maximum value for an integer.
+ *
+ * @param bounds The input list of integers for which suffix sums are to be computed.
+ * @return A Pair object where the first element is a list of suffix sums and the second element is the total sum of all elements in the input list.
+ */",5,4,5,5,5,5,5,5,5,,,,
+636767461a6d9265ec017d0e,"private Pair<List<Integer>,Long> computeSuffixSum(List<Integer> bounds){
+  List<Integer> suffixSum=new ArrayList<>(Collections.nCopies(bounds.size(),0));
+  long sum=0;
+  for (int i=bounds.size() - 1; i >= 0; i--) {
+    suffixSum.set(i,(int)Math.min(Integer.MAX_VALUE,sum));
+    sum+=bounds.get(i);
+  }
+  return Pair.of(suffixSum,sum);
+}
+",CodeLlama-34b-Instruct-hf,"# Docstring
+
+This method computes the suffix sum of a list of integers. It returns a pair of a list of integers and a long value. The list of integers represents the suffix sum of the input list, where each element is the sum of the elements in the input list from that position to the end. The long value represents the total sum of the input list.
+
+The method takes a list of integers as input and returns a pair of a list of integers and a long value. The list of integers represents the suffix sum of the input list, where each element is the sum of the elements in the input list from that position to the end. The long value represents the total sum of the input list.
+
+The method uses a for loop to iterate over the input list in reverse order, starting from the last element and ending at the first element. For each element, it calculates the sum of the elements in the input list from that position to the end and stores it in the corresponding position in the output list. It also keeps track of the total sum of the input list.
+
+The method uses the `Math.min` method to ensure that the sum of the elements in the input list does not exceed `Integer.MAX_VALUE`. If the sum exceeds this value, it is set to `Integer.MAX_VALUE`.
+
+The method returns a pair of a list of integers and a long value, where the list of integers represents the suffix sum of the input list and the long value represents the total sum of the input list.","This method computes the suffix sum of a list of integers. It returns a pair of a list of integers and a long value. The list of integers represents the suffix sum of the input list, where each element is the sum of the elements in the input list from that position to the end. The long value represents the total sum of the input list.
+
+The method takes a list of integers as input and returns a pair of a list of integers and a long value. The list of integers represents the suffix sum of the input list, where each element is the sum of the elements in the input list from that position to the end. The long value represents the total sum of the input list.
+
+The method uses a for loop to iterate over the input list in reverse order, starting from the last element and ending at the first element. For each element, it calculates the sum of the elements in the input list from that position to the end and stores it in the corresponding position in the output list. It also keeps track of the total sum of the input list.
+
+The method uses the `Math.min` method to ensure that the sum of the elements in the input list does not exceed `Integer.MAX_VALUE`. If the sum exceeds this value, it is set to `Integer.MAX_VALUE`.
+
+The method returns a pair of a list of integers and a long value, where the list of integers represents the suffix sum of the input list and the long value represents the total sum of the input list.",4,3,3,5,3,5,5,4,5,,,,
+636767461a6d9265ec017d0e,"private Pair<List<Integer>,Long> computeSuffixSum(List<Integer> bounds){
+  List<Integer> suffixSum=new ArrayList<>(Collections.nCopies(bounds.size(),0));
+  long sum=0;
+  for (int i=bounds.size() - 1; i >= 0; i--) {
+    suffixSum.set(i,(int)Math.min(Integer.MAX_VALUE,sum));
+    sum+=bounds.get(i);
+  }
+  return Pair.of(suffixSum,sum);
+}
+",CodeLlama-7b-Instruct-hf,"```
+/**
+ * Computes the suffix sum of a list of integers, where the suffix sum of a list is the sum of the elements in the list,
+ * starting from the last element and moving backwards to the first element.
+ *
+ * @param bounds The list of integers to compute the suffix sum for.
+ * @return A pair containing the suffix sum of the list and the total sum of all elements in the list.
+ */
+private Pair<List<Integer>, Long> computeSuffixSum(List<Integer> bounds) {
+  // Implementation goes here
+}
+```","/**
+ * Computes the suffix sum of a list of integers, where the suffix sum of a list is the sum of the elements in the list,
+ * starting from the last element and moving backwards to the first element.
+ *
+ * @param bounds The list of integers to compute the suffix sum for.
+ * @return A pair containing the suffix sum of the list and the total sum of all elements in the list.
+ */",4,5,5,4,5,5,4,5,5,,,,
+636767461a6d9265ec017d0e,"private Pair<List<Integer>,Long> computeSuffixSum(List<Integer> bounds){
+  List<Integer> suffixSum=new ArrayList<>(Collections.nCopies(bounds.size(),0));
+  long sum=0;
+  for (int i=bounds.size() - 1; i >= 0; i--) {
+    suffixSum.set(i,(int)Math.min(Integer.MAX_VALUE,sum));
+    sum+=bounds.get(i);
+  }
+  return Pair.of(suffixSum,sum);
+}
+",gpt-3.5-turbo,"```java
+/**
+ * Computes the suffix sum of a given list of integers up to each index, and returns a Pair containing the suffix sum list and the total sum.
+ * 
+ * @param bounds the list of integers to compute the suffix sum for
+ * @return a Pair containing the suffix sum list and the total sum
+ */
+```
+","/**
+ * Computes the suffix sum of a given list of integers up to each index, and returns a Pair containing the suffix sum list and the total sum.
+ * 
+ * @param bounds the list of integers to compute the suffix sum for
+ * @return a Pair containing the suffix sum list and the total sum
+ */",4,5,5,4,5,5,3,5,5,,,,
+636767461a6d9265ec017d0e,"private Pair<List<Integer>,Long> computeSuffixSum(List<Integer> bounds){
+  List<Integer> suffixSum=new ArrayList<>(Collections.nCopies(bounds.size(),0));
+  long sum=0;
+  for (int i=bounds.size() - 1; i >= 0; i--) {
+    suffixSum.set(i,(int)Math.min(Integer.MAX_VALUE,sum));
+    sum+=bounds.get(i);
+  }
+  return Pair.of(suffixSum,sum);
+}
+",human_written,"/** 
+ * Computes a suffix sum of the  {@code bounds}. Returns computed suffix sum and the sum of all elements in the  {@code bounds list}.
+ * @param bounds list of integers.
+ * @return computed pair of suffix sum list and a sum of all elements.
+ */
+","/** 
+ * Computes a suffix sum of the  {@code bounds}. Returns computed suffix sum and the sum of all elements in the  {@code bounds list}.
+ * @param bounds list of integers.
+ * @return computed pair of suffix sum list and a sum of all elements.
+ */",4,3,3,3,5,5,3,5,5,,,,
+636767461a6d9265ec017d0e,"private Pair<List<Integer>,Long> computeSuffixSum(List<Integer> bounds){
+  List<Integer> suffixSum=new ArrayList<>(Collections.nCopies(bounds.size(),0));
+  long sum=0;
+  for (int i=bounds.size() - 1; i >= 0; i--) {
+    suffixSum.set(i,(int)Math.min(Integer.MAX_VALUE,sum));
+    sum+=bounds.get(i);
+  }
+  return Pair.of(suffixSum,sum);
+}
+",CodeLlama-13b-Instruct-hf,"This method computes the suffix sum of a list of integers and returns a pair containing the suffix sum and the total sum.
+
+The suffix sum is computed by iterating over the list of integers in reverse order, starting from the last element. At each iteration, the current sum is added to the previous sum, and the result is stored in the suffix sum list. The total sum is also computed and returned as a long value.
+
+The method uses the `Collections.nCopies` method to create a list of zeros with the same size as the input list, and the `Math.min` method to ensure that the sum does not exceed the maximum value of an integer.
+
+The method is marked as private, indicating that it is not intended to be used outside of the class it is defined in.","This method computes the suffix sum of a list of integers and returns a pair containing the suffix sum and the total sum.
+
+The suffix sum is computed by iterating over the list of integers in reverse order, starting from the last element. At each iteration, the current sum is added to the previous sum, and the result is stored in the suffix sum list. The total sum is also computed and returned as a long value.
+
+The method uses the `Collections.nCopies` method to create a list of zeros with the same size as the input list, and the `Math.min` method to ensure that the sum does not exceed the maximum value of an integer.
+
+The method is marked as private, indicating that it is not intended to be used outside of the class it is defined in.",4,4,4,5,4,5,5,4,5,,,,
+6367670b1a6d9265ec017a00,"public static boolean isSameLength(final byte[] array1,final byte[] array2){
+  if (array1 == null && array2 != null && array2.length > 0 || array2 == null && array1 != null && array1.length > 0 || array1 != null && array2 != null && array1.length != array2.length) {
+    return false;
+  }
+  return true;
+}
+",gpt-3.5-turbo,"```java
+/**
+ * Checks if two byte arrays have the same length.
+ * 
+ * @param array1 the first byte array to compare
+ * @param array2 the second byte array to compare
+ * @return true if both arrays have the same length, false otherwise
+ */
+```
+","/**
+ * Checks if two byte arrays have the same length.
+ * 
+ * @param array1 the first byte array to compare
+ * @param array2 the second byte array to compare
+ * @return true if both arrays have the same length, false otherwise
+ */",3,5,5,4,5,5,3,5,5,,,,
+6367670b1a6d9265ec017a00,"public static boolean isSameLength(final byte[] array1,final byte[] array2){
+  if (array1 == null && array2 != null && array2.length > 0 || array2 == null && array1 != null && array1.length > 0 || array1 != null && array2 != null && array1.length != array2.length) {
+    return false;
+  }
+  return true;
+}
+",gpt-4-turbo,"```java
+/**
+ * Checks if two byte arrays have the same length.
+ *
+ * This method compares the lengths of two byte arrays. It considers null arrays to have a length of zero,
+ * and will return true if both arrays are null or both are non-null with the same length.
+ *
+ * @param array1 the first byte array to compare, may be null.
+ * @param array2 the second byte array to compare, may be null.
+ * @return true if both arrays are of the same length, including if both are null or empty; false otherwise.
+ */
+```","/**
+ * Checks if two byte arrays have the same length.
+ *
+ * This method compares the lengths of two byte arrays. It considers null arrays to have a length of zero,
+ * and will return true if both arrays are null or both are non-null with the same length.
+ *
+ * @param array1 the first byte array to compare, may be null.
+ * @param array2 the second byte array to compare, may be null.
+ * @return true if both arrays are of the same length, including if both are null or empty; false otherwise.
+ */",5,4,5,5,5,5,5,3,5,,,,
+6367670b1a6d9265ec017a00,"public static boolean isSameLength(final byte[] array1,final byte[] array2){
+  if (array1 == null && array2 != null && array2.length > 0 || array2 == null && array1 != null && array1.length > 0 || array1 != null && array2 != null && array1.length != array2.length) {
+    return false;
+  }
+  return true;
+}
+",CodeLlama-34b-Instruct-hf,"# Docstring
+
+/**
+ * Checks if two byte arrays have the same length.
+ *
+ * @param array1 the first byte array to compare
+ * @param array2 the second byte array to compare
+ * @return true if the arrays have the same length, false otherwise
+ */
+public static boolean isSameLength(final byte[] array1, final byte[] array2) {
+  // ...
+}","/**
+ * Checks if two byte arrays have the same length.
+ *
+ * @param array1 the first byte array to compare
+ * @param array2 the second byte array to compare
+ * @return true if the arrays have the same length, false otherwise
+ */",3,5,5,4,5,5,3,5,5,,,,
+6367670b1a6d9265ec017a00,"public static boolean isSameLength(final byte[] array1,final byte[] array2){
+  if (array1 == null && array2 != null && array2.length > 0 || array2 == null && array1 != null && array1.length > 0 || array1 != null && array2 != null && array1.length != array2.length) {
+    return false;
+  }
+  return true;
+}
+",human_written,"/** 
+ * <p>Checks whether two arrays are the same length, treating <code>null</code> arrays as length <code>0</code>.</p>
+ * @param array1 the first array, may be <code>null</code>
+ * @param array2 the second array, may be <code>null</code>
+ * @return <code>true</code> if length of arrays matches, treating<code>null</code> as an empty array
+ */
+","/** 
+ * <p>Checks whether two arrays are the same length, treating <code>null</code> arrays as length <code>0</code>.</p>
+ * @param array1 the first array, may be <code>null</code>
+ * @param array2 the second array, may be <code>null</code>
+ * @return <code>true</code> if length of arrays matches, treating<code>null</code> as an empty array
+ */",4,4,3,5,5,5,5,3,5,,,,
+6367670b1a6d9265ec017a00,"public static boolean isSameLength(final byte[] array1,final byte[] array2){
+  if (array1 == null && array2 != null && array2.length > 0 || array2 == null && array1 != null && array1.length > 0 || array1 != null && array2 != null && array1.length != array2.length) {
+    return false;
+  }
+  return true;
+}
+",CodeLlama-13b-Instruct-hf,"```
+/**
+ * Checks if two byte arrays have the same length.
+ *
+ * @param array1 the first byte array
+ * @param array2 the second byte array
+ * @return true if the arrays have the same length, false otherwise
+ */
+```","/**
+ * Checks if two byte arrays have the same length.
+ *
+ * @param array1 the first byte array
+ * @param array2 the second byte array
+ * @return true if the arrays have the same length, false otherwise
+ */",3,5,5,4,5,5,3,5,5,,,,
+6367670b1a6d9265ec017a00,"public static boolean isSameLength(final byte[] array1,final byte[] array2){
+  if (array1 == null && array2 != null && array2.length > 0 || array2 == null && array1 != null && array1.length > 0 || array1 != null && array2 != null && array1.length != array2.length) {
+    return false;
+  }
+  return true;
+}
+",CodeLlama-7b-Instruct-hf,"```
+/**
+ * Checks if two byte arrays have the same length.
+ *
+ * @param array1 the first byte array
+ * @param array2 the second byte array
+ * @return true if the two arrays have the same length, false otherwise
+ */
+public static boolean isSameLength(final byte[] array1, final byte[] array2) {
+  // ...
+}
+```
+This docstring provides a brief description of the method's purpose and its parameters. It also includes a brief explanation of the method's return value.
+
+The docstring is written in a format that is commonly used for JavaDoc comments, which is a standard for documenting Java code. The `@param` tag is used to describe the parameters of the method, and the `@return` tag is used to describe the return value.
+
+The docstring also includes a brief explanation of the method's logic, which is important for understanding how the method works and how it can be used.","/**
+ * Checks if two byte arrays have the same length.
+ *
+ * @param array1 the first byte array
+ * @param array2 the second byte array
+ * @return true if the two arrays have the same length, false otherwise
+ */",3,5,5,4,5,5,3,5,5,,,,
+636766fe1a6d9265ec017821,"protected void appendDetail(StringBuffer buffer,String fieldName,byte[] array){
+  buffer.append(arrayStart);
+  for (int i=0; i < array.length; i++) {
+    if (i > 0) {
+      buffer.append(arraySeparator);
+    }
+    appendDetail(buffer,fieldName,array[i]);
+  }
+  buffer.append(arrayEnd);
+}
+",CodeLlama-34b-Instruct-hf,"# Docstring
+
+This method appends a detailed representation of a byte array to a StringBuffer. It takes three parameters:
+
+* `buffer`: The StringBuffer to append to.
+* `fieldName`: The name of the field being appended.
+* `array`: The byte array to append.
+
+The method first appends the `arrayStart` character to the buffer, then iterates over the elements of the array and appends each element to the buffer, separated by the `arraySeparator` character. Finally, it appends the `arrayEnd` character to the buffer.
+
+This method is intended to be used for debugging purposes, and is not intended to be used in production code. It is protected, meaning that it can only be accessed by subclasses of the class that defines it.","This method appends a detailed representation of a byte array to a StringBuffer. It takes three parameters:
+
+* `buffer`: The StringBuffer to append to.
+* `fieldName`: The name of the field being appended.
+* `array`: The byte array to append.
+
+The method first appends the `arrayStart` character to the buffer, then iterates over the elements of the array and appends each element to the buffer, separated by the `arraySeparator` character. Finally, it appends the `arrayEnd` character to the buffer.
+
+This method is intended to be used for debugging purposes, and is not intended to be used in production code. It is protected, meaning that it can only be accessed by subclasses of the class that defines it.",4,3,5,5,4,5,5,4,5,,,,
+636766fe1a6d9265ec017821,"protected void appendDetail(StringBuffer buffer,String fieldName,byte[] array){
+  buffer.append(arrayStart);
+  for (int i=0; i < array.length; i++) {
+    if (i > 0) {
+      buffer.append(arraySeparator);
+    }
+    appendDetail(buffer,fieldName,array[i]);
+  }
+  buffer.append(arrayEnd);
+}
+",CodeLlama-7b-Instruct-hf,"```
+/**
+ * Appends a detail of a byte array to a string buffer.
+ *
+ * @param buffer the string buffer to append to
+ * @param fieldName the name of the field to append
+ * @param array the byte array to append
+ */
+protected void appendDetail(StringBuffer buffer, String fieldName, byte[] array) {
+  buffer.append(arrayStart);
+  for (int i = 0; i < array.length; i++) {
+    if (i > 0) {
+      buffer.append(arraySeparator);
+    }
+    appendDetail(buffer, fieldName, array[i]);
+  }
+  buffer.append(arrayEnd);
+}
+```","/**
+ * Appends a detail of a byte array to a string buffer.
+ *
+ * @param buffer the string buffer to append to
+ * @param fieldName the name of the field to append
+ * @param array the byte array to append
+ */",3,4,5,3,5,4,3,5,4,,,,
+636766fe1a6d9265ec017821,"protected void appendDetail(StringBuffer buffer,String fieldName,byte[] array){
+  buffer.append(arrayStart);
+  for (int i=0; i < array.length; i++) {
+    if (i > 0) {
+      buffer.append(arraySeparator);
+    }
+    appendDetail(buffer,fieldName,array[i]);
+  }
+  buffer.append(arrayEnd);
+}
+",gpt-3.5-turbo,"```java
+/**
+ * Appends details of a byte array to the given StringBuffer.
+ * 
+ * @param buffer the StringBuffer to which the details are appended
+ * @param fieldName the name of the field being appended
+ * @param array the byte array to be appended
+ */
+```
+","/**
+ * Appends details of a byte array to the given StringBuffer.
+ * 
+ * @param buffer the StringBuffer to which the details are appended
+ * @param fieldName the name of the field being appended
+ * @param array the byte array to be appended
+ */",3,4,5,3,5,4,3,5,5,,,,
+636766fe1a6d9265ec017821,"protected void appendDetail(StringBuffer buffer,String fieldName,byte[] array){
+  buffer.append(arrayStart);
+  for (int i=0; i < array.length; i++) {
+    if (i > 0) {
+      buffer.append(arraySeparator);
+    }
+    appendDetail(buffer,fieldName,array[i]);
+  }
+  buffer.append(arrayEnd);
+}
+",human_written,"/** 
+ * <p>Append to the <code>toString</code> the detail of a <code>byte</code> array.</p>
+ * @param buffer  the <code>StringBuffer</code> to populate
+ * @param fieldName  the field name, typically not used as already appended
+ * @param array  the array to add to the <code>toString</code>,not <code>null</code>
+ */
+","/** 
+ * <p>Append to the <code>toString</code> the detail of a <code>byte</code> array.</p>
+ * @param buffer  the <code>StringBuffer</code> to populate
+ * @param fieldName  the field name, typically not used as already appended
+ * @param array  the array to add to the <code>toString</code>,not <code>null</code>
+ */",3,4,3,2,5,3,3,5,4,,,,
+636766fe1a6d9265ec017821,"protected void appendDetail(StringBuffer buffer,String fieldName,byte[] array){
+  buffer.append(arrayStart);
+  for (int i=0; i < array.length; i++) {
+    if (i > 0) {
+      buffer.append(arraySeparator);
+    }
+    appendDetail(buffer,fieldName,array[i]);
+  }
+  buffer.append(arrayEnd);
+}
+",CodeLlama-13b-Instruct-hf,"```
+/**
+ * Appends the detail of a byte array to a StringBuffer.
+ *
+ * @param buffer the StringBuffer to append to
+ * @param fieldName the name of the field to append
+ * @param array the byte array to append
+ */
+protected void appendDetail(StringBuffer buffer, String fieldName, byte[] array) {
+  // ...
+}
+```
+This docstring provides a brief description of the method, including its purpose and the parameters it takes. It also includes a brief description of the return value, if applicable. The `@param` tags are used to document the parameters, and the `@return` tag is used to document the return value. The method is marked as `protected`, which means that it can only be accessed within the same package or by subclasses.","/**
+ * Appends the detail of a byte array to a StringBuffer.
+ *
+ * @param buffer the StringBuffer to append to
+ * @param fieldName the name of the field to append
+ * @param array the byte array to append
+ */",3,5,5,3,5,4,3,5,4,,,,
+636766fe1a6d9265ec017821,"protected void appendDetail(StringBuffer buffer,String fieldName,byte[] array){
+  buffer.append(arrayStart);
+  for (int i=0; i < array.length; i++) {
+    if (i > 0) {
+      buffer.append(arraySeparator);
+    }
+    appendDetail(buffer,fieldName,array[i]);
+  }
+  buffer.append(arrayEnd);
+}
+",gpt-4-turbo,"```java
+/**
+ * Appends a detailed, formatted representation of a byte array to the given StringBuffer.
+ * The method formats the array by enclosing it within `arrayStart` and `arrayEnd` markers,
+ * and separates each element with `arraySeparator`. Each byte element is processed
+ * and appended using the `appendDetail` method for individual byte values.
+ *
+ * @param buffer The StringBuffer to which the array details are appended.
+ * @param fieldName The name of the field, used potentially in the `appendDetail` method for individual bytes.
+ * @param array The byte array to be detailed and appended to the buffer.
+ */
+```","/**
+ * Appends a detailed, formatted representation of a byte array to the given StringBuffer.
+ * The method formats the array by enclosing it within `arrayStart` and `arrayEnd` markers,
+ * and separates each element with `arraySeparator`. Each byte element is processed
+ * and appended using the `appendDetail` method for individual byte values.
+ *
+ * @param buffer The StringBuffer to which the array details are appended.
+ * @param fieldName The name of the field, used potentially in the `appendDetail` method for individual bytes.
+ * @param array The byte array to be detailed and appended to the buffer.
+ */",4,3,4,5,5,5,5,5,5,,,,
