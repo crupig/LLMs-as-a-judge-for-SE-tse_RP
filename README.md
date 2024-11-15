@@ -122,3 +122,7 @@ Results for code summarization, but prompting to the LLMs-as-a-judge the exact s
 **5) ```cs_meanvsmedian.pdf```:**
 
 Results for code summarization, but using the mean of the human ratings as ground truth instead of the median.
+
+**6) ```cs_ranking_con_flu.pdf```:**
+
+Ranking of the Generators of Summaries according to each Judge for Conciseness and Fluency & Understandability.
