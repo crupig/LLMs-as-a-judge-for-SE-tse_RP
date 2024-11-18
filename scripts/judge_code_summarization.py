@@ -16,9 +16,6 @@ if __name__ == '__main__':
     judge_model = args.model
 
     # models = [
-    #     "deepseek-ai/deepseek-coder-1.3b-instruct",
-    #     "deepseek-ai/deepseek-coder-6.7b-instruct", 
-    #     "deepseek-ai/deepseek-coder-33b-instruct",
     #     "codellama/CodeLlama-7b-Instruct-hf",
     #     "codellama/CodeLlama-13b-Instruct-hf",
     #     "codellama/CodeLlama-34b-Instruct-hf",
