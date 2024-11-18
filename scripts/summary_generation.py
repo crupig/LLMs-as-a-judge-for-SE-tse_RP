@@ -83,6 +83,6 @@ if __name__ == '__main__':
     
     data['prompt'] = prompts
     data['generated_by'] = generator_model
-    data[f'{model_name}_output'] = output
+    data[f'model_output'] = output
 
-    data.to_csv(f'../data/results/code_summarization/{model_name}.csv', index = False)
+    data.to_csv(f'../data/results/cs/{model_name}_CCF.csv', index = False)

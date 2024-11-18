@@ -2,7 +2,7 @@ import os
 import pandas as pd
 import re
 
-INPUT_PATH = '../data/results/tse/cs_judgement_codereval'
+INPUT_PATH = '../data/results/cs'
 
 if __name__ == '__main__':
 
@@ -55,12 +55,11 @@ if __name__ == '__main__':
     }
 
 
-    for file in sorted([f for f in os.listdir(INPUT_PATH) if os.path.isfile(os.path.join(INPUT_PATH, f)) and '_extendedprompt' not in f]):
+    for file in sorted([f for f in os.listdir(INPUT_PATH) if os.path.isfile(os.path.join(INPUT_PATH, f))]):
         
         model_name = file.split('_')[0]
-        mabatch_name = file.split('_')[1].split('.csv')[0]
 
-        print(f'Writing: {model_name}_{mabatch_name}_CCF.csv')
+        print(f'Writing: {file}')
 
         judge_output_df = pd.read_csv(os.path.join(INPUT_PATH, file))
         judge_output_df.fillna('', inplace = True)
@@ -109,4 +108,4 @@ if __name__ == '__main__':
         
         to_concat = pd.DataFrame(d)
         out = pd.concat([judge_output_df, to_concat], axis = 1)
-        out.to_csv(os.path.join(INPUT_PATH, 'ccf', f'{model_name}_{mabatch_name}_CCF.csv'), index = False)
+        out.to_csv(os.path.join(INPUT_PATH, f'{file}'), index = False)
