@@ -2,6 +2,9 @@
 This repository is the replication package of the work **"On the Effectiveness of LLM-as-a-judge for Software-related Tasks"**. The purpose of this repository is to provide the data and discuss the pipeline that we used to run this study.
 
 ## LLM as a judge on Code Generation task
+
+This part of our work is dedicated to aswering the following research question: _To what extent are LLMs good at judging the correctess of a candidate java method with respect to the_
+
 ### Pipeline
 
 For this part of our work we rely on the **CoderEval ICSE'24** dataset for **Java**, which can be found [here](https://github.com/CoderEval/CoderEval).
@@ -89,7 +92,7 @@ The last two columns are repeated for each LLM-as-a-judge.
 
 **2) ```code_generation_manual_analysis/cg_MA.csv```:**
 
-Results of the manual analysis for code generation judgement failures.
+Results of the manual analysis for code generation judgement failures. To assign one or more reasons of failure (i.e., ```category-Final1```, ```category-Final2```, etc...), we take into consideration the docstring (```docstring```) and the candidate implementation (```generated_code```) which were fed to the LLM-as-a-judge (```judge_model```) and the judgment explanation (```rationale```) of the judge. By considering these three elements plus the ```reason_of_failure``` (i.e., ```false_negative``` if the LLM-as-a-judge classified the candidate implementation as wrong with respect to the provided docstring and method signature
 
 **3) ```code_generation_manual_analysis/cg_MA_false_positives.csv``` and ```code_generation_manual_analysis/cg_MA_false_negatives.csv```:**
 
