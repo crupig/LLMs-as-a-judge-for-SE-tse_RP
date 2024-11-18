@@ -3,7 +3,7 @@ This repository is the replication package of the work **"On the Effectiveness o
 
 ## LLM-as-a-judge on Code Generation task
 
-This part of our work is dedicated to aswering the following research question: _Given a textual description of a java method and its signature, to what extent are LLMs good at judging the correctess of a provided candidate java method?_
+This part of our work is dedicated to answering the following research question: _Given a textual description of a java method and its signature, to what extent are LLMs good at judging the correctess of a provided candidate java method?_
 
 ### Pipeline
 
@@ -55,6 +55,9 @@ The goal is to extract a sample of cases in which each LLM-as-a-judge fails at j
 For this part of our work we create a code summarization benchmark for Java starting from the CoderEval dataset discussed above. Our dataset features human judgements of ```594``` summaries. To build the dataset, we selected from the CoderEval benchmark the top-100 Java methods in terms of number of statements they feature. We decided to focus on the longest methods since those are the ones for which a good summary is likely to make a difference in terms of code comprehensibility and, thus, assessing the quality of summaries for these methods may make more sense. Among these ```100``` methods we found one that was a duplicate and was thus removed from the set, leaving us with ```99``` methods. For each of them, we have the associated code summary written by the original developer of the method, already featured in the CoderEval dataset. Furthermore, we asked five LLMs (i.e., CodeLlama 7B, 13B, and 34B, GPT-3.5-turbo and GPT-4-turbo) to generate a summary for each of these ```99``` methods, leading to the total of ```99``` (manually written) + ```99×5``` automatically generated) = ```594``` summaries. The prompt used to generate code summaries with the LLMs is documented in ```prompts/prompt-summary-generation.tex```. We asked 3 different experienced Java developers to evaluate the quality of the summaries in terms of ```content adequacy``` (the extent to which the comment summarizes all information that can be inferred from the source code), ```conciseness``` (the extent to which the comment contains unnecessary information) and ```fluency & understandability``` (the extent to which the comment is easy to understand). This manual analysis leaves us with ```3``` scores (from 1 to 5) for ```content adequacy```, ```3``` for ```conciseness``` and ```3``` for ```fluency & understandability``` for every of the ```594``` summaries. We asked the human raters to evaluate each aspect independently from one another (i.e., a summary can be considered concise even if the information it contains is wrong). Our dataset is available at ```data/cs_benchmark/CS-dataset.csv```.
 
 ## LLM-as-a-judge on Code Summarization task
+
+This part of our work is dedicated to answering the following research question: _Given a java method and a textual summary written with the intent of documenting the method, to what extent are LLMs good at assessing the quality of the summary?_
+
 ### Pipeline
 
 We use the dataset described before to run our judgements on code summarization.
