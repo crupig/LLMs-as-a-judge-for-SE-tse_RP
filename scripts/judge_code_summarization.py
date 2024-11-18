@@ -5,7 +5,7 @@ import argparse
 
 INPUT_PATH = '../data/input'
 
-MA_BATCHES = ['Batch1', 'Batch2', 'Batch3', 'Batch4', 'Batch5']
+MA_BATCHES = ['batch1', 'batch2', 'batch3', 'batch4', 'batch5']
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
