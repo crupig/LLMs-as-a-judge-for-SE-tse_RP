@@ -115,11 +115,11 @@ This file merges the information concerning the human rating (i.e., ```CA_1```, 
 
 **1) ```cg_5level_prompt.pdf```:**
 
-Results for code generation when the model are asked to give a 5-level judgment, i.e., rate the quality of the solution on a scale from 1 to 5, based on the likelihood of the candidate of being correct (see ```prompts/prompt-judge-code-generation-5level.tex```).
+Results for code generation when the models are asked to give a 5-level judgment, i.e., rate the quality of the solution on a scale from 1 to 5, based on the likelihood of the candidate of being correct (see ```prompts/prompt-judge-code-generation-5level.tex```).
 
 **2) ```cg_norationale_prompt.pdf```:**
 
-Results for code generation when the model are asked to give a binary judgment, like the one reported in the paper, but they are not asked for a rationale (see ```prompts/prompt-judge-code-generation-boolean_norationale.tex```).
+Results for code generation when the models are asked to give a binary judgment, like the one reported in the paper, but they are not asked for a rationale (see ```prompts/prompt-judge-code-generation-boolean_norationale.tex```).
 
 **3) ```cg_selfcontained```:**
 
