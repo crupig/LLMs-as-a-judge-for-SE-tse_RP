@@ -1,7 +1,7 @@
 # LLM-as-a-judge-for-SE
 This repository is the replication package of the work **"On the Effectiveness of LLM-as-a-judge for Software-related Tasks"**. The purpose of this repository is to provide the data and discuss the pipeline that we used to run this study.
 
-## LLM as a judge on Code Generation task
+## LLM-as-a-judge on Code Generation task
 
 This part of our work is dedicated to aswering the following research question: _Given a textual description of a java method and its signature, to what extent are LLMs good at judging the correctess of a provided candidate java method?_
 
@@ -32,7 +32,7 @@ The candidates go through the CoderEval test cases and for each of them we assoc
   	
 **4) Each LLM acts as a judge on the code generation task (```scripts/judge_code_generation.py```):**
 
-Each model as a judge is asked to assert the quality of a given candidate based on the description and the signature of a target method. The judge is asked to provide a binary answer (i.e., ```1``` if it thinks that the candidate is correct and ```0``` otherwise). Note that each model as a judge provides a judgment both for the ```M = 1,431``` java methods automatically generated and for the ```N = 184``` target methods written by humans (which are valid implementations by construction). Therefore, each LLM-as-a-judge was asked to judge ```M + N = 1,615``` different candidates in total. The judge is asked both for a ```# Rating``` and a ```# Rationale``` (i.e., an explanation of the ```# Rating```). The optimized prompt that we fed to all the LLMs-as-a-judge is ```prompts/prompt-judge-code-generation-boolean.tex```.
+Each model-as-a-judge is asked to assert the quality of a given candidate based on the description and the signature of a target method. The judge is asked to provide a binary answer (i.e., ```1``` if it thinks that the candidate is correct and ```0``` otherwise). Note that each model-as-a-judge provides a judgment both for the ```M = 1,431``` java methods automatically generated and for the ```N = 184``` target methods written by humans (which are valid implementations by construction). Therefore, each LLM-as-a-judge was asked to judge ```M + N = 1,615``` different candidates in total. The judge is asked both for a ```# Rating``` and a ```# Rationale``` (i.e., an explanation of the ```# Rating```). The optimized prompt that we fed to all the LLMs-as-a-judge is ```prompts/prompt-judge-code-generation-boolean.tex```.
 
 **5) Extraction of the ```# Rating``` and the ```# Rationale``` for each judgement (```scripts/extract_rating_rationale_bool.py```):**
 
