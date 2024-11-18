@@ -11,7 +11,7 @@ For this part of our work we rely on the **CoderEval ICSE'24** dataset for **Jav
 Clean the CoderEval dataset from instances with noisy or wrong test cases:
 - remove instances with target implementation not passing the test;
 - remove the instances which pass the test with an empty body (only one comment is present);
-- remove instances which pass the test with a trivial body (only the return statement is present);
+- remove instances which pass the test with a trivial body: only the return statement is present. For example ```return 0;``` if the return type is ```int```.;
   
 Let ```N = 184``` be the number of valid instances present in the CoderEval dataset.
 
