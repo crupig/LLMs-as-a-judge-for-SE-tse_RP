@@ -3,7 +3,7 @@ This repository is the replication package of the work **"On the Effectiveness o
 
 ## LLM as a judge on Code Generation task
 
-This part of our work is dedicated to aswering the following research question: _To what extent are LLMs good at judging the correctess of a candidate java method with respect to the_
+This part of our work is dedicated to aswering the following research question: _Given a textual description of a java method and its signature, to what extent are LLMs good at judging the correctess of a provided candidate java method?_
 
 ### Pipeline
 
@@ -92,7 +92,7 @@ The last two columns are repeated for each LLM-as-a-judge.
 
 **2) ```code_generation_manual_analysis/cg_MA.csv```:**
 
-Results of the manual analysis for code generation judgement failures. To assign one or more reasons of failure (i.e., ```category-Final1```, ```category-Final2```, etc...), we take into consideration the docstring (```docstring```) and the candidate implementation (```generated_code```) which were fed to the LLM-as-a-judge (```judge_model```) and the judgment explanation (```rationale```) of the judge. By considering these three elements plus the ```reason_of_failure``` (i.e., ```false_negative``` if the LLM-as-a-judge classified the candidate implementation as wrong with respect to the provided docstring and method signature
+Results of the manual analysis for code generation judgement failures. To assign one or more reasons of failure (i.e., ```category-Final1```, ```category-Final2```, etc...), we take into consideration the docstring (```docstring```) and the candidate implementation (```generated_code```) which were fed to the LLM-as-a-judge (```judge_model```) and the judgment explanation (```rationale```) of the judge. By considering these three elements plus the ```reason_of_failure``` (i.e., ```false_negative``` if the LLM-as-a-judge classified as wrong a candidate implementation which is actually correct, and ```false_positive``` in the opposite scenario), we manually assign a category to the misclassification. Let us discuss the second row of the file ```cg_MA.csv``` for the sake of clarity: ```CodeLlama-34b-Instruct-hf``` is asked to assess the correctess of the candidate implementation (```generated_code```) given a textual description of the method (```Return an EMPTY_BOOLEAN_OBJECT_ARRAY array for a null or empty input array.```) and the its signature (```public static Boolean[] nullToEmpty(final Boolean[] array){```). The LLM-as-a-judge misjudges the candidate implementation assessing it as wrong. The rationale for this choice is ```The candidate implementation does not return an empty array when the input array is null.```. By comparing the docstring, the candidate implementation and the rationale we can conclude that the model's misjudgment is due to ```Misunderstanding of code statements```. In other words, the model is not able to label the correctness of the candidate because it misunderstands the statements of the candidate implementations (i.e., the candiate implementation actually returns an empty array when the input array is null, but the model is not able to detect it).
 
 **3) ```code_generation_manual_analysis/cg_MA_false_positives.csv``` and ```code_generation_manual_analysis/cg_MA_false_negatives.csv```:**
 
