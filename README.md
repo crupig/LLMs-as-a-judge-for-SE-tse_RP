@@ -105,6 +105,10 @@ The most frequent reasons (i.e., categories) why LLMs-as-a-judge fail at the cod
 
 These files contain the raw output (```model_output``` column) of the models when prompted to do the code summarization judgment task and also their judgments for the three quality aspects (```content adequacy```, ```conciseness``` and ```fluency & understandability```), extracted with the heuristics.
 
+**5) ```input/csdata4visualization.csv```:**
+
+This file merges the information concerning the human rating (i.e., ```CA_1```, ```CA_2```, ```CA_3```) and the prediction of the 5 LLMs for the given method-summary pair.
+
 ## Complementary results (```data/complementary_results/```):
 
 **1) ```cg_5level_prompt.pdf```:**
