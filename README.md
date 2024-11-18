@@ -92,7 +92,7 @@ The last two columns are repeated for each LLM-as-a-judge.
 
 **2) ```code_generation_manual_analysis/cg_MA.csv```:**
 
-Results of the manual analysis for code generation judgement failures. To assign one or more reasons of failure (i.e., ```category-Final1```, ```category-Final2```, etc...), we take into consideration the docstring (```docstring```) and the candidate implementation (```generated_code```) which were fed to the LLM-as-a-judge (```judge_model```) and the judgment explanation (```rationale```) of the judge. By considering these three elements plus the ```reason_of_failure``` (i.e., ```false_negative``` if the LLM-as-a-judge classified as wrong a candidate implementation which is actually correct, and ```false_positive``` in the opposite scenario), we manually assign a category to the misclassification. Let us discuss the second row of the file ```cg_MA.csv``` for the sake of clarity: ```CodeLlama-34b-Instruct-hf``` is asked to assess the correctess of the candidate implementation (```generated_code```) given a textual description of the method (```Return an EMPTY_BOOLEAN_OBJECT_ARRAY array for a null or empty input array.```) and the its signature (```public static Boolean[] nullToEmpty(final Boolean[] array){```). The LLM-as-a-judge misjudges the candidate implementation assessing it as wrong. The rationale for this choice is ```The candidate implementation does not return an empty array when the input array is null.```. By comparing the docstring, the candidate implementation and the rationale we can conclude that the model's misjudgment is due to ```Misunderstanding of code statements```. In other words, the model is not able to label the correctness of the candidate because it misunderstands the statements of the candidate implementations (i.e., the candiate implementation actually returns an empty array when the input array is null, but the model is not able to detect it).
+Results of the manual analysis for code generation judgement failures. To assign one or more reasons of failure (i.e., ```category-Final1```, ```category-Final2```, etc...), we take into consideration the docstring (```docstring```) and the candidate implementation (```generated_code```) which were fed to the LLM-as-a-judge (```judge_model```) and the judgment explanation (```rationale```) of the judge. By considering these three elements plus the ```reason_of_failure``` (i.e., ```false_negative``` if the LLM-as-a-judge classified as wrong a candidate implementation which is actually correct, and ```false_positive``` in the opposite scenario), we manually assign a category to the misclassification. Let us discuss the second row of the file ```cg_MA.csv``` for the sake of clarity: ```CodeLlama-34b-Instruct-hf``` is asked to assess the correctess of the candidate implementation (```generated_code```) given a textual description of the method (```Return an EMPTY_BOOLEAN_OBJECT_ARRAY array for a null or empty input array.```) and the its signature (```public static Boolean[] nullToEmpty(final Boolean[] array){```). The LLM-as-a-judge misjudges the candidate implementation assessing it as wrong. The rationale for this choice is ```The candidate implementation does not return an empty array when the input array is null.```. By comparing the docstring, the candidate implementation and the rationale we can conclude that the model's misjudgment is due to ```Misunderstanding of code statements```. In other words, the model is not able to detect the correctness of the candidate because it misunderstands the statements of the candidate implementations (i.e., the candiate implementation actually returns an empty array when the input array is null, but the model is not able to detect it).
 
 **3) ```code_generation_manual_analysis/cg_MA_false_positives.csv``` and ```code_generation_manual_analysis/cg_MA_false_negatives.csv```:**
 
@@ -100,21 +100,21 @@ The most frequent reasons (i.e., categories) why LLMs-as-a-judge fail at the cod
 
 **4) ```results/cs/{model_name}_CCF.csv```:**
 
-These files contain the raw output of the models when prompted to do the code summarization judgment task (```model_output``` column) and also their judgments for the three quality aspects (```content adequacy```, ```conciseness``` and ```fluency & understandability```), extracted with the heuristics. 
+These files contain the raw output (```model_output``` column) of the models when prompted to do the code summarization judgment task and also their judgments for the three quality aspects (```content adequacy```, ```conciseness``` and ```fluency & understandability```), extracted with the heuristics.
 
 ## Complementary results (```data/complementary_results/```):
 
 **1) ```cg_5level_prompt.pdf```:**
 
-Results for code generation when the model are asked to give a 5-level judgment, i.e., rate the quality of the solution on a scale from 1 to 5 (see ```prompts/prompt-judge-code-generation-5level.tex```).
+Results for code generation when the model are asked to give a 5-level judgment, i.e., rate the quality of the solution on a scale from 1 to 5, based on the likelihood of the candidate of being correct (see ```prompts/prompt-judge-code-generation-5level.tex```).
 
 **2) ```cg_norationale_prompt.pdf```:**
 
-Results for code generation when the model are asked to give a binary judgment, like the one reported in the paper, but they are not asked for a rationale.
+Results for code generation when the model are asked to give a binary judgment, like the one reported in the paper, but they are not asked for a rationale (see ```prompts/prompt-judge-code-generation-boolean_norationale.tex```).
 
 **3) ```cg_selfcontained```:**
 
-Results for code generation when considering only the CoderEval methods with no external dependencies.
+Results for code generation when considering only the CoderEval methods with no external dependencies (these are the instances of the CoderEval dataset with either ```"level": "self_contained"``` or ```"level": "slib_runnable"```).
 
 **4) ```cs_instruction_prompt.pdf```:**
 
@@ -126,4 +126,4 @@ Results for code summarization, but using the mean of the human ratings as groun
 
 **6) ```cs_ranking_con_flu.pdf```:**
 
-Ranking of the Generators of Summaries according to each Judge for Conciseness and Fluency & Understandability.
+Ranking of the generators of summaries according to each LLM-as-a-judge for ```conciseness``` and ```fluency & understandability```.
