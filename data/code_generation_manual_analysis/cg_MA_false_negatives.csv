@@ -1,9 +1,0 @@
-model,Test result unreliable,Ambiguous docstring,Artificial hallucination,Uncought wrong behavioral,Misunderstanding of code statements,Focus on non-functional requirements,Limited coding context,Misintepreted implementation requirements
-gpt-4-turbo,6,0,0,0,1,0,10,1
-CodeLlama-34b-Instruct-hf,1,0,7,0,7,1,2,1
-deepseek-coder-33b-instruct,3,1,6,0,3,3,0,2
-CodeLlama-7b-Instruct-hf,0,1,11,0,4,0,0,1
-deepseek-coder-1.3b-instruct,1,0,7,0,7,0,1,0
-gpt-3.5-turbo,3,2,5,0,3,0,7,0
-deepseek-coder-6.7b-instruct,0,0,0,0,0,0,0,0
-CodeLlama-13b-Instruct-hf,0,0,9,0,6,0,0,0
