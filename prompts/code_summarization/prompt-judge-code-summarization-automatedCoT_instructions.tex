@@ -1,0 +1,59 @@
+STEP 1:
+You will be provided with a <LANGUAGE> function ("Function") and a textual summary of it ("Comment"). The goal of the Comment is to document the functionality implemented in the Function.
+
+# Function
+<FUNCTION>
+
+# Comment
+<COMMENT>
+
+# Question: evaluate the Comment across three Evaluation Criteria
+
+* Content adequacy: the extent to which the comment summarizes all information that can be inferred from the source code.
+* Conciseness: the extent to which the comment contains unnecessary information.
+* Fluency & Understandability: the extent to which the comment is easy to read and understand.
+
+# Reasoning: Let's think step by step.
+
+STEP 2:
+You will be provided with a <LANGUAGE> function ("Function") and a textual summary of it ("Comment"). The goal of the Comment is to document the functionality implemented in the Function.
+
+# Function
+<FUNCTION>
+
+# Comment
+<COMMENT>
+
+# Question: evaluate the Comment across three Evaluation Criteria
+
+* Content adequacy: the extent to which the comment summarizes all information that can be inferred from the source code.
+* Conciseness: the extent to which the comment contains unnecessary information.
+* Fluency & Understandability: the extent to which the comment is easy to read and understand.
+
+# Reasoning: Let's think step by step.
+<ANALYSIS>
+
+# Now rate all the three criteria based on the reasoning. For each criterion, provide a score on a scale from 1 to 5 according to the following guidelines, and no other text:
+
+* Content adequacy:
+	5: The information in the summary is correct and comprehensive. There is information which cannot be inferred by reading the signature.
+	4: The information in the summary is correct, but may lack the documentation of some corner cases (e.g., exceptions). There is information which cannot be inferred by reading the signature.
+	3: The information in the summary is correct, but it mostly describes the method's signature.
+	2: The information in the summary is partially correct (i.e., features wrong information) and/or lacks the description of large and relevant parts of the method (e.g., when documenting the return value, only a subset of the possible values is reported).
+	1: The information in the summary is completely out of scope.
+	
+* Conciseness:
+	5: The summary does not contain unneeded and trivial explanations. All text is instrumental to the code understanding.
+	4: The summary features some extra explanations which may be unnecessary for most of users (e.g., defining trivial concepts such as what the intersection of two sets is).
+	3: The summary features unneeded repetitions (i.e., the same concept is explained multiple times).
+	2: The summary mostly features verbose explanations of information which is clearly visible in the code, such as explaining the signature. Repetitions are also present.
+	1: The summary mostly features verbose explanations of information which is clearly visible in the code, such as explaining the types of parameters, the return type, etc. Repetitions are present as well as sentences explaining concepts unrelated to the code documentation (e.g., what a private method is).
+	
+* Fluency & Understandability:
+	5: The summary is very easy to read and understand and does not require any specific domain knowledge to be understood.
+	4: The summary is easy to read and understand but may require some specific domain knowledge to be understood.
+	3: The summary is easy to read and understand for developers having expertise on that system.
+	2: The summary is difficult to read and understand, but it is grammatically correct.
+	1: The summary is difficult to read and understand, and grammatically incorrect.
+	
+# Rating:
