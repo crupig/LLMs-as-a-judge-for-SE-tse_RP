@@ -5,10 +5,8 @@ import argparse
 from tqdm import tqdm
 from datetime import datetime
 
-DEBUG_MODE = '../'
-
-INPUT_PATH = f'{DEBUG_MODE}data/input/cs'
-OUTPUT_ROOT = f'{DEBUG_MODE}data/results/tse/tse_maj/cs'
+INPUT_PATH = f'../../code_summarization_benchmark'
+OUTPUT_ROOT = f'../data/results/tse/tse_maj/cs'
 
 def divide_into_batches(data, batch_size):
     for i in range(0, len(data), batch_size):
@@ -43,7 +41,7 @@ if __name__ == '__main__':
         '--temp',
         dest = 'temperature',
         type = float,
-        default = .5
+        default = .2
         )
     parser.add_argument(
         '--max_new_tokens',

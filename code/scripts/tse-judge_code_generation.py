@@ -7,9 +7,7 @@ import ResultExtractor
 from tqdm import tqdm
 from datetime import datetime
 
-DEBUG_MODE = '../'
-
-INPUT_PATH = f'{DEBUG_MODE}data/input/cg'
+INPUT_PATH = f'../data/input/cg'
 
 def divide_into_batches(data, batch_size):
     for i in range(0, len(data), batch_size):
@@ -60,7 +58,7 @@ if __name__ == '__main__':
         '--temp',
         dest = 'temperature',
         type = float,
-        default = .5
+        default = .2
         )
     parser.add_argument(
         '--max_new_tokens',
@@ -82,14 +80,12 @@ if __name__ == '__main__':
         )
     args = parser.parse_args()
 
-    OUTPUT_ROOT = f'{DEBUG_MODE}data/results/tse/tse_maj/{args.language}'
-    INCOMPLETE_IMPLEMENTATIONS = pd.read_csv(f'{DEBUG_MODE}data/input/{args.language}_incomplete.csv')
+    OUTPUT_ROOT = f'../data/results/{args.language}'
+    INCOMPLETE_IMPLEMENTATIONS = pd.read_csv(f'../constants/{args.language}_incomplete.csv')
     INCOMPLETE_IMPLEMENTATIONS['id_generatedby'] = INCOMPLETE_IMPLEMENTATIONS['target_id'] + '_' + INCOMPLETE_IMPLEMENTATIONS['generated_by']
     INCOMPLETE_IMPLEMENTATIONS = INCOMPLETE_IMPLEMENTATIONS['id_generatedby'].tolist()
 
-    os.chdir('/home/giuseppe/benchmarks')
-    IDS_TO_DISCARD = json.load(open(f'ids_to_discard.json'))[f"CoderEval {args.language.capitalize()} Ids with Unreliable Tests"]
-    os.chdir('/home/giuseppe/llms_as_judge/scripts')
+    IDS_TO_DISCARD = json.load(open(f'../constants/ids_to_discard.json'))[f"CoderEval {args.language.capitalize()} Ids with Unreliable Tests"]
 
     #import data
     data = json.load(open(os.path.join(INPUT_PATH, f'CoderEval4{args.language.capitalize()}.json')))['RECORDS']
@@ -126,7 +122,7 @@ if __name__ == '__main__':
         "gpt-4-turbo"
     ]
 
-    prediction_path = f'{DEBUG_MODE}data/results/icse25/code_generation/{args.language}'
+    prediction_path = f'../data/results/icse25/code_generation/{args.language}'
     
     batches = list(divide_into_batches(data, batch_size = args.batch_size))
     print(f'Testing {args.model} as judge on {args.language.upper()}.')
