@@ -6,7 +6,7 @@ from tqdm import tqdm
 from datetime import datetime
 
 INPUT_PATH = f'../../code_summarization_benchmark'
-OUTPUT_ROOT = f'../data/results/tse/tse_maj/cs'
+OUTPUT_ROOT = f'../data/code_summarization/results'
 
 def divide_into_batches(data, batch_size):
     for i in range(0, len(data), batch_size):
