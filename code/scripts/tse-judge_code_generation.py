@@ -7,7 +7,7 @@ import ResultExtractor
 from tqdm import tqdm
 from datetime import datetime
 
-INPUT_PATH = f'../data/input/cg'
+INPUT_PATH = f'../data/input'
 
 def divide_into_batches(data, batch_size):
     for i in range(0, len(data), batch_size):

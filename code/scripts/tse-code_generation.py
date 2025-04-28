@@ -7,16 +7,11 @@ import ResultExtractor
 import sys
 import time
 
-os.chdir('/home/giuseppe/benchmarks')
-CODEREVAL_IDS_TODISCARD = json.load(open('ids_to_discard.json'))["CoderEval Ids with Unreliable Tests"]
-os.chdir('/home/giuseppe/llms_as_judge/scripts')
 
-
-DEBUG_MODE = '../'
-
-INPUT_PATH = f'{DEBUG_MODE}data/input/cg'
-INPUT_FILE = 'CoderEval4Java.json'
-OUTPUT_PATH = '/home/giuseppe/law_school/data/knowlbase_raw/codereval_allocated'
+INPUT_PATH = f'../data/input'
+LANGUAGE = 'java'
+OUTPUT_PATH = f'../data/predictions/{LANGUAGE}'
+CODEREVAL_IDS_TODISCARD = json.load(open('../constants/ids_to_discard.json'))[f"CoderEval {LANGUAGE.capitalize()} Ids with Unreliable Tests"]
 
 def sleep(sleeping_time_in_seconds):
     for remaining in range(sleeping_time_in_seconds, 0, -1):
@@ -41,8 +36,8 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
 
-    #import java methods
-    instances = json.load(open(os.path.join(INPUT_PATH, INPUT_FILE)))['RECORDS']
+    #import methods
+    instances = json.load(open(os.path.join(INPUT_PATH, f'CoderEval4{LANGUAGE.capitalize}.json')))['RECORDS']
 
     instances = [inst for inst in instances if inst['_id'] not in CODEREVAL_IDS_TODISCARD]
     
@@ -58,11 +53,10 @@ if __name__ == '__main__':
     
     code_extractor = ResultExtractor.ResultExtractor()
 
-    language = INPUT_FILE.split('4')[1].split('.')[0].lower()
-    file_extention = 'py' if language == 'python' else language
+    file_extention = 'py' if LANGUAGE == 'python' else LANGUAGE
     
     
-    print(f'Testing {args.model} on {language.upper()}.')
+    print(f'Testing {args.model} on {LANGUAGE.upper()}.')
 
     result_dict = {}
     for ibeam in range(args.beam):
@@ -70,12 +64,12 @@ if __name__ == '__main__':
             print(f'\rBeam {ibeam + 1}/{args.beam}, Instance: {iinstance + 1}/{len(instances)}', end = '')
 
             if querier.is_gpt:
-                model_output = querier.codegeneration_codereval_chatgpt(instances[iinstance], language = language)
+                model_output = querier.codegeneration_codereval_chatgpt(instances[iinstance], language = LANGUAGE)
                 predicted_method = code_extractor.extract_predicted_method_from_output(model_output, file_extention = file_extention, gpt_flag = querier.is_gpt)
             
             elif not args.allocate:
-                model_output = querier.codegeneration_codereval(instances[iinstance], language = language)
-                signature = ModelQuerier.extract_signature_codereval(instances[iinstance], language)
+                model_output = querier.codegeneration_codereval(instances[iinstance], language = LANGUAGE)
+                signature = ModelQuerier.extract_signature_codereval(instances[iinstance], LANGUAGE)
                 predicted_method = code_extractor.extract_predicted_method_from_output(model_output, 
                                                                                        file_extention, 
                                                                                        gpt_flag = querier.is_gpt, 
@@ -83,8 +77,8 @@ if __name__ == '__main__':
                                                                                        tempfile_name = instances[iinstance]['_id']
                                                                                     )
             elif args.allocate:
-                model_output = querier.codegeneration_codereval(instances[iinstance], language = language)
-                signature = ModelQuerier.extract_signature_codereval(instances[iinstance], language)
+                model_output = querier.codegeneration_codereval(instances[iinstance], language = LANGUAGE)
+                signature = ModelQuerier.extract_signature_codereval(instances[iinstance], LANGUAGE)
                 predicted_method = code_extractor.extract_predicted_method_from_output(model_output, 
                                                                                        file_extention, 
                                                                                        gpt_flag = querier.is_gpt, 
@@ -110,4 +104,4 @@ if __name__ == '__main__':
     fout.close()
     
     print()
-    subprocess.call(f'rm {DEBUG_MODE}data/temp/*', shell = True)
+    subprocess.call(f'rm ../data/temp/*', shell = True)
